@@ -1,0 +1,15 @@
+id,person_or_group,relationship,known_context,priority,sensitivity,next_action
+P-001,Father,Family,Name unknown; reportedly gave PC in 1996,HIGH,PRIVATE,Interview
+P-002,Mother,Family,No reliable details in current archive,HIGH,PRIVATE,Interview
+P-003,Siblings,Family,Unknown,HIGH,PRIVATE,Build family tree
+P-004,Partner/spouse/co-parent,Family,Not documented sufficiently,HIGH,PRIVATE,Consent-first interview
+P-005,Saiffil Ammar Hadif,Child,Born 2012; homeschool/The Saiffils context,HIGH,PRIVATE,Consent and age-appropriate interview
+P-006,Fahira,Child,Reported daughter born 2017; details conflict/omitted elsewhere,HIGH,PRIVATE,Resolve privately
+P-007,Saiffil Habib Kauthar,Child,Born 2020; homeschool/The Saiffils context,HIGH,PRIVATE,Consent and age-appropriate interview
+P-008,Maxxima co-founders,Business,Names and roles absent,HIGH,CONFIDENTIAL,Corporate records and interviews
+P-009,Maxxima staff/agent leaders,Business,Key witnesses to scale and culture,HIGH,CONFIDENTIAL,Create list
+P-010,CellMaxx/AirAsia campaign team,Campaign,Key witnesses to execution,HIGH,PUBLIC/CONFIDENTIAL,Contracts and interviews
+P-011,University friends/lecturers,Education,Unknown,MEDIUM,PRIVATE,Alumni search
+P-012,Childhood friends,Personal,Unknown,MEDIUM,PRIVATE,Interview family for names
+P-013,Religious teachers,Faith,Unknown,HIGH,SENSITIVE,Saiffil to identify
+P-014,Tony Robbins et al.,Influence,"Intellectual influences, not assumed personal relationships",LOW,PUBLIC,Describe accurately

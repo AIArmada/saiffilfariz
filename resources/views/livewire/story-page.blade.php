@@ -1,0 +1,27 @@
+<div class="reference-site reference-story">
+    @include('livewire.partials.reference-header', ['current' => 'story'])
+
+    <main>
+        <section class="reference-hero reference-hero-story">
+            <div class="reference-hero-art" style="--reference-hero-image: url('{{ asset('assets/img/generated/home-hero-reference.png') }}')"></div>
+            <div class="reference-wrap reference-hero-content"><p class="reference-kicker">IDEAS <span>×</span> PEOPLE <span>×</span> AI <span>×</span> A BETTER TOMORROW</p><h1>A more<br>capable you<br>for a <em>brighter</em><br>tomorrow.</h1><p class="reference-hero-copy">I help people and organisations use AI to work smarter, create more, and live a more meaningful life.</p><div class="reference-actions"><a href="{{ route('work') }}" class="reference-button reference-button-dark">Explore My Story <span>→</span></a><a href="#story-intro" class="reference-button reference-button-light"><b>▷</b> Watch Video</a></div><span class="reference-handnote reference-note-hero">Better People<br>Better Systems<br>A Brighter Tomorrow</span></div>
+        </section>
+
+        <section class="reference-stat-strip"><div class="reference-wrap reference-stat-grid"><div><strong>30+</strong><span>Years with Technology</span></div><div><strong>100K+</strong><span>People Reached</span></div><div><strong>◫</strong><span>Organisations<br>From Startups to Government</span></div><div><strong>◎</strong><span>One Mission<br>Make AI useful to as many people as possible</span></div></div></section>
+
+        <section id="story-intro" class="reference-story-intro reference-wrap">
+            <div class="reference-story-photo"><img src="{{ asset('assets/img/generated/story-1996-dialup.jpg') }}" alt="A curious child using an early computer"><span class="reference-handnote">It started<br>with curiosity…</span><small>A curious kid.<br>A bigger tomorrow.</small></div>
+            <div class="reference-story-copy"><p class="reference-kicker reference-kicker-green">MY STORY</p><h2>A Curious Mind<br>That Never Stopped</h2><p>I was a curious kid who fell in love with computers. What started as curiosity turned into a lifelong journey across code, commerce, influence and education.</p><p>Today, I speak, teach and build — helping people navigate the AI era with clarity, confidence and real results.</p><a href="{{ route('about') }}" class="reference-button reference-button-dark">Read My Full Story <span>→</span></a></div>
+        </section>
+
+        <section class="reference-journey-panel" style="--reference-image: url('{{ asset('assets/img/generated/story-reflective-closing.jpg') }}')"><div class="reference-wrap"><p class="reference-kicker reference-kicker-green">THE JOURNEY</p><h2>Different Chapters.<br>Same Direction.</h2><p>From a kid with a computer to a builder, speaker and lifelong learner — every chapter shaped a bigger purpose.</p><a href="{{ route('story') }}" class="reference-button reference-button-dark">Explore the Journey <span>→</span></a><div class="reference-journey-line"><span>CURIOSITY<small>1990s</small></span><span>BUILD<small>2000s</small></span><span>BUSINESS<small>2010s</small></span><span>SPEAK<small>2020s</small></span><span>IMPACT<small>Today &amp; Beyond</small></span></div><span class="reference-handnote">Same intention.<br>More people.<br>Greater impact.</span></div></section>
+
+        <section class="reference-areas-section"><div class="reference-wrap"><p class="reference-kicker reference-kicker-green">WHAT I DO</p><h2>Turn Possibilities<br>Into Progress</h2><p class="reference-section-intro">I work at the intersection of technology, people and real-world outcomes.</p><div class="reference-icon-grid">@foreach ([['⌘','Code','Build systems that work.'],['▣','Commerce','Create value that scales.'],['♧','Influence','Share ideas that move people.'],['◇','Education','Make AI practical for everyone.'],['♡','Character','Do good. Stay grounded.']] as $area)<article><span>{{ $area[0] }}</span><h3>{{ $area[1] }}</h3><p>{{ $area[2] }}</p></article>@endforeach</div></div></section>
+
+        <section class="reference-split-section reference-people-section"><div class="reference-split-image" style="--reference-image: url('{{ asset('assets/img/generated/work-audience-closeup.jpg') }}')"><span class="reference-handnote">People<br>are the real upgrade.</span></div><div class="reference-split-copy"><p class="reference-kicker reference-kicker-green">WHY I DO THIS</p><h2>Because People<br>Matter Most</h2><p>Technology is powerful. But people are the real upgrade. I believe AI should amplify human potential — not replace the human in us.</p><blockquote>“A more capable you creates a brighter tomorrow for everyone around you.”<small>Saiffil</small></blockquote></div></section>
+
+        <section class="reference-cta-panel reference-cta-wide" style="--reference-image: url('{{ asset('assets/img/generated/home-beach-reference.png') }}')"><div class="reference-wrap reference-cta-content"><p class="reference-kicker reference-kicker-green">LET’S BUILD TOGETHER</p><h2>Ideas Are Better<br>When Shared</h2><p>Whether it’s a talk, a workshop, a collaboration or just a conversation — I’d love to hear from you.</p><a href="{{ route('contact') }}" class="reference-button reference-button-dark">Start a Conversation <span>→</span></a></div><span class="reference-handnote">New ideas.<br>New people.<br>New possibilities.</span></section>
+    </main>
+
+    @include('livewire.partials.reference-footer')
+</div>

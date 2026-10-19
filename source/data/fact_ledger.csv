@@ -1,0 +1,53 @@
+id,category,claim,status,sensitivity,source_basis,next_action
+ID-001,Identity,Full name: Saiffil Fariz bin Mohamad Yusuff,CONFIRMED,Private/Public,Prior personal context and memory,Use public name Saiffil Fariz
+ID-002,Identity,Born 17 June 1984,CONFIRMED,PRIVATE,Prior personal context,Publish only with approval
+ID-003,Identity,Malaysia-based programmer and entrepreneur,CONFIRMED,Public,Memory/profile,Safe
+CH-001,Childhood,Given a Whiz Kid personal computer as a child,CONFIRMED,Private/Public,User statement,"Verify model, giver, date"
+CH-002,Childhood,Exposed to personal computing around age four,VERIFY,Private/Public,Prior profile,Reconcile with Whiz Kid and 1996 PC
+CH-003,Childhood,Dismantled and reassembled computers,CONFIRMED,Public,User statement,Seek family witness
+CH-004,Childhood,"Installed operating systems/software from floppy, diskette, CD and DVD",CONFIRMED,Public,User statement,Collect artefacts
+CH-005,Childhood,"State-level chess, badminton, soccer and sepak takraw",VERIFY,Private/Public,Prior personal context,Need records and dates
+ED-001,Education,Studied Computer Engineering at The University of Arizona,CONFIRMED,Public,User/prior context,Verify years and transcript
+ED-002,Education,Did not complete degree and pursued entrepreneurship,CONFIRMED,Sensitive/Public,User/prior context,Represent without cliché
+ED-003,Education,"Learned terminal, SSH, C, C++ and Java",CONFIRMED,Public,User statement,Collect code or witnesses
+ED-004,Education,"Fell in love with PHP, HTML, CSS and JavaScript",CONFIRMED,Public,User statement,Use as personal reflection
+HL-001,Health,"Serious 2003 car accident with jaw, dental and brain injuries and memory difficulty",CONFIRMED,PRIVATE,Prior context,Explicit approval required
+WEB-001,Technology,Building websites since 1996,CONFIRMED,Public,User statement,Find archives
+WEB-002,Technology,Created school website and possible award around 2000,VERIFY,Public,Prior context,Find school evidence
+SRV-001,Infrastructure,Had dedicated server from around 2004,CONFIRMED,Public,User statement,Find invoices/logs
+SRV-002,Infrastructure,Served media via FTP and P2P from home PC,CONFIRMED,Sensitive/Public,User statement,Frame as infrastructure story
+SRV-003,Infrastructure,Up to approximately 4 TB downloaded per month,VERIFY,Public,User account,Need logs
+SRV-004,Infrastructure,Processor damaged by heat/load,CONFIRMED,Public,User account,Interview sensory detail
+COM-001,Commerce,Explored Amazon affiliate models in the 2000s,CONFIRMED,Public,User statement,Find reports/accounts
+COM-002,Commerce,Traded through eBay and Half.com,CONFIRMED,Public,User statement,Find account history
+COM-003,Commerce,Founded masyuk.com in 2004,CONFIRMED,Public,User statement,Find archive and company details
+COM-004,Commerce,Global e-commerce using PayPal and other gateways,CONFIRMED,Public,User statement,Find transaction/gateway records
+COM-005,Commerce,Studied Netflix-style media/subscription model,CONFIRMED,Public,User statement,Interview specific insights
+DEV-001,Software,"Built custom systems for automation, delivery, feedback, payment, stock and finance",CONFIRMED,Public,User statement/profile,Create system inventory
+BUS-001,Maxxima,"Associated with Maxxima as co-founder, Executive Director and CEO",VERIFY,Public,Prior materials,Normalise role by year/entity
+BUS-002,Maxxima,"Network exceeded 275,000 members",VERIFY,Public,Prior materials,Define member and period
+BUS-003,Maxxima,Nearly RM100 million distributed as bonuses/commissions/payouts,VERIFY,Public,Prior materials,"Define entity, period and category"
+BUS-004,Maxxima,Ventures achieved nine-figure overseas sales,VERIFY,Public,Media profile,"Define amount, currency, period"
+BUS-005,Maxxima,Warehouse fire disrupted business and cash flow,CONFIRMED,PRIVATE,Prior personal context,Interview and collect records
+BR-001,CellMaxx,CellMaxx was a defining brand under/associated with Maxxima,CONFIRMED,Public,Prior profile,Document brand timeline
+BR-002,AirAsia,CellMaxx branding appeared on AirAsia aircraft,CONFIRMED,Public,User/profile,Collect official assets
+BR-003,AirAsia,First third-party brand to wrap AirAsia aircraft,VERIFY,Public,User statement,Independent confirmation
+BR-004,AirAsia,Campaign included cabin touchpoints and Travel 3Sixty,VERIFY,Public,User statement/profile,Collect pages/photos
+BR-005,AirAsia,Campaign lasted more than two years and flew domestic/international/China routes,VERIFY,Public,User statement,Aircraft and route evidence
+BR-006,Campaign,"CellMaxx major sponsor of Le Tour de Langkawi 2017, RM1.5 million",DOCUMENTED,Public,Media profile,Retain official source
+BR-007,Campaign,Rhoma Irama Indonesia campaign with TV/radio,VERIFY,Public,Media profile,Confirm role/date
+AI-001,AI,Created Unfair Advantage / AI Awakening direction,CONFIRMED,Public,Current materials,Verify events completed
+AI-002,AI,"Core idea: Learn the map, not just the tool",CONFIRMED,Public,Media materials,Use
+AI-003,AI,Current AI Navigation Map has seven layers,CONFIRMED,Public,Current context,Document evolution
+AI-004,AI,AI multiplies what already exists,INTERPRETATION,Public,Developed positioning,Confirm as adopted quote
+PR-001,Project,KOD / kod.to current venture,CONFIRMED,Public,User context,Define scope/status
+PR-002,Project,AIArmada Laravel package ecosystem,CONFIRMED,Public,Technical context,Document readiness/adoption
+PR-003,Project,ilmu360 / MajlisIlmu knowledge ecosystem,CONFIRMED,Sensitive/Public,User context,Normalise naming and scope
+FM-001,Family,Father of Ammar and Habib,CONFIRMED,PRIVATE,User context,Use only with consent
+FM-002,Family,Prior context also records daughter Fahira born 2017,CONFLICT,PRIVATE,Personal context,Resolve privately
+FM-003,Family,Children homeschooled and accompany him to learning/work environments,CONFIRMED,PRIVATE,User context,Consent required
+SP-001,Speaking,"Speaks on AI, digital transformation, business, systems and learning",CONFIRMED,Public,Profiles/programmes,Build engagement ledger
+SP-002,Speaking,"Known contexts include JPA/UPM, JDN/Pos Digicert, WBS, PPAS and community ICT",DOCUMENTED,Public,Profile materials,Verify exact dates
+MED-001,Media,"YouTube account around twenty years old, inactive",VERIFY,Public,User statement,Check creation date
+VAL-001,Values,Desire to be useful to as many people as possible,INTERPRETATION,Public,Prior memory,Confirm wording
+VAL-002,Values,Muslim and involved in religious knowledge platforms,CONFIRMED,PRIVATE,Prior context,Public only with approval

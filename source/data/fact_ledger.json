@@ -1,0 +1,470 @@
+[
+  {
+    "id": "ID-001",
+    "category": "Identity",
+    "claim": "Full name: Saiffil Fariz bin Mohamad Yusuff",
+    "status": "CONFIRMED",
+    "sensitivity": "Private/Public",
+    "source_basis": "Prior personal context and memory",
+    "next_action": "Use public name Saiffil Fariz"
+  },
+  {
+    "id": "ID-002",
+    "category": "Identity",
+    "claim": "Born 17 June 1984",
+    "status": "CONFIRMED",
+    "sensitivity": "PRIVATE",
+    "source_basis": "Prior personal context",
+    "next_action": "Publish only with approval"
+  },
+  {
+    "id": "ID-003",
+    "category": "Identity",
+    "claim": "Malaysia-based programmer and entrepreneur",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "Memory/profile",
+    "next_action": "Safe"
+  },
+  {
+    "id": "CH-001",
+    "category": "Childhood",
+    "claim": "Given a Whiz Kid personal computer as a child",
+    "status": "CONFIRMED",
+    "sensitivity": "Private/Public",
+    "source_basis": "User statement",
+    "next_action": "Verify model, giver, date"
+  },
+  {
+    "id": "CH-002",
+    "category": "Childhood",
+    "claim": "Exposed to personal computing around age four",
+    "status": "VERIFY",
+    "sensitivity": "Private/Public",
+    "source_basis": "Prior profile",
+    "next_action": "Reconcile with Whiz Kid and 1996 PC"
+  },
+  {
+    "id": "CH-003",
+    "category": "Childhood",
+    "claim": "Dismantled and reassembled computers",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Seek family witness"
+  },
+  {
+    "id": "CH-004",
+    "category": "Childhood",
+    "claim": "Installed operating systems/software from floppy, diskette, CD and DVD",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Collect artefacts"
+  },
+  {
+    "id": "CH-005",
+    "category": "Childhood",
+    "claim": "State-level chess, badminton, soccer and sepak takraw",
+    "status": "VERIFY",
+    "sensitivity": "Private/Public",
+    "source_basis": "Prior personal context",
+    "next_action": "Need records and dates"
+  },
+  {
+    "id": "ED-001",
+    "category": "Education",
+    "claim": "Studied Computer Engineering at The University of Arizona",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User/prior context",
+    "next_action": "Verify years and transcript"
+  },
+  {
+    "id": "ED-002",
+    "category": "Education",
+    "claim": "Did not complete degree and pursued entrepreneurship",
+    "status": "CONFIRMED",
+    "sensitivity": "Sensitive/Public",
+    "source_basis": "User/prior context",
+    "next_action": "Represent without cliché"
+  },
+  {
+    "id": "ED-003",
+    "category": "Education",
+    "claim": "Learned terminal, SSH, C, C++ and Java",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Collect code or witnesses"
+  },
+  {
+    "id": "ED-004",
+    "category": "Education",
+    "claim": "Fell in love with PHP, HTML, CSS and JavaScript",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Use as personal reflection"
+  },
+  {
+    "id": "HL-001",
+    "category": "Health",
+    "claim": "Serious 2003 car accident with jaw, dental and brain injuries and memory difficulty",
+    "status": "CONFIRMED",
+    "sensitivity": "PRIVATE",
+    "source_basis": "Prior context",
+    "next_action": "Explicit approval required"
+  },
+  {
+    "id": "WEB-001",
+    "category": "Technology",
+    "claim": "Building websites since 1996",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Find archives"
+  },
+  {
+    "id": "WEB-002",
+    "category": "Technology",
+    "claim": "Created school website and possible award around 2000",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "Prior context",
+    "next_action": "Find school evidence"
+  },
+  {
+    "id": "SRV-001",
+    "category": "Infrastructure",
+    "claim": "Had dedicated server from around 2004",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Find invoices/logs"
+  },
+  {
+    "id": "SRV-002",
+    "category": "Infrastructure",
+    "claim": "Served media via FTP and P2P from home PC",
+    "status": "CONFIRMED",
+    "sensitivity": "Sensitive/Public",
+    "source_basis": "User statement",
+    "next_action": "Frame as infrastructure story"
+  },
+  {
+    "id": "SRV-003",
+    "category": "Infrastructure",
+    "claim": "Up to approximately 4 TB downloaded per month",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "User account",
+    "next_action": "Need logs"
+  },
+  {
+    "id": "SRV-004",
+    "category": "Infrastructure",
+    "claim": "Processor damaged by heat/load",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User account",
+    "next_action": "Interview sensory detail"
+  },
+  {
+    "id": "COM-001",
+    "category": "Commerce",
+    "claim": "Explored Amazon affiliate models in the 2000s",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Find reports/accounts"
+  },
+  {
+    "id": "COM-002",
+    "category": "Commerce",
+    "claim": "Traded through eBay and Half.com",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Find account history"
+  },
+  {
+    "id": "COM-003",
+    "category": "Commerce",
+    "claim": "Founded masyuk.com in 2004",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Find archive and company details"
+  },
+  {
+    "id": "COM-004",
+    "category": "Commerce",
+    "claim": "Global e-commerce using PayPal and other gateways",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Find transaction/gateway records"
+  },
+  {
+    "id": "COM-005",
+    "category": "Commerce",
+    "claim": "Studied Netflix-style media/subscription model",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Interview specific insights"
+  },
+  {
+    "id": "DEV-001",
+    "category": "Software",
+    "claim": "Built custom systems for automation, delivery, feedback, payment, stock and finance",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User statement/profile",
+    "next_action": "Create system inventory"
+  },
+  {
+    "id": "BUS-001",
+    "category": "Maxxima",
+    "claim": "Associated with Maxxima as co-founder, Executive Director and CEO",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "Prior materials",
+    "next_action": "Normalise role by year/entity"
+  },
+  {
+    "id": "BUS-002",
+    "category": "Maxxima",
+    "claim": "Network exceeded 275,000 members",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "Prior materials",
+    "next_action": "Define member and period"
+  },
+  {
+    "id": "BUS-003",
+    "category": "Maxxima",
+    "claim": "Nearly RM100 million distributed as bonuses/commissions/payouts",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "Prior materials",
+    "next_action": "Define entity, period and category"
+  },
+  {
+    "id": "BUS-004",
+    "category": "Maxxima",
+    "claim": "Ventures achieved nine-figure overseas sales",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "Media profile",
+    "next_action": "Define amount, currency, period"
+  },
+  {
+    "id": "BUS-005",
+    "category": "Maxxima",
+    "claim": "Warehouse fire disrupted business and cash flow",
+    "status": "CONFIRMED",
+    "sensitivity": "PRIVATE",
+    "source_basis": "Prior personal context",
+    "next_action": "Interview and collect records"
+  },
+  {
+    "id": "BR-001",
+    "category": "CellMaxx",
+    "claim": "CellMaxx was a defining brand under/associated with Maxxima",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "Prior profile",
+    "next_action": "Document brand timeline"
+  },
+  {
+    "id": "BR-002",
+    "category": "AirAsia",
+    "claim": "CellMaxx branding appeared on AirAsia aircraft",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User/profile",
+    "next_action": "Collect official assets"
+  },
+  {
+    "id": "BR-003",
+    "category": "AirAsia",
+    "claim": "First third-party brand to wrap AirAsia aircraft",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Independent confirmation"
+  },
+  {
+    "id": "BR-004",
+    "category": "AirAsia",
+    "claim": "Campaign included cabin touchpoints and Travel 3Sixty",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "User statement/profile",
+    "next_action": "Collect pages/photos"
+  },
+  {
+    "id": "BR-005",
+    "category": "AirAsia",
+    "claim": "Campaign lasted more than two years and flew domestic/international/China routes",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Aircraft and route evidence"
+  },
+  {
+    "id": "BR-006",
+    "category": "Campaign",
+    "claim": "CellMaxx major sponsor of Le Tour de Langkawi 2017, RM1.5 million",
+    "status": "DOCUMENTED",
+    "sensitivity": "Public",
+    "source_basis": "Media profile",
+    "next_action": "Retain official source"
+  },
+  {
+    "id": "BR-007",
+    "category": "Campaign",
+    "claim": "Rhoma Irama Indonesia campaign with TV/radio",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "Media profile",
+    "next_action": "Confirm role/date"
+  },
+  {
+    "id": "AI-001",
+    "category": "AI",
+    "claim": "Created Unfair Advantage / AI Awakening direction",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "Current materials",
+    "next_action": "Verify events completed"
+  },
+  {
+    "id": "AI-002",
+    "category": "AI",
+    "claim": "Core idea: Learn the map, not just the tool",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "Media materials",
+    "next_action": "Use"
+  },
+  {
+    "id": "AI-003",
+    "category": "AI",
+    "claim": "Current AI Navigation Map has seven layers",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "Current context",
+    "next_action": "Document evolution"
+  },
+  {
+    "id": "AI-004",
+    "category": "AI",
+    "claim": "AI multiplies what already exists",
+    "status": "INTERPRETATION",
+    "sensitivity": "Public",
+    "source_basis": "Developed positioning",
+    "next_action": "Confirm as adopted quote"
+  },
+  {
+    "id": "PR-001",
+    "category": "Project",
+    "claim": "KOD / kod.to current venture",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "User context",
+    "next_action": "Define scope/status"
+  },
+  {
+    "id": "PR-002",
+    "category": "Project",
+    "claim": "AIArmada Laravel package ecosystem",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "Technical context",
+    "next_action": "Document readiness/adoption"
+  },
+  {
+    "id": "PR-003",
+    "category": "Project",
+    "claim": "ilmu360 / MajlisIlmu knowledge ecosystem",
+    "status": "CONFIRMED",
+    "sensitivity": "Sensitive/Public",
+    "source_basis": "User context",
+    "next_action": "Normalise naming and scope"
+  },
+  {
+    "id": "FM-001",
+    "category": "Family",
+    "claim": "Father of Ammar and Habib",
+    "status": "CONFIRMED",
+    "sensitivity": "PRIVATE",
+    "source_basis": "User context",
+    "next_action": "Use only with consent"
+  },
+  {
+    "id": "FM-002",
+    "category": "Family",
+    "claim": "Prior context also records daughter Fahira born 2017",
+    "status": "CONFLICT",
+    "sensitivity": "PRIVATE",
+    "source_basis": "Personal context",
+    "next_action": "Resolve privately"
+  },
+  {
+    "id": "FM-003",
+    "category": "Family",
+    "claim": "Children homeschooled and accompany him to learning/work environments",
+    "status": "CONFIRMED",
+    "sensitivity": "PRIVATE",
+    "source_basis": "User context",
+    "next_action": "Consent required"
+  },
+  {
+    "id": "SP-001",
+    "category": "Speaking",
+    "claim": "Speaks on AI, digital transformation, business, systems and learning",
+    "status": "CONFIRMED",
+    "sensitivity": "Public",
+    "source_basis": "Profiles/programmes",
+    "next_action": "Build engagement ledger"
+  },
+  {
+    "id": "SP-002",
+    "category": "Speaking",
+    "claim": "Known contexts include JPA/UPM, JDN/Pos Digicert, WBS, PPAS and community ICT",
+    "status": "DOCUMENTED",
+    "sensitivity": "Public",
+    "source_basis": "Profile materials",
+    "next_action": "Verify exact dates"
+  },
+  {
+    "id": "MED-001",
+    "category": "Media",
+    "claim": "YouTube account around twenty years old, inactive",
+    "status": "VERIFY",
+    "sensitivity": "Public",
+    "source_basis": "User statement",
+    "next_action": "Check creation date"
+  },
+  {
+    "id": "VAL-001",
+    "category": "Values",
+    "claim": "Desire to be useful to as many people as possible",
+    "status": "INTERPRETATION",
+    "sensitivity": "Public",
+    "source_basis": "Prior memory",
+    "next_action": "Confirm wording"
+  },
+  {
+    "id": "VAL-002",
+    "category": "Values",
+    "claim": "Muslim and involved in religious knowledge platforms",
+    "status": "CONFIRMED",
+    "sensitivity": "PRIVATE",
+    "source_basis": "Prior context",
+    "next_action": "Public only with approval"
+  }
+]

@@ -1,0 +1,21 @@
+id,asset,domain,current_status,priority,sensitivity,next_action
+E-001,Whiz Kid/childhood computer photo,Childhood,Unknown,HIGH,Private/Public,Locate family artefact
+E-002,First PC/repair photos,Childhood,Unknown,HIGH,Private/Public,Ask family
+E-003,School website/award,Early web,Unknown,HIGH,Public,Contact school/archive
+E-004,University of Arizona records,Education,Unknown,HIGH,Private/Public,Request transcript
+E-005,Accident records,Health,Unknown,MEDIUM,PRIVATE,Collect only with approval
+E-006,masyuk.com archive,Commerce,Unknown,HIGH,Public,Internet Archive/domain records
+E-007,PayPal/eBay/Half.com records,Commerce,Unknown,HIGH,CONFIDENTIAL,Export/redact
+E-008,Dedicated server invoices/logs,Infrastructure,Unknown,HIGH,Private/Public,Search email/backups
+E-009,4 TB bandwidth evidence,Infrastructure,Unknown,HIGH,Public,Find logs/screenshots
+E-010,Custom software repositories/screenshots,Software,Unknown,HIGH,CONFIDENTIAL,Inventory devices/backups
+E-011,Maxxima corporate records,Business,Unknown,CRITICAL,CONFIDENTIAL,SSM/accounts/contracts
+E-012,Maxxima member/payout reports,Business,Unknown,CRITICAL,CONFIDENTIAL,Define metrics
+E-013,Warehouse fire report/photos,Adversity,Unknown,HIGH,PRIVATE,Authorities/insurance
+E-014,CellMaxx brand archive,Brand,Unknown,HIGH,Public/Restricted,Collect guidelines/campaigns
+E-015,AirAsia contract and aircraft records,Campaign,Unknown,CRITICAL,Restricted,AirAsia/agency files
+E-016,Travel 3Sixty pages,Campaign,Unknown,HIGH,Copyright,Scan and permission
+E-017,Le Tour de Langkawi sponsorship proof,Campaign,Documented in profile,HIGH,Public,Find official release/contract
+E-018,Rhoma Irama campaign evidence,Campaign,Unknown,HIGH,Public/Restricted,Indonesia partners/media
+E-019,Speaking invitations and recordings,Speaking,Partial,HIGH,Public,Centralise archive
+E-020,Current project repositories/material,Current work,Partial,HIGH,Public/Confidential,Status audit
