@@ -1,24 +1,166 @@
-<div class="reference-site reference-speaking">
-    @include('livewire.partials.reference-header', ['current' => 'speaking'])
+<div>
+    <section class="phero">
+        <div class="wrap phero__inner">
+            <div class="phero__copy">
+                <p class="phero__eyebrow">Ideas that open minds</p>
+                <h1>Speaking</h1>
+                <p class="lede">I give talks and workshops about using AI at work. I skip the hype. I explain what the tools can do today, what they still get wrong, and what your people can try first. Every talk includes time for questions.</p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="#book">Check a date</a>
+                    <a class="btn btn--ghost" href="#talks">See the talks</a>
+                </div>
+            </div>
+            <div class="phero__media">
+                <x-photo name="work-large-audience" alt="Saiffil Fariz on stage in front of a full hall"
+                         sizes="(max-width: 900px) 100vw, 44vw" :eager="true" />
+            </div>
+        </div>
+    </section>
 
-    <main>
-        <section class="reference-hero reference-hero-speaking">
-            <div class="reference-hero-art" style="--reference-hero-image: url('{{ asset('assets/img/generated/home-hero-reference.png') }}')"></div>
-            <div class="reference-wrap reference-hero-content"><p class="reference-kicker">AI · BUSINESS · PEOPLE · A BRIGHTER TOMORROW</p><h1>A more capable you<br>changes<br><em>everything.</em></h1><p class="reference-hero-copy">I help individuals, teams and organisations use AI to work smarter, create more and unlock what’s next.</p><div class="reference-actions"><a href="#programs" class="reference-button reference-button-dark">Explore My Work <span>→</span></a><a href="#programs" class="reference-button reference-button-light"><b>▷</b> Watch Story</a></div><div class="reference-trusted"><span>TRUSTED BY</span><span>◉ MATRADE</span><span>♜ Government</span><span>◇ Universities</span><span>▦ Corporates</span><span>♧ Communities</span></div><span class="reference-handnote reference-note-hero">Same curiosity.<br>Bigger possibilities.<br><b>Saiffil</b></span></div>
+    <section class="strip">
+        <div class="wrap strip__grid">
+            @foreach (config('site.facts') as $fact)
+                <div>
+                    <b>{{ $fact['value'] }}</b>
+                    <span>{{ $fact['label'] }}</span>
+                    <small>{{ $fact['note'] }}</small>
+                </div>
+            @endforeach
+        </div>
+    </section>
+
+    <section class="section" id="talks">
+        <div class="wrap">
+            <div class="head">
+                <h2>Talks I give</h2>
+                <p class="body">These four are the ones I am asked for most. Each one runs as a 45-minute keynote or a longer workshop, and I adjust the examples for your audience.</p>
+            </div>
+            <div class="rows">
+                @foreach ([
+                    ['AI without the hype.', 'What AI tools can do today, what they still cannot do, and how to tell the difference before you spend money. Your team leaves with a short list of things worth trying.', '45 to 75 minutes', 'Mixed audiences'],
+                    ['Using AI in everyday work.', 'Five everyday jobs most teams can improve this quarter. Writing, research, meetings, reporting, and the handover notes nobody writes. I work live, on examples close to your own.', '60 to 90 minutes', 'Teams'],
+                    ['People first, tools second.', 'Why many AI projects stall even when the software works. I cover the four questions that tell you early whether a project will stick.', '45 minutes', 'Leaders'],
+                    ['Explaining hard things clearly.', 'How to explain a complicated topic to busy people so they can act on it. Drawn from thirty years of teaching and plenty of mistakes.', '45 to 60 minutes', 'Communicators and trainers'],
+                ] as $talk)
+                    <div class="rows__item">
+                        <div>
+                            <h3>{{ $talk[0] }}</h3>
+                            <p>{{ $talk[1] }}</p>
+                        </div>
+                        <div class="rows__meta">
+                            <b>{{ $talk[2] }}</b>
+                            {{ $talk[3] }}
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--muted">
+        <div class="wrap">
+            <div class="head">
+                <h2>Ways to book me</h2>
+                <p class="body">Most bookings are keynotes. Workshops work better when people need to practise, not just listen.</p>
+            </div>
+            <div class="grid grid--4">
+                @foreach ([
+                    ['Keynote', '45 to 90 minutes', 'One clear talk for your event, with examples chosen for your audience and time for questions.'],
+                    ['Workshop', 'Half day or full day', 'People work on their own tasks, on their own laptops. They leave with something started and notes to finish it.'],
+                    ['Panel', '30 to 60 minutes', 'I am happy to join a panel. I will say what I think, keep it friendly, and share the time.'],
+                    ['Guest lecture', '60 to 120 minutes', 'For universities and colleges. Practical sessions that connect the subject to first jobs and real workplaces.'],
+                ] as $format)
+                    <article class="card card--flat">
+                        <p class="small">{{ $format[1] }}</p>
+                        <h3>{{ $format[0] }}</h3>
+                        <p>{{ $format[2] }}</p>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    @if ($talks->isNotEmpty())
+        <section class="section">
+            <div class="wrap">
+                <div class="head">
+                    <h2>Where I have spoken</h2>
+                    <div class="stack">
+                        <p class="body">Ministries, agencies, universities, companies, and once a village ICT centre in Tanjong Sepat. The message changes with the room. The honesty does not.</p>
+                        <a class="link" href="{{ route('talks') }}">See all {{ $talkCount }} sessions</a>
+                        @if ($wall = \App\Support\Series::first())
+                            <a class="link" href="{{ $wall['url'] }}">See the weekly series I ran in 2020 and 2021</a>
+                        @endif
+                    </div>
+                </div>
+                <div class="talk-grid">
+                    @foreach ($talks as $talk)
+                        <x-talk-card :talk="$talk" />
+                    @endforeach
+                </div>
+            </div>
         </section>
+    @endif
 
-        <section class="reference-belief-intro"><div class="reference-wrap reference-belief-grid"><div><p class="reference-kicker reference-kicker-blue">FIVE PILLARS</p><h2>A balanced<br>advantage.</h2></div><p>Technology is powerful. But real progress happens when we combine skills, business, influence, education and character.</p><a href="#programs" class="reference-text-link">Learn more <span>→</span></a></div><div class="reference-wrap reference-icon-grid reference-icon-grid-compact">@foreach ([['⌘','Code','Build, automate, solve.'],['▣','Commerce','Turn ideas into opportunities.'],['♧','Influence','Create positive impact.'],['▢','Education','Make knowledge practical.'],['⌁','Character','Do what’s right. Always.']] as $area)<article><span>{{ $area[0] }}</span><h3>{{ $area[1] }}</h3><p>{{ $area[2] }}</p></article>@endforeach</div></section>
+    <section class="band">
+        <div class="band__media">
+            <x-photo name="method-navigation-map" alt="A hand-drawn map of ideas on paper"
+                     sizes="(max-width: 900px) 100vw, 50vw" />
+        </div>
+        <div class="band__copy stack">
+            <h2>How I prepare a talk</h2>
+            <p class="body">Before I write a single slide, I ask who will be in the room, what they already think, and what decision they face next. Then I decide what they should still remember a month later, and I build the talk around that.</p>
+            <p class="body">It takes longer than reusing an old slide deck. It is also why people can repeat the main points weeks later when you ask them.</p>
+        </div>
+    </section>
 
-        <section class="reference-story-collage"><div class="reference-wrap reference-story-collage-grid"><div class="reference-collage"><img src="{{ asset('assets/img/generated/story-1996-dialup.jpg') }}" alt="Saiffil as a child"><img src="{{ asset('assets/img/generated/work-audience-closeup.jpg') }}" alt="Saiffil speaking"><img src="{{ asset('assets/img/generated/purpose-mountain-reference.png') }}" alt="A person looking over a mountain"></div><div><p class="reference-kicker reference-kicker-blue">MY STORY</p><h2><em>Curiosity</em> got me here.<br>Now, I help others go further.</h2><p>From a curious kid with a computer, to building websites, running businesses, speaking on stages and now helping thousands embrace AI — it’s been a journey of constant learning, unlearning and rebuilding.</p><div class="reference-mini-timeline"><span>1984 <small>Born in Malaysia</small></span><span>1996 <small>First website</small></span><span>2004 <small>Server &amp; systems</small></span><span>2012 <small>Fatherhood</small></span><span>Today <small>Helping others with AI</small></span></div><a href="{{ route('story') }}" class="reference-text-link">Read the full story <span>→</span></a></div></div></section>
+    <section class="section">
+        <div class="wrap split split--top">
+            <div class="stack">
+                <h2>Useful details</h2>
+                <p class="body">The practical side, in one place. If your event runs differently, tell me. Most of this is flexible, and I charge less for schools, public institutions and non-profits.</p>
+                <p class="small">Something else you need to know? <a class="link" href="mailto:{{ config('site.contact.email') }}">Email me</a>.</p>
+            </div>
+            <dl class="kv">
+                <div>
+                    <dt>Based in</dt>
+                    <dd>Shah Alam, Malaysia. I travel across Malaysia and the region.</dd>
+                </div>
+                <div>
+                    <dt>Lead time</dt>
+                    <dd>Four to six weeks is comfortable. Ask anyway if your date is sooner. If I am free, I will do my best.</dd>
+                </div>
+                <div>
+                    <dt>Travel</dt>
+                    <dd>Included within the Klang Valley. For other places I charge travel at cost, agreed with you in writing first.</dd>
+                </div>
+                <div>
+                    <dt>What I need</dt>
+                    <dd>A microphone people can hear, an HDMI connection, and a screen the back row can read. I bring my own adapters and a backup copy of the slides.</dd>
+                </div>
+                <div>
+                    <dt>Languages</dt>
+                    <dd>English and Bahasa Malaysia. Mixed audiences are fine.</dd>
+                </div>
+                <div>
+                    <dt>Recording</dt>
+                    <dd>You may record the session for your own team. Please ask before publishing it anywhere public.</dd>
+                </div>
+            </dl>
+        </div>
+    </section>
 
-        <section class="reference-belief-panel" style="--reference-image: url('{{ asset('assets/img/generated/purpose-mountain-reference.png') }}')"><div class="reference-wrap"><p class="reference-kicker reference-kicker-blue">MY BELIEF</p><h2>Technology should<br>give us more time<br>for what <em>truly matters.</em></h2><p>AI is not just a tool. It’s a multiplier for human potential — more time with family, deeper work, greater creativity and a better Malaysia.</p><a href="{{ route('about') }}" class="reference-button reference-button-dark">My Philosophy <span>→</span></a></div></section>
-
-        <section id="programs" class="reference-program-section"><div class="reference-wrap"><p class="reference-kicker reference-kicker-blue">FEATURED PROGRAMS</p><h2>Practical AI for<br>real people.</h2><p class="reference-section-intro">Hands-on workshops, masterclasses and corporate training designed for immediate impact.</p><a href="#" class="reference-text-link reference-program-link">View all programs <span>→</span></a><div class="reference-program-grid">@foreach ([['program-awakening-reference.png','AI Awakening Masterclass','Turn AI from noise into real advantage.'],['program-brand-reference.png','AI Brand Makeover 101','Build a brand people remember with AI.'],['program-teams-reference.png','Corporate & Government Training','Practical, customised, results-driven.']] as $program)<article><img src="{{ asset('assets/img/generated/'.$program[0]) }}" alt="{{ $program[1] }}"><h3>{{ $program[1] }}</h3><p>{{ $program[2] }}</p><small>◷ Hands-on</small></article>@endforeach</div></div></section>
-
-        <section class="reference-kind-section"><div class="reference-wrap reference-kind-grid"><div><p class="reference-kicker reference-kicker-blue">KIND WORDS</p><h2>Real people.<br>Real progress.</h2><p>I’m grateful to work with amazing people who are open, curious and action-oriented.</p></div><blockquote>“Clear, practical and immediately useful. Our team left the session with clarity and real action plans.”<small>Director<br>Government Agency</small></blockquote><div class="reference-slider-arrows">← &nbsp; →</div></div></section>
-
-        <section class="reference-newsletter-panel" style="--reference-image: url('{{ asset('assets/img/generated/home-cta-reference.png') }}')"><div class="reference-wrap"><p class="reference-kicker reference-kicker-green">LET’S STAY IN TOUCH</p><h2>Ideas, insights and<br>opportunities — straight to<br>your inbox.</h2><form><input type="email" placeholder="Your email address" aria-label="Your email address"><button type="submit" class="reference-button reference-button-dark">Join the Journey <span>→</span></button></form><small>No spam. Just useful updates, upcoming events and new ideas.</small></div></section>
-    </main>
-
-    @include('livewire.partials.reference-footer', ['dark' => true])
+    <section class="section section--muted" id="book">
+        <div class="wrap split split--top">
+            <div class="stack">
+                <h2>Check a date</h2>
+                <p class="body">Tell me about your event. Who is coming, what they already know, and what you want them to do differently afterwards. That is enough for me to reply with a clear yes or no and a price.</p>
+                <p class="body">You will hear back from me personally.</p>
+                <p class="small">Prefer email? Write to <a class="link" href="mailto:{{ config('site.contact.email') }}">{{ config('site.contact.email') }}</a>.</p>
+            </div>
+            <div class="card form-card">
+                <livewire:enquiry-form intent="speak" />
+            </div>
+        </div>
+    </section>
 </div>

@@ -1,17 +1,43 @@
 <?php
 
+use App\Livewire\ArticlePage;
+use App\Livewire\ConsultingPage;
 use App\Livewire\HomePage;
-use App\Livewire\AboutPage;
-use App\Livewire\BlogPage;
+use App\Livewire\PillarPage;
+use App\Livewire\ProgrammesPage;
+use App\Livewire\SeriesPage;
 use App\Livewire\SpeakingPage;
 use App\Livewire\StoryPage;
+use App\Livewire\TalkPage;
+use App\Livewire\TalksPage;
 use App\Livewire\WorkPage;
+use App\Livewire\WritingPage;
 use Illuminate\Support\Facades\Route;
 
+/*
+| Main pages and ways to work together.
+*/
+
 Route::livewire('/', HomePage::class)->name('home');
-Route::livewire('/about', AboutPage::class)->name('about');
+
 Route::livewire('/story', StoryPage::class)->name('story');
 Route::livewire('/work', WorkPage::class)->name('work');
 Route::livewire('/speaking', SpeakingPage::class)->name('speaking');
-Route::livewire('/blog', BlogPage::class)->name('blog');
-Route::redirect('/contact', '/#connect')->name('contact');
+Route::livewire('/talks', TalksPage::class)->name('talks');
+/* Registered before {talk} so a series slug is never mistaken for an engagement. */
+Route::livewire('/talks/series/{series}', SeriesPage::class)->name('series');
+Route::livewire('/talks/{talk}', TalkPage::class)->name('talk');
+Route::livewire('/writing', WritingPage::class)->name('writing');
+Route::livewire('/writing/{post:slug}', ArticlePage::class)->name('article');
+
+Route::livewire('/programmes', ProgrammesPage::class)->name('programmes');
+Route::livewire('/consulting', ConsultingPage::class)->name('consulting');
+
+/* Writing topics. */
+Route::livewire('/pillars/{pillar}', PillarPage::class)->name('pillar');
+
+/* Old addresses, kept so nothing that was ever shared breaks. */
+Route::redirect('/about', '/story');
+Route::redirect('/blog', '/writing');
+Route::redirect('/library', '/writing');
+Route::redirect('/contact', '/#connect');

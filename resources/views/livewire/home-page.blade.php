@@ -1,180 +1,193 @@
-<div class="site-shell" x-data>
-    <div class="scroll-progress" aria-hidden="true"></div>
-
-    <header class="site-header" x-data="{ scrolled: false }" @scroll.window="scrolled = window.scrollY > 20" :class="{ 'is-scrolled': scrolled }">
-        <div class="page-width header-inner">
-            <a href="#top" class="brand" wire:click="closeMenu" aria-label="Saiffil Fariz home">
-                <span class="brand-script">Saiffil</span>
-                <span class="brand-name">SAIFFIL FARIZ</span>
-            </a>
-
-            <nav class="desktop-nav" aria-label="Primary navigation">
-                <a class="active" href="{{ route('home') }}">Home</a>
-                <a href="{{ route('about') }}">About</a>
-                <a href="{{ route('work') }}">Work</a>
-                <a href="{{ route('speaking') }}">Speaking</a>
-                <a href="{{ route('speaking') }}#programs">Programs</a>
-                <a href="{{ route('blog') }}">Blog</a>
-            </nav>
-
-            <a href="#connect" class="button button-dark header-cta">Let’s Connect <span>→</span></a>
-            <button type="button" class="menu-button" wire:click="toggleMenu" :aria-expanded="$wire.menuOpen.toString()" aria-controls="mobile-menu">
-                <span></span><span></span>
-                <span class="sr-only">Toggle menu</span>
-            </button>
+<div>
+    <section class="hero hero--connected">
+        <picture class="hero__visual" aria-hidden="true">
+            <source media="(max-width: 720px)"
+                    srcset="{{ asset('assets/img/generated/home-hero-connected-intelligence-phone.jpg') }}"
+                    width="1122" height="1402">
+            <source media="(max-width: 1100px)"
+                    srcset="{{ asset('assets/img/generated/home-hero-connected-intelligence-tablet.jpg') }}"
+                    width="1448" height="1086">
+            <img class="hero__art" src="{{ asset('assets/img/generated/home-hero-connected-intelligence.webp') }}"
+                 alt="" width="1672" height="941" fetchpriority="high">
+        </picture>
+        <div class="wrap hero__inner">
+            <div class="hero__copy">
+                <p class="hero__eyebrow">Connected intelligence <span>AI · Business · People</span></p>
+                <h1>Outthink.<br>Outcreate.<br><em>Outlead.</em></h1>
+                <p class="lede">
+                    I connect AI, business and people to make work more meaningful—and make room for what only people can do.
+                </p>
+                <div class="hero__actions">
+                    <a class="btn hero__primary" href="{{ route('programmes') }}">Explore the programmes <span aria-hidden="true">↗</span></a>
+                    <a class="btn hero__secondary" href="{{ route('story') }}">My story</a>
+                </div>
+                <p class="hero__proof">{{ config('site.proof') }}</p>
+            </div>
         </div>
+    </section>
 
-        <div id="mobile-menu" class="mobile-menu" @class(['is-open' => $menuOpen])>
-            <a href="{{ route('home') }}" wire:click="closeMenu">Home</a>
-            <a href="{{ route('about') }}" wire:click="closeMenu">About</a>
-            <a href="{{ route('work') }}" wire:click="closeMenu">Work</a>
-            <a href="{{ route('speaking') }}" wire:click="closeMenu">Speaking</a>
-            <a href="{{ route('speaking') }}#programs" wire:click="closeMenu">Programs</a>
-            <a href="{{ route('blog') }}" wire:click="closeMenu">Blog</a>
-            <a href="#connect" wire:click="closeMenu" class="button button-dark">Let’s Connect <span>→</span></a>
+    <div class="wrap connection-rail">
+        <p class="connection-rail__intro">Five worlds. One perspective.</p>
+        <nav class="connection-rail__links" aria-label="Explore the five disciplines">
+            @foreach (config('site.pillars') as $pillar)
+                <a href="{{ route('pillar', $pillar['slug']) }}">{{ $pillar['name'] }}</a>
+            @endforeach
+        </nav>
+    </div>
+
+    <section class="strip">
+        <div class="wrap strip__grid">
+            @foreach (config('site.facts') as $fact)
+                <div>
+                    <b>{{ $fact['value'] }}</b>
+                    <span>{{ $fact['label'] }}</span>
+                    <small>{{ $fact['note'] }}</small>
+                </div>
+            @endforeach
         </div>
-    </header>
+    </section>
 
-    <main id="top">
-        <section class="hero-section" aria-labelledby="hero-title">
-            <div class="hero-art" aria-hidden="true"></div>
-            <div class="page-width hero-layout">
-                <div class="hero-copy reveal-on-load">
-                    <p class="eyebrow">AI · BUSINESS · PEOPLE · A BETTER TOMORROW</p>
-                    <h1 id="hero-title">A More<br>Capable You<br><em>for a Bigger Tomorrow.</em></h1>
-                    <p class="hero-lede">I help individuals and organisations make sense of AI, turn ideas into real value, and move forward with clarity, confidence and action.</p>
-                    <div class="hero-actions">
-                        <a href="#connect" class="button button-dark">Explore My Work <span>→</span></a>
-                        <a href="#purpose" class="button button-light"><span class="play-icon">▶</span> Watch My Story</a>
-                    </div>
-                    <div class="learner-proof">
-                        <div class="avatar-stack" aria-hidden="true">
-                            <span>AR</span><span>KA</span><span>NH</span><span>JM</span><span>SF</span>
+    <section class="section">
+        <div class="wrap">
+            <div class="head">
+                <div>
+                    <h2>What I do</h2>
+                </div>
+                <p class="body">
+                    Most people come to me for one of these three. If you are not sure which one fits, send me an email and tell me what you are trying to get done. I will tell you honestly if I can help.
+                </p>
+            </div>
+
+            <div class="service-list">
+                @foreach ([
+                    ['title' => 'Speaking', 'image' => 'work-large-audience', 'alt' => 'Saiffil speaking to a large audience', 'body' => 'Talks and workshops for companies, agencies and universities. I explain what AI can and cannot do, in plain language, and I show examples from real work.', 'href' => route('speaking'), 'cta' => 'See the talks', 'meta' => '45 to 90 minutes.'],
+                    ['title' => 'Programmes', 'image' => 'editorial-learning-practice-v1', 'alt' => 'Learners working through a practical exercise together', 'body' => 'Small classes of up to 12 people in Kuala Lumpur. You bring a real task from your job and you leave with it working, plus notes your colleagues can follow.', 'href' => route('programmes'), 'cta' => 'See dates and prices', 'meta' => '1 to 2 days.'],
+                    ['title' => 'Consulting', 'image' => 'work-executive-workshop', 'alt' => 'A workshop in progress around a boardroom table', 'body' => 'I sit with your team and help you put AI into one of your processes. We start small, with one process, and only move on when the first one works without me.', 'href' => route('consulting'), 'cta' => 'How this works', 'meta' => 'By arrangement.'],
+                ] as $service)
+                    <article class="service-row">
+                        <div class="service-row__media">
+                            <x-photo :name="$service['image']" :alt="$service['alt']"
+                                     sizes="(max-width: 720px) 100vw, 44vw" />
                         </div>
-                        <div><strong>10,000+ learners</strong><small>Individuals · Teams · Organisations</small></div>
+                        <div class="service-row__copy">
+                            <p class="small">{{ $service['meta'] }}</p>
+                            <h3>{{ $service['title'] }}</h3>
+                            <p>{{ $service['body'] }}</p>
+                            <a class="link" href="{{ $service['href'] }}">{{ $service['cta'] }}</a>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--tight section--muted">
+        <div class="wrap">
+            @php($featuredProgramme = collect(config('site.programmes'))->firstWhere('featured', true))
+            <article class="card card--feature">
+                <div class="card__media">
+                    <x-photo :name="$featuredProgramme['image']" :alt="$featuredProgramme['name']"
+                             sizes="(max-width: 900px) 100vw, 50vw" />
+                </div>
+                <div class="card__body">
+                    <p class="small">Next programme</p>
+                    <h3>{{ $featuredProgramme['name'] }}</h3>
+                    <p>{{ $featuredProgramme['summary'] }}</p>
+                    <div class="tag-row">
+                        <span class="chip chip--accent">{{ $featuredProgramme['format'] }}</span>
+                        <span class="chip">{{ $featuredProgramme['location'] }}</span>
+                        <span class="chip">{{ $featuredProgramme['seats'] }}</span>
+                    </div>
+                    <p class="prog__price">
+                        {{ $featuredProgramme['price'] }}
+                        <span>{{ $featuredProgramme['price_note'] }}</span>
+                    </p>
+                    <p class="caption">{{ $featuredProgramme['dates'] }}</p>
+                    <div class="card__foot">
+                        <a class="btn btn--primary" href="{{ route('programmes') }}">Reserve a seat</a>
                     </div>
                 </div>
-                <div class="hero-side-note handwritten">Better<br>People<br>Better Systems<br>A Kinder Future</div>
-                <div class="hero-paper-note handwritten" aria-label="Ideas, execution, impact — Saiffil">Ideas<br>Execution.<br>Impact<br>— Saiffil</div>
-                <div class="hero-location"><span class="location-dot"></span><span>Shah Alam, Malaysia<br><small>Working on what matters.</small></span></div>
-            </div>
-        </section>
-
-        <section id="purpose" class="purpose-section section-white">
-            <div class="purpose-image image-frame reveal-on-scroll">
-                <img src="{{ asset('assets/img/generated/purpose-mountain-reference.png') }}" alt="A person with a backpack looking over a mountain valley">
-                <span class="handwritten image-note">Same<br>Curiosity.<br>Bigger<br>Possibilities.</span>
-            </div>
-            <div class="purpose-copy section-pad reveal-on-scroll">
-                <p class="eyebrow eyebrow-blue">MY PURPOSE</p>
-                <h2>Technology is a tool.<br>People are the point.</h2>
-                <p class="body-copy">I believe AI should make life better — not more complicated. My work is about helping people learn, apply and benefit from technology in practical, meaningful ways.</p>
-                <div class="purpose-points">
-                    <article><span class="purpose-icon purpose-icon-lamp" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M9 18h6M10 21h4M8.5 14.5a6 6 0 1 1 7 0c-.9.7-1.5 1.6-1.5 2.5h-4c0-.9-.6-1.8-1.5-2.5Z"/></svg></span><h3>Simplify</h3><p>Make complex ideas simple</p></article>
-                    <article><span class="purpose-icon purpose-icon-people" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="9" cy="9" r="3"/><circle cx="16.5" cy="10" r="2.5"/><path d="M3.5 19c.5-3 2.2-4.5 5.5-4.5s5 1.5 5.5 4.5M14 15.5c2.7-.3 4.7.8 5.5 3.5"/></svg></span><h3>Empower</h3><p>Give people practical skills and confidence</p></article>
-                    <article><span class="purpose-icon purpose-icon-impact" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 19V5M4 19h16M7 15l3-4 3 2 5-7M15 6h3v3"/></svg></span><h3>Create Impact</h3><p>Turn knowledge into real results</p></article>
-                </div>
-            </div>
-        </section>
-
-        <section id="pillars" class="pillars-section section-white section-border">
-            <div class="page-width pillars-layout">
-                <div class="pillars-intro section-pad-left reveal-on-scroll">
-                    <p class="eyebrow eyebrow-blue">THE FIVE PILLARS</p>
-                    <h2>A balanced life.<br>A bigger impact.</h2>
-                    <p class="body-copy">These five pillars guide what I do, how I work, and the kind of future I want to build — for myself, my family, and the wider community.</p>
-                </div>
-                <div class="pillar-grid">
-                    <article class="pillar-card reveal-on-scroll"><img src="{{ asset('assets/img/generated/pillar-code-reference.png') }}" alt="A laptop displaying code"><div><h3>Code</h3><p>Build, automate, solve.</p></div></article>
-                    <article class="pillar-card reveal-on-scroll"><img src="{{ asset('assets/img/generated/pillar-commerce-reference.png') }}" alt="Kuala Lumpur skyline at golden hour"><div><h3>Commerce</h3><p>Create value, grow opportunity.</p></div></article>
-                    <article class="pillar-card reveal-on-scroll"><img src="{{ asset('assets/img/generated/pillar-influence-reference.png') }}" alt="A speaker on a purple-lit stage"><div><h3>Influence</h3><p>Share, inspire, move people.</p></div></article>
-                    <article class="pillar-card reveal-on-scroll"><img src="{{ asset('assets/img/generated/pillar-education-reference.png') }}" alt="A stack of books in soft light"><div><h3>Education</h3><p>Learn, teach, lift others.</p></div></article>
-                    <article class="pillar-card reveal-on-scroll"><img src="{{ asset('assets/img/generated/pillar-character-reference.png') }}" alt="A large tree in a sunlit landscape"><div><h3>Character</h3><p>Do what is right, always.</p></div></article>
-                </div>
-            </div>
-        </section>
-
-        <section id="journal" class="journey-section section-white section-border">
-            <div class="page-width journey-layout">
-                <div class="journey-intro section-pad-left reveal-on-scroll">
-                    <p class="eyebrow eyebrow-blue">THE JOURNEY</p>
-                    <h2>From a curious<br>kid to a lifelong<br>learner.</h2>
-                    <p class="body-copy">It started with a computer, a lot of curiosity and a belief that technology can create a better life. The journey continues...</p>
-                </div>
-                <div class="timeline-wrap reveal-on-scroll">
-                    <div class="timeline-line"></div>
-                    <div class="timeline-item"><span class="timeline-dot"></span><strong>1996</strong><h3>First website</h3><p>A curious kid with an internet connection.</p></div>
-                    <div class="timeline-item"><span class="timeline-dot"></span><strong>2004</strong><h3>Server ops</h3><p>Learning, breaking, fixing, and growing through real experience.</p></div>
-                    <div class="timeline-item"><span class="timeline-dot"></span><strong>Business</strong><h3>Building companies</h3><p>Turning ideas into real-world solutions.</p></div>
-                    <div class="timeline-item"><span class="timeline-dot"></span><strong>Today</strong><h3>AI for a bigger tomorrow</h3><p>Sharing what I’ve learned to help more people go further, faster.</p></div>
-                    <span class="handwritten timeline-note">Still<br>Curious.<br>Still<br>Building.</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="programs" class="programs-section section-white section-border">
-            <div class="page-width programs-layout">
-                <div class="programs-intro section-pad-left reveal-on-scroll">
-                    <p class="eyebrow eyebrow-blue">FEATURED PROGRAMS</p>
-                    <h2>Practical AI.<br>Real Results.</h2>
-                    <p class="body-copy">Hands-on learning experiences for individuals, teams and organisations who want to stay ahead in the AI era.</p>
-                    <a href="#connect" class="text-link">View All Programs <span>→</span></a>
-                </div>
-                <div class="program-grid">
-                    <article class="program-card reveal-on-scroll"><img src="{{ asset('assets/img/generated/program-awakening-reference.png') }}" alt="A face illuminated by blue digital light"><div class="program-card-body"><p class="program-meta">4–5 JUNE 2026</p><h3>AI Awakening<br><span>Masterclass</span></h3><p>Understand. Apply. Move Forward.</p><button type="button" aria-label="Learn more about AI Awakening">↗</button></div></article>
-                    <article class="program-card reveal-on-scroll"><img src="{{ asset('assets/img/generated/program-brand-reference.png') }}" alt="A laptop and creative desk in warm light"><div class="program-card-body"><p class="program-meta">16 JUNE 2026</p><h3>AI Brand<br><span>Makeover 101</span></h3><p>Build a stronger brand with AI.</p><button type="button" aria-label="Learn more about AI Brand Makeover 101">↗</button></div></article>
-                    <article class="program-card reveal-on-scroll"><img src="{{ asset('assets/img/generated/program-teams-reference.png') }}" alt="A team workshop with a presentation screen"><div class="program-card-body"><p class="program-meta">FOR ORGANISATIONS</p><h3>AI for Teams<br><span>&amp; Leaders</span></h3><p>Custom training for your organisation.</p><button type="button" aria-label="Learn more about AI for Teams and Leaders">↗</button></div></article>
-                </div>
-            </div>
-        </section>
-
-        <section class="tomorrow-section section-white">
-            <div class="tomorrow-image image-frame reveal-on-scroll"><img src="{{ asset('assets/img/generated/home-beach-reference.png') }}" alt="Two boys running through the sea at sunset"><span class="handwritten image-note tomorrow-note">For my sons,<br>and a brighter<br>tomorrow.</span></div>
-            <div class="tomorrow-copy section-pad reveal-on-scroll"><p class="eyebrow eyebrow-blue">BEYOND WORK</p><h2>A Better Tomorrow<br>Starts with Us.</h2><p class="body-copy">Everything I do is also for my family, my community and the next generation — so they can inherit a world with more opportunity, not more problems.</p><a href="#connect" class="button button-outline-blue">Read My Story <span>→</span></a></div>
-        </section>
-
-        <section class="testimonials-section section-white section-border">
-            <div class="page-width testimonials-layout">
-                <div class="testimonials-intro section-pad-left reveal-on-scroll"><p class="eyebrow eyebrow-blue">KIND WORDS</p><h2>Real People.<br>Real Impact.</h2><p class="body-copy">From students and professionals to business leaders — here’s what they say about the journey.</p><div class="slider-controls"><button wire:click="previousTestimonial" aria-label="Previous testimonial">←</button><span class="slider-dots" aria-label="Testimonial {{ $activeTestimonial + 1 }} of 3"><i class="{{ $activeTestimonial === 0 ? 'is-active' : '' }}"></i><i class="{{ $activeTestimonial === 1 ? 'is-active' : '' }}"></i><i class="{{ $activeTestimonial === 2 ? 'is-active' : '' }}"></i></span><button wire:click="nextTestimonial" aria-label="Next testimonial">→</button></div></div>
-                <div class="testimonial-grid">
-                    @foreach ($testimonials as $index => $testimonial)
-                        <article class="testimonial-card {{ $testimonial['tone'] }} {{ $activeTestimonial === $index ? 'is-featured' : '' }}" wire:key="testimonial-{{ $index }}">
-                            <span class="quote-mark">“</span><blockquote>{{ $testimonial['quote'] }}</blockquote><div class="testimonial-person"><span class="person-avatar">{{ collect(explode(' ', $testimonial['name']))->map(fn ($part) => substr($part, 0, 1))->join('') }}</span><span><strong>{{ $testimonial['name'] }}</strong><small>{{ $testimonial['role'] }}</small></span></div>
-                        </article>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-        <section id="connect" class="connect-section">
-            <div class="connect-background"></div>
-            <div class="page-width connect-content reveal-on-scroll"><p class="eyebrow">LET’S CREATE A BRIGHTER TOMORROW</p><h2>Ideas are better<br>when shared.</h2><p>Have a question, an idea, or want to work together?<br>I’d love to hear from you.</p><div class="hero-actions"><a href="mailto:hello@saiffilfariz.com" class="button button-dark">Let’s Connect <span>→</span></a><a href="#journal" class="button button-light">Follow My Journey</a></div></div><span class="handwritten connect-note">Same<br>Sky<br>Bigger<br>Possibilities.</span>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="page-width footer-inner">
-            <div><div class="footer-script">Saiffil Fariz</div><p>Technologist. Educator. Speaker. Lifelong Learner.</p></div>
-            <nav aria-label="Footer navigation"><a href="#top">Home</a><a href="#purpose">About</a><a href="#journal">Blog</a><a href="#connect">Contact</a><span class="social-link social-youtube" aria-label="YouTube">▶</span><span class="social-link" aria-label="LinkedIn">in</span><span class="social-link social-instagram" aria-label="Instagram">◎</span><a href="#top" class="back-to-top">↑</a></nav>
+            </article>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const progress = document.querySelector('.scroll-progress');
-            const revealItems = document.querySelectorAll('.reveal-on-scroll');
-            const updateProgress = () => {
-                const max = document.documentElement.scrollHeight - window.innerHeight;
-                if (progress) progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
-            };
-            window.addEventListener('scroll', updateProgress, { passive: true });
-            updateProgress();
-            if ('IntersectionObserver' in window) {
-                const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
-                    if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
-                }), { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
-                revealItems.forEach((item) => observer.observe(item));
-            } else { revealItems.forEach((item) => item.classList.add('is-visible')); }
-        });
-    </script>
+    <section class="band">
+        <div class="band__media">
+            <x-photo name="home-beach" alt="Two boys running through the sea at sunset"
+                     sizes="(max-width: 900px) 100vw, 50vw" />
+        </div>
+        <div class="band__copy">
+            <h2>A bit about me</h2>
+            <p class="body">
+                I live in Shah Alam with my wife and our two boys. A lot of how I think about technology comes from home. If a tool saves me an hour, I would rather spend that hour with my family than answer more email.
+            </p>
+            <p class="body">
+                That is also how I teach. The point of using AI well is to get the boring parts done faster, so you have time for the parts that need a person.
+            </p>
+            <a class="link" href="{{ route('story') }}">More about me</a>
+        </div>
+    </section>
+
+    <section class="section section--muted">
+        <div class="wrap">
+            <div class="head">
+                <h2>Recent writing</h2>
+                <div>
+                    <p class="body">I write down what I learn from talks, classes and projects. Most pieces are short and practical. Start with the newest one, or browse by topic.</p>
+                    <a class="link" href="{{ route('writing') }}">All writing</a>
+                </div>
+            </div>
+
+            @if ($featured)
+                <article class="card card--feature">
+                    <div class="card__media">
+                        <x-photo :name="$featured->image ?? 'purpose-mountain'" :alt="$featured->title"
+                                 sizes="(max-width: 900px) 100vw, 50vw" />
+                    </div>
+                    <div class="card__body">
+                        <div class="tag-row">
+                            <span class="chip chip--accent">{{ ucfirst($featured->pillar) }}</span>
+                            <span class="chip">{{ $featured->format }}</span>
+                            <span class="chip">{{ $featured->reading_time }} min</span>
+                        </div>
+                        <h3>{{ $featured->title }}</h3>
+                        <p>{{ $featured->dek }}</p>
+                        <div class="card__foot">
+                            <span>{{ $featured->dateLabel() }}</span>
+                            <a class="link" href="{{ $featured->url() }}">Read</a>
+                        </div>
+                    </div>
+                </article>
+            @endif
+
+            <div class="grid grid--3">
+                @foreach ($latest as $post)
+                    <x-post-card :post="$post" />
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap">
+            <figure class="quote">
+                <blockquote>Clear, practical and immediately useful. Our team left with clarity and a real plan, not a folder of slides.</blockquote>
+                <figcaption>
+                    <b>Aisyah Rahman</b>
+                    Business owner, Shah Alam
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="cta" id="connect">
+        <div class="wrap cta__inner">
+            <h2>Get in touch</h2>
+            <p class="lede">Planning a talk, a class or a project? Or you just have a question about using AI in your work? Send me an email. I read everything myself and I usually reply within two working days.</p>
+            <div class="cta__actions">
+                <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}">Email me</a>
+                <a class="btn btn--ghost" href="{{ route('speaking') }}#book">Invite me to speak</a>
+            </div>
+        </div>
+    </section>
 </div>

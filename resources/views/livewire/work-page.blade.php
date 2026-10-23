@@ -1,26 +1,127 @@
-<div class="reference-site reference-work-page">
-    @include('livewire.partials.reference-header', ['current' => 'work'])
+<div>
+    <section class="phero">
+        <div class="wrap phero__inner">
+            <div class="phero__copy">
+                <p class="phero__eyebrow">Experience across five disciplines</p>
+                <h1>My work</h1>
+                <p class="lede">I have spent thirty years building systems, running a business, teaching and speaking. The work looks different every few years. The test stays the same. Did anyone use it after I left?</p>
+            </div>
+            <div class="phero__media">
+                <x-photo name="work-audience-closeup" alt="A participant listening closely during a session"
+                         sizes="(max-width: 900px) 100vw, 44vw" :eager="true" />
+            </div>
+        </div>
+    </section>
 
-    <main>
-        <section class="reference-hero reference-hero-work">
-            <div class="reference-hero-art" style="--reference-hero-image: url('{{ asset('assets/img/generated/home-hero-reference.png') }}')"></div>
-            <div class="reference-wrap reference-hero-content"><p class="reference-kicker">IDEAS · SYSTEMS · PEOPLE · A BRIGHTER TOMORROW</p><h1>A more capable you<br>creates a <em>brighter<br>world.</em></h1><p class="reference-hero-copy">I’m Saiffil Fariz — an independent speaker, builder and practitioner, helping people and organisations harness AI, systems and creativity to achieve real results.</p><div class="reference-actions"><a href="#work" class="reference-button reference-button-dark">Explore My Story <span>→</span></a><a href="#work" class="reference-button reference-button-light"><b>▷</b> See What I Do</a></div><span class="reference-handnote reference-note-hero">Bigger People<br>Better Systems<br>Brighter Tomorrow</span></div>
-        </section>
+    <section class="strip">
+        <div class="wrap strip__grid">
+            @foreach (config('site.facts') as $fact)
+                <div>
+                    <b>{{ $fact['value'] }}</b>
+                    <span>{{ $fact['label'] }}</span>
+                    <small>{{ $fact['note'] }}</small>
+                </div>
+            @endforeach
+        </div>
+    </section>
 
-        <section id="work" class="reference-work-journey"><div class="reference-wrap reference-work-journey-grid"><div class="reference-collage"><img src="{{ asset('assets/img/generated/story-1996-dialup.jpg') }}" alt="Childhood curiosity at a computer"><img src="{{ asset('assets/img/generated/story-2004-business.jpg') }}" alt="Early work with computers"><img src="{{ asset('assets/img/generated/work-large-audience.jpg') }}" alt="Saiffil speaking to an audience"><span class="reference-handnote">Same curiosity.<br>Different tools.<br>Bigger purpose.</span></div><div class="reference-work-journey-copy"><p class="reference-kicker reference-kicker-blue">THE JOURNEY</p><h2>Same curiosity.<br>Different tools.<br><em>Bigger purpose.</em></h2><p>From a curious kid with a computer, to building websites, businesses and systems, to speaking on AI and digital transformation — it’s always been about one thing: using technology to create opportunities for people.</p><a href="{{ route('story') }}" class="reference-button reference-button-dark">My Full Story <span>→</span></a><span class="reference-handnote">Still learning.<br>Still building.<br>Still excited.</span></div></div></section>
+    <section class="section">
+        <div class="wrap">
+            <div class="head">
+                <h2>Five topics my work covers</h2>
+                <p class="body">I group my talks, classes and writing under five topics. Most projects touch two or three of them at once. If you want to read more, each topic links to the writing on it.</p>
+            </div>
+            <div class="rows">
+                @foreach (config('site.pillars') as $topic)
+                    <div class="rows__item">
+                        <div>
+                            <h3>{{ $topic['name'] }}</h3>
+                            <p>{{ $topic['blurb'] }}</p>
+                        </div>
+                        <div class="rows__meta">
+                            <b>{{ $topic['line'] }}</b>
+                            <a class="link" href="{{ route('pillar', $topic['slug']) }}">Read the writing</a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
-        <section class="reference-pillars-large"><div class="reference-wrap"><p class="reference-kicker reference-kicker-blue">FIVE PILLARS</p><h2>A well-rounded<br>life, a greater impact.</h2><p class="reference-section-intro">These five pillars guide everything I do — from the code I write to the communities I serve. They are not just what I do, but who I am.</p><div class="reference-pillar-image-grid">@foreach ([['pillar-code-reference.png','Code','Build systems that solve real problems.'],['pillar-commerce-reference.png','Commerce','Turn ideas into opportunities.'],['pillar-influence-reference.png','Influence','Share, inspire and move people.'],['pillar-education-reference.png','Education','Make knowledge practical and accessible.'],['pillar-character-reference.png','Character','Do the right thing, always.']] as $pillar)<article><img src="{{ asset('assets/img/generated/'.$pillar[0]) }}" alt="{{ $pillar[1] }}"><h3>{{ $pillar[1] }}</h3><p>{{ $pillar[2] }}</p><button type="button" aria-label="Explore {{ $pillar[1] }}">↗</button></article>@endforeach</div></div></section>
+    <section class="section section--muted">
+        <div class="wrap">
+            <div class="head">
+                <h2>How working with me goes</h2>
+                <p class="body">A one-hour talk and a two-month project follow the same shape. You will always know what happens next and what it costs before we start.</p>
+            </div>
+            <div class="steps">
+                @foreach ([
+                    ['Talk', 'We start with a short call about what you want to get done. No slides. If I am not the right person, I will say so on that call.'],
+                    ['Agree', 'You get a one-page note with what we will do, who is involved, the price and the dates. Nothing is booked until you agree to it.'],
+                    ['Do the work', 'The talk, the class or the project, built around your own material and your own people.'],
+                    ['Hand over', 'You keep the notes, templates and files, written so your team can carry on without me.'],
+                ] as $index => $step)
+                    <div class="steps__item">
+                        <b>{{ $index + 1 }}</b>
+                        <h3>{{ $step[0] }}</h3>
+                        <p>{{ $step[1] }}</p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
-        <section class="reference-split-section reference-home-section"><div class="reference-split-image" style="--reference-image: url('{{ asset('assets/img/generated/home-beach-reference.png') }}')"></div><div class="reference-split-copy"><p class="reference-kicker reference-kicker-blue">BEYOND WORK</p><h2>A meaningful<br>life at home.</h2><p>I’m a father of two, a lifelong learner, and a firm believer that technology should give us more time for what truly matters — family, health and the people we care about.</p><a href="{{ route('about') }}" class="reference-text-link">More About Me <span>→</span></a></div></section>
+    <section class="band">
+        <div class="band__media">
+            <x-photo name="work-training-room" alt="A training room mid-workshop"
+                     sizes="(max-width: 900px) 100vw, 50vw" />
+        </div>
+        <div class="band__copy">
+            <h2>What success looks like</h2>
+            <p class="body">I do not measure a session by how people feel when it ends. I care about two weeks later. Is the report faster? Do people know how to check what the AI gives them? Has the argument moved from whether to use AI to how to use it well?</p>
+            <p class="body">That is why everything ends with something written down and owned by someone on your team.</p>
+        </div>
+    </section>
 
-        <section class="reference-stat-strip reference-stat-strip-wide"><div class="reference-wrap reference-stat-grid"><div><strong>50K+</strong><span>People trained<br>and inspired</span></div><div><strong>100+</strong><span>Talks &amp; workshops</span></div><div><strong>300+</strong><span>Organisations<br>engaged</span></div><div><strong>3</strong><span>Decades of<br>hands-on experience</span></div></div></section>
+    <section class="section">
+        <div class="wrap">
+            <div class="head">
+                <h2>Start here</h2>
+                <p class="body">Pick whichever is closest to what you need. We can always change direction after the first call.</p>
+            </div>
+            <div class="grid grid--3">
+                @foreach ([
+                    ['title' => 'Speaking', 'image' => 'work-large-audience', 'alt' => 'Saiffil speaking to a large audience', 'body' => 'Talks and workshops for companies, agencies and universities. I explain what AI can and cannot do, in plain language, and I show examples from real work.', 'href' => route('speaking'), 'cta' => 'See the talks', 'meta' => '45 to 90 minutes.'],
+                    ['title' => 'Programmes', 'image' => 'editorial-learning-practice-v1', 'alt' => 'Learners working through a practical exercise together', 'body' => 'Small classes of up to 12 people in Kuala Lumpur. You bring a real task from your job and you leave with it working, plus notes your colleagues can follow.', 'href' => route('programmes'), 'cta' => 'See dates and prices', 'meta' => '1 to 2 days.'],
+                    ['title' => 'Consulting', 'image' => 'work-executive-workshop', 'alt' => 'A workshop around a boardroom table', 'body' => 'I sit with your team and help you put AI into one of your processes. We start small, with one process, and only move on when the first one works without me.', 'href' => route('consulting'), 'cta' => 'How this works', 'meta' => 'By arrangement.'],
+                ] as $service)
+                    <article class="card">
+                        <div class="card__media">
+                            <x-photo :name="$service['image']" :alt="$service['alt']"
+                                     sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" />
+                        </div>
+                        <div class="card__body">
+                            <p class="small">{{ $service['meta'] }}</p>
+                            <h3>{{ $service['title'] }}</h3>
+                            <p>{{ $service['body'] }}</p>
+                            <div class="card__foot">
+                                <a class="link" href="{{ $service['href'] }}">{{ $service['cta'] }}</a>
+                            </div>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
-        <section class="reference-talk-section"><div class="reference-wrap reference-talk-grid"><div class="reference-talk-image"><img src="{{ asset('assets/img/generated/work-audience-closeup.jpg') }}" alt="Saiffil speaking on stage"><span class="reference-play-overlay">▷<small>Watch Intro (01:30)</small></span></div><div><p class="reference-kicker reference-kicker-blue">FEATURED</p><h2>Talks that spark<br>action.</h2><p>I speak on AI, digital transformation, business growth and the future of work — always with real examples, practical ideas and a focus on what you can do next.</p><div class="reference-actions"><a href="{{ route('speaking') }}" class="reference-button reference-button-dark">Watch Showreel <span>→</span></a><a href="{{ route('contact') }}" class="reference-text-link">Book Me to Speak <span>→</span></a></div></div></div></section>
-
-        <section class="reference-blog-preview"><div class="reference-wrap"><p class="reference-kicker reference-kicker-blue">LATEST FROM THE BLOG</p><h2>Ideas for a more<br>capable tomorrow.</h2><a href="{{ route('blog') }}" class="reference-text-link reference-blog-link">View All Articles <span>→</span></a><div class="reference-article-grid"><article><img src="{{ asset('assets/img/generated/purpose-mountain-reference.png') }}" alt="Sunrise over a mountain valley"><small>AI</small><h3>AI for Real People<br>(Not Just Tech People)</h3><p>How to start, what to focus on, and avoid the common traps.</p></article><article><img src="{{ asset('assets/img/generated/program-brand-reference.png') }}" alt="A simple desk system"><small>PRODUCTIVITY</small><h3>A Simple System<br>for a Focused Life</h3><p>Tools, habits and mindset that help me stay on track.</p></article><article><img src="{{ asset('assets/img/generated/pillar-commerce-reference.png') }}" alt="Kuala Lumpur skyline"><small>BUSINESS</small><h3>Opportunities in<br>AI for Malaysian SMEs</h3><p>Why now is the time, and how to get started.</p></article></div></div></section>
-
-        <section class="reference-cta-panel reference-cta-wide" style="--reference-image: url('{{ asset('assets/img/generated/home-cta-reference.png') }}')"><div class="reference-wrap reference-cta-content"><p class="reference-kicker reference-kicker-green">LET’S CREATE A BRIGHTER TOMORROW</p><h2>Have a question, an idea<br>or just want to say hello?</h2><p>Let’s start a conversation. You never know where it might lead.</p><a href="{{ route('contact') }}" class="reference-button reference-button-dark">Get in Touch <span>→</span></a></div><span class="reference-handnote">Better People.<br>Brighter Tomorrow.</span></section>
-    </main>
-
-    @include('livewire.partials.reference-footer')
+    <section class="cta">
+        <div class="wrap cta__inner">
+            <h2>Get in touch</h2>
+            <p class="lede">Tell me what you are working on. A short call is usually enough to know if I can help. If I cannot, I will try to point you to someone who can.</p>
+            <div class="cta__actions">
+                <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}">Email me</a>
+                <a class="btn btn--ghost" href="{{ route('story') }}">About me</a>
+            </div>
+        </div>
+    </section>
 </div>

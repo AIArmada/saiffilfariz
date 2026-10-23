@@ -3,9 +3,13 @@
 namespace App\Livewire;
 
 use Livewire\Attributes\Layout;
+use Livewire\Component;
 
 #[Layout('layouts.app')]
-class WorkPage extends ContentPage
+class WorkPage extends Component
 {
-    protected string $template = 'livewire.work-page';
+    public function render()
+    {
+        return view('livewire.work-page');
+    }
 }

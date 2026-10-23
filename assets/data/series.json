@@ -1,0 +1,352 @@
+{
+  "updated": "2026-10-19",
+  "note": "Multi-session series — the long runs that don't fit the one-off engagement list. Each episode is one announcement poster: drop the poster in assets/img/engagements/<poster_dir>/, add an entry to episodes, then run `python3 tools/optimise-series.py`. Titles are transcribed exactly as they appear on the poster; \"en\" is an English gloss shown in the viewer and only where the printed title is not already English. A missing row means a missing poster, not a missing session — the copy on the site says so, so never let a count read as a total number of sessions run.",
+  "themes": {
+    "mindset": "Mindset",
+    "sales": "Sales & follow-up",
+    "business": "Business & digital",
+    "leadership": "Leadership & voice",
+    "faith": "Faith & meaning",
+    "learning": "Learning"
+  },
+  "series": [
+    {
+      "slug": "talk-with-ceo",
+      "name": "Talk With CEO",
+      "org": "Maxxima Resources (M) Sdn Bhd",
+      "org_short": "Maxxima",
+      "role": "Host and speaker, every episode",
+      "kicker": "Before the AI work",
+    "lede": "From July 2020 to August 2021 I ran a weekly live session on Zoom, at nine at night, in Bahasa Malaysia and Bahasa Indonesia. Each session had an announcement poster. Forty-six posters survived, and they are collected here.",
+    "summary": "A weekly live session for entrepreneurs, small business owners and sales agents. We covered sales, follow-up, closing and mindset. The basics of running something small, one topic a week.",
+      "why": [
+      "Most people meet me through my AI talks. This series is where I learned to teach, a few years before that.",
+      "For over a year I explained how to make the second phone call, how to follow up without sounding desperate, and how to keep going when sales are slow. The audience was small business owners and agents. They asked direct questions and expected answers they could use the next morning."
+      ],
+    "format": "Live on Zoom. 8pm to 10pm in 2020, 9pm on Saturdays in 2021.",
+      "lang": "Bahasa Malaysia and Bahasa Indonesia",
+      "audience": "Entrepreneurs, small-business owners, agents and distributors",
+      "date_start": "2020-07-10",
+      "date_end": "2021-08-16",
+      "poster_dir": "talk-with-ceo-series",
+      "episodes": [
+        {
+          "poster": "05",
+          "date": "2020-07-10",
+          "theme": "mindset",
+          "title": "Hidup Tanpa Batas — Berubah atau Punah",
+          "en": "A life without limits — change, or perish"
+        },
+        {
+          "poster": "09",
+          "date": "2020-07-17",
+          "theme": "sales",
+          "title": "Cara Efektif Mengetahui Keinginan (Wants) dan Kebutuhan (Needs)",
+          "en": "How to read what people want, and what they actually need"
+        },
+        {
+          "poster": "10",
+          "date": "2020-07-24",
+          "theme": "business",
+          "title": "Dari Bisnis Kecil ke Bisnis Besar",
+          "en": "From a small business to a big one"
+        },
+        {
+          "poster": "11",
+          "date": "2020-08-15",
+          "theme": "mindset",
+          "title": "Bertahan atau Menikmati Hidup",
+          "en": "Endure it, or enjoy it"
+        },
+        {
+          "poster": "12",
+          "date": "2020-08-21",
+          "theme": "mindset",
+          "title": "Membangun Mental Juara",
+          "en": "Building a champion's mentality"
+        },
+        {
+          "poster": "16",
+          "date": "2020-10-09",
+          "theme": "sales",
+          "title": "Cara Jualan yang Efektif",
+          "en": "How to sell effectively"
+        },
+        {
+          "poster": "15",
+          "date": "2020-10-16",
+          "theme": "learning",
+          "title": "Cara Jitu Mendapatkan Nilai 100 dalam Matematika",
+          "en": "The sure way to a perfect 100 in mathematics"
+        },
+        {
+          "poster": "14",
+          "date": "2020-11-11",
+          "theme": "mindset",
+          "title": "Focus"
+        },
+        {
+          "poster": "13",
+          "date": "2020-11-20",
+          "theme": "mindset",
+          "title": "Growth Mindset"
+        },
+        {
+          "poster": "17",
+          "date": "2020-11-23",
+          "theme": "leadership",
+          "title": "Listen / Dengar",
+          "en": "Listen"
+        },
+        {
+          "poster": "18",
+          "date": "2020-11-30",
+          "theme": "mindset",
+          "title": "I Can, I Will, I Must",
+          "en": "Saya bisa. Saya pasti bisa. Saya harus bisa."
+        },
+        {
+          "poster": "19",
+          "date": "2020-12-07",
+          "theme": "mindset",
+          "title": "Dunia Belum Berakhir",
+          "en": "The world is not over yet"
+        },
+        {
+          "poster": "20",
+          "date": "2020-12-14",
+          "theme": "mindset",
+          "title": "Reborn / Terlahir Kembali",
+          "en": "Born again"
+        },
+        {
+          "poster": "23",
+          "date": "2020-12-21",
+          "theme": "mindset",
+          "title": "Melihat",
+          "en": "Seeing"
+        },
+        {
+          "poster": "24",
+          "date": "2020-12-28",
+          "theme": "mindset",
+          "title": "Choice / Pilihan",
+          "en": "Choice"
+        },
+        {
+          "poster": "22",
+          "date": "2021-01-04",
+          "theme": "faith",
+          "title": "Forgiveness / Memaafkan",
+          "en": "Forgiveness"
+        },
+        {
+          "poster": "21",
+          "date": "2021-01-11",
+          "theme": "business",
+          "title": "Money Mindset"
+        },
+        {
+          "poster": "25",
+          "date": "2021-01-25",
+          "theme": "sales",
+          "title": "The Power of Follow Up — Kekuatan Menghubungi",
+          "en": "The power of follow-up — the strength of reaching out"
+        },
+        {
+          "poster": "26",
+          "date": "2021-02-01",
+          "theme": "sales",
+          "title": "The Art of Closing / Seni Closing",
+          "en": "The art of closing"
+        },
+        {
+          "poster": "27",
+          "date": "2021-02-08",
+          "theme": "business",
+          "title": "The Miracle of Duplication / Keajaiban Duplikasi",
+          "en": "The miracle of duplication"
+        },
+        {
+          "poster": "28",
+          "date": "2021-02-15",
+          "theme": "sales",
+          "title": "Rahasia Meledakkan Follow Up, Closing dan Duplikasi 10× Lipat",
+          "en": "The secret to exploding follow-up, closing and duplication tenfold"
+        },
+        {
+          "poster": "46",
+          "date": "2021-02-22",
+          "theme": "sales",
+          "title": "Rahasia Prospecting Powerfull",
+          "en": "The secret to powerful prospecting"
+        },
+        {
+          "poster": "45",
+          "date": "2021-03-29",
+          "theme": "mindset",
+          "title": "Shape Your Result / Bentuk Hasil",
+          "en": "Shape your result"
+        },
+        {
+          "poster": "30",
+          "date": "2021-04-05",
+          "theme": "mindset",
+          "title": "Rahasia Kebiasaan / Habit Orang Hebat",
+          "en": "The habits of exceptional people"
+        },
+        {
+          "poster": "29",
+          "date": "2021-04-12",
+          "theme": "faith",
+          "title": "Surga-Surga yang Mengalir Sungai-Sungai di Bawahnya",
+          "en": "The gardens beneath which rivers flow"
+        },
+        {
+          "poster": "44",
+          "date": "2021-04-19",
+          "theme": "leadership",
+          "title": "Empathy & Perspective — 2 Hal yang Harus Dimiliki Leader Hebat",
+          "en": "Two things every great leader needs: empathy and perspective"
+        },
+        {
+          "poster": "43",
+          "date": "2021-04-26",
+          "theme": "mindset",
+          "title": "Clearing the Roadblock / Menghilangkan Tabir Rintangan",
+          "en": "Clearing the roadblock"
+        },
+        {
+          "poster": "42",
+          "date": "2021-05-03",
+          "theme": "mindset",
+          "title": "Dari Bumi ke Angkasa",
+          "en": "From earth to the sky"
+        },
+        {
+          "poster": "41",
+          "date": "2021-05-10",
+          "theme": "leadership",
+          "title": "Bagaimana Menjadi Master dalam Seni Berbicara di Depan Umum",
+          "en": "How to master speaking in public"
+        },
+        {
+          "poster": "40",
+          "date": "2021-05-24",
+          "theme": "sales",
+          "title": "Marketing Tips di Masa Pandemi Corona",
+          "en": "Marketing tips during the coronavirus pandemic"
+        },
+        {
+          "poster": "39",
+          "date": "2021-05-31",
+          "theme": "mindset",
+          "title": "Dari Angkasa Kembali ke Bumi",
+          "en": "From the sky back to earth"
+        },
+        {
+          "poster": "01",
+          "date": "2021-06-05",
+          "theme": "mindset",
+          "title": "Memecah Kebuntuan di Waktu Pandemik",
+          "en": "Breaking the deadlock in a pandemic"
+        },
+        {
+          "poster": "38",
+          "date": "2021-06-07",
+          "theme": "sales",
+          "title": "Sales / Jualan — Semuanya yang Anda Lakukan Adalah Sales",
+          "en": "Sales — everything you do is selling"
+        },
+        {
+          "poster": "02",
+          "date": "2021-06-12",
+          "theme": "sales",
+          "title": "The Power of Follow Up"
+        },
+        {
+          "poster": "36",
+          "date": "2021-06-14",
+          "theme": "mindset",
+          "title": "Ada Apa Dengan Nge'Gym'",
+          "en": "What's the deal with the gym?"
+        },
+        {
+          "poster": "37",
+          "date": "2021-06-21",
+          "theme": "leadership",
+          "title": "Start With Why / Mulailah Dengan Mengapa",
+          "en": "Start with why"
+        },
+        {
+          "poster": "03",
+          "date": "2021-06-26",
+          "theme": "mindset",
+          "title": "Kesetiaanmu, Keghairahanku",
+          "en": "Your loyalty, my passion"
+        },
+        {
+          "poster": "35",
+          "date": "2021-06-28",
+          "theme": "business",
+          "title": "Sepatu, Topi & Kacamata",
+          "en": "Shoes, hat and glasses"
+        },
+        {
+          "poster": "04",
+          "date": "2021-07-03",
+          "theme": "mindset",
+          "title": "Shape Your Result"
+        },
+        {
+          "poster": "08",
+          "date": "2021-07-10",
+          "theme": "mindset",
+          "title": "Change Happens in a Moment"
+        },
+        {
+          "poster": "07",
+          "date": "2021-07-24",
+          "theme": "learning",
+          "title": "Tips Mendapat 100% dalam Matematik Tambahan",
+          "en": "How to get 100% in additional mathematics"
+        },
+        {
+          "poster": "34",
+          "date": "2021-07-26",
+          "theme": "sales",
+          "title": "Pondasi Social Media Marketing (Part 4)",
+          "en": "Foundations of social media marketing, part 4"
+        },
+        {
+          "poster": "32",
+          "date": "2021-08-02",
+          "theme": "mindset",
+          "title": "Becoming Elite / Menjadi Pribadi yang Elit",
+          "en": "Becoming an elite person"
+        },
+        {
+          "poster": "06",
+          "date": "2021-08-07",
+          "theme": "mindset",
+          "title": "Become an Elite / Menjadi Golongan Elit",
+          "en": "Becoming the elite"
+        },
+        {
+          "poster": "33",
+          "date": "2021-08-09",
+          "theme": "business",
+          "title": "Rahasia Googling",
+          "en": "The secret of googling"
+        },
+        {
+          "poster": "31",
+          "date": "2021-08-16",
+          "theme": "business",
+          "title": "Pondasi Nama Domain, Website & Hosting",
+          "en": "Foundations: name, domain, website and hosting"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+ "editorial-brand-studio-v1": {
+  "h": 1024,
+  "variants": [
+   480,
+   800,
+   1200,
+   1536
+  ],
+  "w": 1536
+ },
+ "editorial-capability-v1": {
+  "h": 1024,
+  "variants": [
+   480,
+   800,
+   1200,
+   1536
+  ],
+  "w": 1536
+ },
+ "editorial-confluence-v1": {
+  "h": 1024,
+  "variants": [
+   480,
+   800,
+   1200,
+   1536
+  ],
+  "w": 1536
+ },
+ "editorial-fieldnotes-v1": {
+  "h": 1024,
+  "variants": [
+   480,
+   800,
+   1200,
+   1536
+  ],
+  "w": 1536
+ },
+ "editorial-learning-practice-v1": {
+  "h": 1024,
+  "variants": [
+   480,
+   800,
+   1200,
+   1536
+  ],
+  "w": 1536
+ },
+ "editorial-workflow-mapping-v1": {
+  "h": 1024,
+  "variants": [
+   480,
+   800,
+   1200,
+   1536
+  ],
+  "w": 1536
+ },
+ "home-audience": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "home-beach": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "home-cta": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "home-editorial-portrait": {
+  "h": 1402,
+  "variants": [
+   480,
+   800
+  ],
+  "w": 1122
+ },
+ "home-hero": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "method-navigation-map": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "pillar-character": {
+  "h": 1086,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1448
+ },
+ "pillar-code": {
+  "h": 1086,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1448
+ },
+ "pillar-commerce": {
+  "h": 1086,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1448
+ },
+ "pillar-education": {
+  "h": 1086,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1448
+ },
+ "pillar-influence": {
+  "h": 1086,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1448
+ },
+ "program-awakening": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "program-brand": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "program-teams": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "purpose-mountain": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "story-1988-computer": {
+  "h": 1086,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1448
+ },
+ "story-1996-dialup": {
+  "h": 1086,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1448
+ },
+ "story-2004-business": {
+  "h": 1086,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1448
+ },
+ "story-airline": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "story-communities": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "story-present-portrait": {
+  "h": 1086,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1448
+ },
+ "story-reflective-closing": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "talk-jdn-ai-evolution-posdigicert": {
+  "h": 1200,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1600
+ },
+ "talk-matrade-celik-ai-2026-08": {
+  "h": 1066,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1600
+ },
+ "talk-matrade-celik-ai-2026-08-letter": {
+  "h": 1290,
+  "variants": [
+   480,
+   800
+  ],
+  "w": 914
+ },
+ "work-audience-closeup": {
+  "h": 1024,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1536
+ },
+ "work-executive-workshop": {
+  "h": 1024,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1536
+ },
+ "work-large-audience": {
+  "h": 941,
+  "variants": [
+   480,
+   800,
+   1200,
+   1600
+  ],
+  "w": 1672
+ },
+ "work-training-room": {
+  "h": 1024,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1536
+ }
+}
