@@ -2,9 +2,9 @@
     <section class="phero">
         <div class="wrap phero__inner">
             <div class="phero__copy">
-                <p class="phero__eyebrow">Always learning. Still building.</p>
+                <p class="phero__eyebrow">A story that starts in 1988</p>
                 <h1>About me</h1>
-                <p class="lede">I first went online in 1996, on a dial-up modem in Shah Alam. The connection was slow and the phone bill was not small, but I was hooked. Almost thirty years later, my work is still about the same thing. I help people use new technology without feeling lost.</p>
+                <p class="lede">My first contact with technology was a VTech Talking WhizKid in 1988. I went online in 1996. Today, I connect AI, business and people, helping them understand the tools and put them to use.</p>
             </div>
             <div class="phero__media">
                 <x-photo name="story-present-portrait" alt="Portrait of Saiffil Fariz"
@@ -25,17 +25,37 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="first-contact">
         <div class="wrap split">
-            <div class="band__media band__media--contained">
-                <x-photo name="story-1988-computer" alt="An early home computer on a desk"
-                         sizes="(max-width: 900px) 100vw, 50vw" />
+            <div class="origin-archive">
+                <figure class="origin-photo">
+                    <div class="origin-photo__image">
+                        <x-photo name="story-vtech-whizkid-device-reference-v1"
+                                 alt="VTech Talking WhizKid with its cream folding case, LCD screen, colourful keyboard and printed learning cards"
+                                 sizes="(max-width: 390px) 80vw, 337px" />
+                    </div>
+                    <figcaption class="caption">
+                        The Talking WhizKid, from <a href="https://www.hkexnews.hk/listedco/listconews/sehk/2026/0618/2026061800748.pdf#page=25" target="_blank" rel="noopener">VTech’s company archive</a>.
+                        A reference example of the model I had.
+                    </figcaption>
+                </figure>
+                <figure class="origin-reference">
+                    <x-photo name="story-vtech-whizkid-box-reference-v1"
+                             alt="Original boxed Talking Whiz-Kid in The Strong museum collection"
+                             sizes="144px" />
+                    <figcaption class="caption">
+                        Original packaging, <a href="https://artsandculture.google.com/asset/electronic-learning-game-talking-whiz-kid-vtech/mQGp2kNwl067rQ?hl=en" target="_blank" rel="noopener">The Strong National Museum of Play</a>.
+                        Gift of Sara Zielinski · object 116.4187.
+                    </figcaption>
+                </figure>
             </div>
             <div class="stack">
-                <h2>How I got here</h2>
-                <p class="body">As a kid I liked taking things apart to see how they worked. Putting them back together took longer to learn. When the internet reached Malaysia, I could see it would change how people work and do business. I could also see that most people around me had no easy way in.</p>
-                <p class="body">So I started there. First I built websites and systems. Then I ran a small business and learned what owners actually worry about. Later I began teaching in classrooms, workshops and boardrooms. These days most of the teaching is about AI.</p>
-                <p class="body">The tools keep changing. The job stays the same. Explain things clearly, use real examples, and make sure people can do it themselves after I leave.</p>
+                <p class="label accent">1988 · The first encounter</p>
+                <h2>It started with a Talking WhizKid.</h2>
+                <p class="body">In 1988, I had a VTech Talking WhizKid. That was my first contact with technology, eight years before I went online.</p>
+                <p class="body">It was a learning computer with a keyboard, a small LCD screen, a talking tutor and printed picture cards. Maths, spelling and music were things you could interact with.</p>
+                <p class="body">Technology entered my life through a tool made for learning. Today, helping people learn to use technology is a large part of my work.</p>
+                <p class="small origin-note">VTech introduced the Talking Whiz Kid in 1987. The year 1988 is when it became part of my story. <a href="https://www.vtech.com/en/about-us/history-milestones/" target="_blank" rel="noopener">VTech’s history</a> and the <a href="https://www.manualowl.com/m/Vtech/Talking-Whiz-Kid/Manual/197427" target="_blank" rel="noopener">original user manual</a> document the device.</p>
             </div>
         </div>
     </section>
@@ -45,13 +65,14 @@
             <div class="head head--wide">
                 <h2>The short history</h2>
             </div>
-            <div class="timeline timeline--five">
+            <div class="timeline timeline--six">
                 @foreach ([
-                    ['1996', 'First connection', 'Dial-up internet at home. Slow, noisy, and enough to change what I wanted to do with my life.'],
+                    ['1988', 'First contact', 'A VTech Talking WhizKid was my first encounter with technology. A learning computer came before the internet.'],
+                    ['1996', 'Going online', 'My first internet connection, on dial-up in Shah Alam. A new way to find information and connect with people.'],
                     ['2004', 'Building', 'Websites, servers and systems for clients. Work that had to keep running on Monday morning, not just look good in a demo.'],
                     ['2012', 'Business', 'Running a small company of my own. I learned where money and time actually go in a small team.'],
                     ['2020', 'Teaching', 'Weekly live sessions, workshops and guest lectures. A lot of it for people who had been told technology was not for them.'],
-                    ['Now', 'Talks, classes and projects', 'Keynotes, training programmes and project work with companies, agencies and universities in Malaysia and the region.'],
+                    ['Today', 'Connecting the pieces', 'AI, business and people, brought together through talks, programmes and consulting. The work starts with what someone needs to learn or get done.'],
                 ] as $chapter)
                     <div class="timeline__item">
                         <b>{{ $chapter[0] }}</b>
@@ -60,6 +81,15 @@
                     </div>
                 @endforeach
             </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap--narrow stack">
+            <h2>From learning to building</h2>
+            <p class="body">The internet came next, in 1996. Then came websites and systems, running a business, and teaching in classrooms, workshops and boardrooms.</p>
+            <p class="body">Working across those settings taught me to look beyond the tool. A system has to work for the people using it. A business has to make the time and cost worthwhile. A class has to leave someone able to do something.</p>
+            <p class="body">That is how I approach AI today. Start with real work, explain the tools clearly, and help people build enough understanding to carry on for themselves.</p>
         </div>
     </section>
 
@@ -97,7 +127,7 @@
                 </div>
                 <div>
                     <dt>Still true</dt>
-                    <dd>I still take things apart to see how they work. I am better at putting them back together now.</dd>
+                    <dd>I am still learning. There is always another tool to understand, and another way to make it useful.</dd>
                 </div>
             </dl>
         </div>

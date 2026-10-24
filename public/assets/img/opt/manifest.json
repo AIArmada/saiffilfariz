@@ -268,6 +268,29 @@
   ],
   "w": 1672
  },
+ "story-vtech-whizkid-box-reference-v1": {
+  "credit": "The Strong National Museum of Play; gift of Sara Zielinski; object 116.4187",
+  "h": 390,
+  "note": "Archival reference photograph, not the owner's personal unit.",
+  "source": "https://artsandculture.google.com/asset/electronic-learning-game-talking-whiz-kid-vtech/mQGp2kNwl067rQ?hl=en",
+  "variants": [
+   320,
+   480,
+   512
+  ],
+  "w": 512
+ },
+ "story-vtech-whizkid-device-reference-v1": {
+  "h": 251,
+  "variants": [
+   240,
+   337
+  ],
+  "w": 337,
+  "credit": "VTech Holdings Limited, Annual Report 2026, printed page 23 (PDF page 25).",
+  "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0618/2026061800748.pdf#page=25",
+  "note": "Manufacturer archival product photograph, extracted from the report without retouching. A reference example, not the owner’s personal unit."
+ },
  "talk-jdn-ai-evolution-posdigicert": {
   "h": 1200,
   "variants": [

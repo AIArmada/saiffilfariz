@@ -16,7 +16,7 @@
 return [
 
     'facts' => [
-        ['value' => '30', 'label' => 'years with technology', 'note' => 'since 1996'],
+        ['value' => '1988', 'label' => 'first contact with technology', 'note' => 'VTech Talking WhizKid'],
         ['value' => '100+', 'label' => 'talks and workshops', 'note' => 'Malaysia and the region'],
         ['value' => '300+', 'label' => 'organisations', 'note' => 'public, private, academic'],
         ['value' => '9', 'label' => 'universities', 'note' => 'guest lectures and programmes'],
