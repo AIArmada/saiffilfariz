@@ -99,3 +99,40 @@ if (lightbox && typeof lightbox.showModal === 'function') {
     });
   }
 }
+
+const creationGallery = document.querySelector('[data-creation-gallery]');
+
+if (creationGallery) {
+  const filters = creationGallery.querySelector('[data-creation-filters]');
+  const buttons = [...creationGallery.querySelectorAll('[data-creation-filter]')];
+  const creations = [...creationGallery.querySelectorAll('[data-creation-formats]')];
+  const result = creationGallery.querySelector('[data-creation-result]');
+
+  filters.hidden = false;
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const medium = button.dataset.creationFilter;
+      let visible = 0;
+
+      creations.forEach((creation) => {
+        const matches = medium === 'all' || creation.dataset.creationFormats.split(' ').includes(medium);
+        creation.hidden = !matches;
+        if (matches && creation.hasAttribute('data-creation')) {
+          visible++;
+        }
+      });
+
+      buttons.forEach((filter) => filter.setAttribute('aria-pressed', String(filter === button)));
+      result.textContent = `${visible} ${visible === 1 ? 'project' : 'projects'} shown. ${button.textContent.trim()}.`;
+    });
+  });
+}
+
+document.querySelectorAll('audio').forEach((player) => {
+  player.addEventListener('play', () => {
+    document.querySelectorAll('audio').forEach((other) => {
+      if (other !== player) other.pause();
+    });
+  });
+});

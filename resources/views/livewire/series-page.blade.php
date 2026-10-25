@@ -1,3 +1,5 @@
+<x-slot:description>{{ $series['lede'] }}</x-slot:description>
+
 @php
     $facetUrl = function (string $key, string $value) use ($series, $year, $theme) {
         $query = array_filter(['year' => $year, 'theme' => $theme]);

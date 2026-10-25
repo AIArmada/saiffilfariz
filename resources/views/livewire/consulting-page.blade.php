@@ -1,10 +1,12 @@
+<x-slot:description>Improve business processes with AI, useful software and integrations. Work with Saiffil Fariz to connect the people, the work and a clear outcome.</x-slot:description>
+
 <div>
     <section class="phero">
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">From possibility to practice</p>
                 <h1>Consulting for teams</h1>
-                <p class="lede">I help teams put AI into work they already do. Most projects I see do not fail because the software is weak. They stall because nobody agreed on what done means, or because the staff who must use it were never involved. We fix those parts first.</p>
+                <p class="lede">I help teams connect AI, business processes and the systems they use every day. We start with the people and the work, agree on what better looks like, then make it happen through practical advice, a clearer workflow or a software build.</p>
                 <div class="hero__actions">
                     <a class="btn btn--primary" href="#talk">Tell me about your project</a>
                     <a class="btn btn--ghost" href="#shapes">How engagements work</a>
@@ -21,7 +23,7 @@
         <div class="wrap">
             <div class="head">
                 <h2>Where projects usually stall</h2>
-                <p class="body">I have seen these four patterns in well-run organisations. None of them needs more software. Each one needs a clearer process and an owner.</p>
+                <p class="body">I have seen these four patterns in well-run organisations. A clearer process and an owner come first. Then we can judge where training, an integration or custom software will make the improvement stick.</p>
             </div>
             <div class="grid grid--4">
                 @foreach ([
@@ -49,7 +51,7 @@
                 @foreach ([
                     ['Pick one process', 'For about two weeks I sit in, ask questions and watch how work really flows. We choose one process with a clear owner and a cost we can measure.'],
                     ['Test it small', 'We build a working version on your real data within weeks. If it does not save time, we stop and I will tell you why.'],
-                    ['Hand it over', 'Your team gets the documentation, the prompts and the list of exceptions. The process runs without me.'],
+                    ['Hand it over', 'Your team gets the documentation, any prompts and source code, and a clear view of exceptions and ownership.'],
                     ['Then the next one', 'Only when the first process is running well do we choose a second one.'],
                 ] as $index => $step)
                     <div class="steps__item">
@@ -84,7 +86,7 @@
                 @foreach ([
                     ['The sprint', 'Two to four weeks to test one process. You get a working prototype and a written recommendation. Sometimes the honest answer is do not proceed, and I will say so.', 'From RM 18,000', '2 to 4 weeks'],
                     ['Monthly advice', 'A regular session with the team doing the work. You get a second opinion before you spend the budget, not after.', 'From RM 4,500 per month', '3 to 12 months'],
-                    ['The build', 'When something needs to be built and nobody inside can build it. I scope it like software, deliver it, and hand over the source code.', 'Quoted per project', '6 to 16 weeks'],
+                    ['The build', 'A website, application, custom system or integration shaped around the process. I scope the work, build it and hand over the source code and setup notes.', 'Quoted per project', '6 to 16 weeks'],
                 ] as $shape)
                     <div class="rows__item">
                         <div>
@@ -99,6 +101,7 @@
                 @endforeach
             </div>
             <p class="small note">Schools, public institutions and non-profits pay less. Ask me and I will quote for your situation.</p>
+            <a class="link" href="{{ route('build') }}">Explore software services</a>
         </div>
     </section>
 

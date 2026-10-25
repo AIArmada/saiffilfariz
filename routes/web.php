@@ -1,7 +1,10 @@
 <?php
 
 use App\Livewire\ArticlePage;
+use App\Livewire\BuildPage;
 use App\Livewire\ConsultingPage;
+use App\Livewire\CreationPage;
+use App\Livewire\CreationsPage;
 use App\Livewire\HomePage;
 use App\Livewire\PillarPage;
 use App\Livewire\ProgrammesPage;
@@ -22,6 +25,9 @@ Route::livewire('/', HomePage::class)->name('home');
 
 Route::livewire('/story', StoryPage::class)->name('story');
 Route::livewire('/work', WorkPage::class)->name('work');
+Route::livewire('/build', BuildPage::class)->name('build');
+Route::livewire('/creations', CreationsPage::class)->name('creations');
+Route::livewire('/creations/{slug}', CreationPage::class)->name('creation');
 Route::livewire('/speaking', SpeakingPage::class)->name('speaking');
 Route::livewire('/talks', TalksPage::class)->name('talks');
 /* Registered before {talk} so a series slug is never mistaken for an engagement. */

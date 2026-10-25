@@ -1,3 +1,5 @@
+<x-slot:description>Learn to use AI on real work with Saiffil Fariz. Practical individual and team programmes that connect technology, business and people.</x-slot:description>
+
 <div>
     <section class="phero phero--wide">
         <div class="wrap phero__inner">
@@ -130,6 +132,10 @@
                 <div>
                     <dt>Is it mostly lectures?</dt>
                     <dd>No. About 70 percent of the time you are working. I explain what you need, then you try it.</dd>
+                </div>
+                <div>
+                    <dt>Can you help us turn this into a working system?</dt>
+                    <dd>Yes. Alongside training, I build websites, applications, custom systems and integrations. <a class="link" href="{{ route('build') }}">Explore software services</a>, or <a class="link" href="{{ route('consulting') }}">explore consulting</a> if you want to work through the process together.</dd>
                 </div>
                 <div>
                     <dt>Can my company pay by invoice?</dt>

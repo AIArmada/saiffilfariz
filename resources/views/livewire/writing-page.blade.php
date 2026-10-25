@@ -1,3 +1,5 @@
+<x-slot:description>Field notes from Saiffil Fariz on code, commerce, influence, education and character: the five perspectives behind his work with AI, business and people.</x-slot:description>
+
 @php
     // Each filter is a shareable URL and remains available without JavaScript.
     $facetUrl = function (string $key, string $value) use ($pillar, $format, $audience) {
@@ -23,7 +25,7 @@
             <div class="phero__copy">
                 <p class="phero__eyebrow">Notes from a connected world</p>
                 <h1>Writing</h1>
-                <p class="lede">Short pieces from my talks, classes and projects. Most are practical. Some are just me thinking in public. Browse everything, or filter by topic.</p>
+                <p class="lede">Notes from building software, running a business, teaching and advising teams. Five connected topics run through the work: code, commerce, influence, education and character. Browse everything, or filter by topic.</p>
             </div>
             <div class="phero__media phero__media--wide">
                 <x-photo name="editorial-fieldnotes-v1" alt="Gold-edged pages unfolding into a flowing metallic ribbon"

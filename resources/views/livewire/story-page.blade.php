@@ -1,10 +1,12 @@
+<x-slot:description>Meet Saiffil Fariz: programmer, speaker, educator and creator connecting AI, business and people through software, learning, music and film.</x-slot:description>
+
 <div>
     <section class="phero">
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">A story that starts in 1988</p>
                 <h1>About me</h1>
-                <p class="lede">My first contact with technology was a VTech Talking WhizKid in 1988. I went online in 1996. Today, I connect AI, business and people, helping them understand the tools and put them to use.</p>
+                <p class="lede">My first contact with technology was a VTech Talking WhizKid in 1988. I went online in 1996. Today, I connect AI, business and people through the software and creative work I make, the rooms I teach in and the teams I work with.</p>
             </div>
             <div class="phero__media">
                 <x-photo name="story-present-portrait" alt="Portrait of Saiffil Fariz"
@@ -72,7 +74,7 @@
                     ['2004', 'Building', 'Websites, servers and systems for clients. Work that had to keep running on Monday morning, not just look good in a demo.'],
                     ['2012', 'Business', 'Running a small company of my own. I learned where money and time actually go in a small team.'],
                     ['2020', 'Teaching', 'Weekly live sessions, workshops and guest lectures. A lot of it for people who had been told technology was not for them.'],
-                    ['Today', 'Connecting the pieces', 'AI, business and people, brought together through talks, programmes and consulting. The work starts with what someone needs to learn or get done.'],
+                    ['Today', 'Connecting the pieces', 'AI, business and people, brought together through talks, programmes, consulting and software development. The work starts with what someone needs to learn, build or get done.'],
                 ] as $chapter)
                     <div class="timeline__item">
                         <b>{{ $chapter[0] }}</b>
@@ -89,7 +91,8 @@
             <h2>From learning to building</h2>
             <p class="body">The internet came next, in 1996. Then came websites and systems, running a business, and teaching in classrooms, workshops and boardrooms.</p>
             <p class="body">Working across those settings taught me to look beyond the tool. A system has to work for the people using it. A business has to make the time and cost worthwhile. A class has to leave someone able to do something.</p>
-            <p class="body">That is how I approach AI today. Start with real work, explain the tools clearly, and help people build enough understanding to carry on for themselves.</p>
+            <p class="body">That is how I approach AI and software today. Start with real work, make the tools useful and help people build enough understanding to carry on for themselves. Sometimes that means teaching a team. Sometimes it means building the website, application, integration or system they need.</p>
+            <a class="link" href="{{ route('creations') }}#websites">Explore the websites and systems I have made</a>
         </div>
     </section>
 
@@ -110,7 +113,8 @@
             <div class="stack">
                 <h2>Outside work</h2>
                 <p class="body">Work is only part of my life. These are the other parts, in no particular order.</p>
-                <a class="link" href="{{ route('writing') }}">Read my writing</a>
+                <p class="body">I also make music and films, and follow ideas that begin simply as hobbies. Some find their way into bigger projects; others are a reason to keep exploring.</p>
+                <a class="link" href="{{ route('creations') }}">Explore my creations</a>
             </div>
             <dl class="kv">
                 <div>
@@ -119,7 +123,7 @@
                 </div>
                 <div>
                     <dt>Family</dt>
-                    <dd>Married, with two boys. They think my job is mostly talking, and they are not far wrong.</dd>
+                    <dd>Married, with two boys.</dd>
                 </div>
                 <div>
                     <dt>Reading</dt>
@@ -136,10 +140,10 @@
     <section class="cta" id="connect">
         <div class="wrap cta__inner">
             <h2>Get in touch</h2>
-            <p class="lede">Planning a talk, a class or a project? Or you just have a question about using AI in your work? Send me an email. I read everything myself and I usually reply within two working days.</p>
+            <p class="lede">{{ config('site.contact.invitation') }}</p>
             <div class="cta__actions">
                 <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}">Email me</a>
-                <a class="btn btn--ghost" href="{{ route('speaking') }}#book">Invite me to speak</a>
+                <a class="btn btn--ghost" href="{{ route('work') }}#ways-to-work">Ways to work together</a>
             </div>
         </div>
     </section>

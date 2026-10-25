@@ -2,9 +2,8 @@
     $nav = [
         ['route' => 'home', 'label' => 'Home', 'also' => []],
         ['route' => 'story', 'label' => 'About me', 'also' => []],
-        ['route' => 'work', 'label' => 'Work', 'also' => []],
-        // Talks are part of the speaking story, so the tab stays lit there too.
-        ['route' => 'speaking', 'label' => 'Speaking', 'also' => ['talks', 'talk', 'series']],
+        ['route' => 'creations', 'label' => 'Creations', 'also' => []],
+        ['route' => 'work', 'label' => 'Work with me', 'also' => ['build', 'speaking', 'programmes', 'consulting', 'talks', 'talk', 'series']],
         // Articles and topics belong to Writing, so the tab stays lit there.
         ['route' => 'writing', 'label' => 'Writing', 'also' => ['article', 'pillar']],
     ];
@@ -33,19 +32,13 @@
     </div>
 
     <div class="mobile-nav__group">
-        <p class="label">Work with me</p>
-        <a class="mobile-nav__action" href="{{ route('speaking') }}#book">
-            <b>Invite me to speak</b>
-            <span>Tell me the date, the room and the topic.</span>
-        </a>
-        <a class="mobile-nav__action" href="{{ route('programmes') }}">
-            <b>Join a programme</b>
-            <span>See dates, prices and seats left.</span>
-        </a>
-        <a class="mobile-nav__action" href="{{ route('consulting') }}">
-            <b>Help for your team</b>
-            <span>For teams putting AI into a real process.</span>
-        </a>
+        <p class="label">Services</p>
+        @foreach (config('site.services') as $serviceRoute => $service)
+            <a class="mobile-nav__action" href="{{ route($serviceRoute).($service['anchor'] ? '#'.$service['anchor'] : '') }}">
+                <b>{{ $service['action'] }}</b>
+                <span>{{ $service['summary'] }}</span>
+            </a>
+        @endforeach
     </div>
 
     <a class="btn" href="mailto:{{ config('site.contact.email') }}">Email me</a>

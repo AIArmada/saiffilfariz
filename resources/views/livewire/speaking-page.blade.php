@@ -1,3 +1,5 @@
+<x-slot:description>Practical AI keynotes and workshops grounded in building software, running a business and teaching people. Invite Saiffil Fariz to speak to your team.</x-slot:description>
+
 <div>
     <section class="phero">
         <div class="wrap phero__inner">
@@ -110,7 +112,8 @@
         <div class="band__copy stack">
             <h2>How I prepare a talk</h2>
             <p class="body">Before I write a single slide, I ask who will be in the room, what they already think, and what decision they face next. Then I decide what they should still remember a month later, and I build the talk around that.</p>
-            <p class="body">It takes longer than reusing an old slide deck. It is also why people can repeat the main points weeks later when you ask them.</p>
+            <p class="body">My perspective comes from programming, business and teaching. I also build websites, applications and custom systems, so the questions I bring to the room come from making technology work for people in practice.</p>
+            <a class="link" href="{{ route('creations') }}#websites">Explore the websites and systems I have made</a>
         </div>
     </section>
 

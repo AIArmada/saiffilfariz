@@ -1,10 +1,17 @@
+<x-slot:title>Work with me | Saiffil Fariz</x-slot:title>
+<x-slot:description>Speaking, AI programmes, consulting, custom software and creative collaborations. Explore how Saiffil Fariz connects AI, business and people to make useful work happen.</x-slot:description>
+
 <div>
     <section class="phero">
         <div class="wrap phero__inner">
             <div class="phero__copy">
-                <p class="phero__eyebrow">Experience across five disciplines</p>
-                <h1>My work</h1>
-                <p class="lede">I have spent thirty years building systems, running a business, teaching and speaking. The work looks different every few years. The test stays the same. Did anyone use it after I left?</p>
+                <p class="phero__eyebrow">Bring the challenge. We will find the right approach.</p>
+                <h1>Work with me</h1>
+                <p class="lede">Help your people understand AI, improve the way your team works, build a useful product or bring a creative idea to life. We can start wherever you need me most.</p>
+                <div class="hero__actions">
+                    <a class="btn btn--primary" href="#ways-to-work">Ways to work together</a>
+                    <a class="btn btn--ghost" href="{{ route('creations') }}">Explore my creations</a>
+                </div>
             </div>
             <div class="phero__media">
                 <x-photo name="work-audience-closeup" alt="A participant listening closely during a session"
@@ -13,38 +20,41 @@
         </div>
     </section>
 
-    <section class="strip">
-        <div class="wrap strip__grid">
-            @foreach (config('site.facts') as $fact)
-                <div>
-                    <b>{{ $fact['value'] }}</b>
-                    <span>{{ $fact['label'] }}</span>
-                    <small>{{ $fact['note'] }}</small>
-                </div>
-            @endforeach
+    <section class="section" id="ways-to-work" aria-labelledby="work-options-heading">
+        <div class="wrap">
+            <div class="head">
+                <h2 id="work-options-heading">Ways to work together</h2>
+                <p class="body">Pick whichever is closest to what you need. We can always change direction after the first call.</p>
+            </div>
+            <div class="grid grid--2">
+                @foreach (config('site.services') as $serviceRoute => $service)
+                    <article class="card" wire:key="work-service-{{ $serviceRoute }}">
+                        <div class="card__media {{ isset($service['screenshot']) ? 'card__media--screen' : '' }}">
+                            @if (isset($service['screenshot']))
+                                <img src="{{ asset($service['screenshot']) }}" alt="{{ $service['alt'] }}" width="1200" height="850" loading="lazy">
+                            @else
+                                <x-photo :name="$service['image']" :alt="$service['alt']"
+                                         sizes="(max-width: 620px) 100vw, 50vw" />
+                            @endif
+                        </div>
+                        <div class="card__body">
+                            <p class="small">{{ $service['meta'] }}</p>
+                            <h3>{{ $service['title'] }}</h3>
+                            <p>{{ $service['description'] }}</p>
+                            <div class="card__foot">
+                                <a class="link" href="{{ route($serviceRoute) }}">{{ $service['cta'] }}</a>
+                            </div>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
         </div>
     </section>
 
-    <section class="section">
-        <div class="wrap">
-            <div class="head">
-                <h2>Five topics my work covers</h2>
-                <p class="body">I group my talks, classes and writing under five topics. Most projects touch two or three of them at once. If you want to read more, each topic links to the writing on it.</p>
-            </div>
-            <div class="rows">
-                @foreach (config('site.pillars') as $topic)
-                    <div class="rows__item">
-                        <div>
-                            <h3>{{ $topic['name'] }}</h3>
-                            <p>{{ $topic['blurb'] }}</p>
-                        </div>
-                        <div class="rows__meta">
-                            <b>{{ $topic['line'] }}</b>
-                            <a class="link" href="{{ route('pillar', $topic['slug']) }}">Read the writing</a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+    <section class="section section--tight section--muted" aria-labelledby="creative-services-heading">
+        <div class="wrap split">
+            <div class="stack"><h2 id="creative-services-heading">Have a creative brief?</h2><p class="body">I also make music and corporate films. If your idea needs sound, a story or a digital experience, we can shape the right combination.</p></div>
+            <div class="stack"><a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}?subject=Creative%20collaboration">Discuss a creative collaboration</a><br><a class="link" href="{{ route('creations') }}">Experience the creations</a></div>
         </div>
     </section>
 
@@ -58,8 +68,8 @@
                 @foreach ([
                     ['Talk', 'We start with a short call about what you want to get done. No slides. If I am not the right person, I will say so on that call.'],
                     ['Agree', 'You get a one-page note with what we will do, who is involved, the price and the dates. Nothing is booked until you agree to it.'],
-                    ['Do the work', 'The talk, the class or the project, built around your own material and your own people.'],
-                    ['Hand over', 'You keep the notes, templates and files, written so your team can carry on without me.'],
+                    ['Do the work', 'The talk, the programme, the process or the software, shaped around your own material and your own people.'],
+                    ['Hand over', 'You keep the material, documentation and any source code, with a clear handover your team can use.'],
                 ] as $index => $step)
                     <div class="steps__item">
                         <b>{{ $index + 1 }}</b>
@@ -78,46 +88,15 @@
         </div>
         <div class="band__copy">
             <h2>What success looks like</h2>
-            <p class="body">I do not measure a session by how people feel when it ends. I care about two weeks later. Is the report faster? Do people know how to check what the AI gives them? Has the argument moved from whether to use AI to how to use it well?</p>
-            <p class="body">That is why everything ends with something written down and owned by someone on your team.</p>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="wrap">
-            <div class="head">
-                <h2>Start here</h2>
-                <p class="body">Pick whichever is closest to what you need. We can always change direction after the first call.</p>
-            </div>
-            <div class="grid grid--3">
-                @foreach ([
-                    ['title' => 'Speaking', 'image' => 'work-large-audience', 'alt' => 'Saiffil speaking to a large audience', 'body' => 'Talks and workshops for companies, agencies and universities. I explain what AI can and cannot do, in plain language, and I show examples from real work.', 'href' => route('speaking'), 'cta' => 'See the talks', 'meta' => '45 to 90 minutes.'],
-                    ['title' => 'Programmes', 'image' => 'editorial-learning-practice-v1', 'alt' => 'Learners working through a practical exercise together', 'body' => 'Small classes of up to 12 people in Kuala Lumpur. You bring a real task from your job and you leave with it working, plus notes your colleagues can follow.', 'href' => route('programmes'), 'cta' => 'See dates and prices', 'meta' => '1 to 2 days.'],
-                    ['title' => 'Consulting', 'image' => 'work-executive-workshop', 'alt' => 'A workshop around a boardroom table', 'body' => 'I sit with your team and help you put AI into one of your processes. We start small, with one process, and only move on when the first one works without me.', 'href' => route('consulting'), 'cta' => 'How this works', 'meta' => 'By arrangement.'],
-                ] as $service)
-                    <article class="card">
-                        <div class="card__media">
-                            <x-photo :name="$service['image']" :alt="$service['alt']"
-                                     sizes="(max-width: 620px) 100vw, (max-width: 900px) 50vw, 33vw" />
-                        </div>
-                        <div class="card__body">
-                            <p class="small">{{ $service['meta'] }}</p>
-                            <h3>{{ $service['title'] }}</h3>
-                            <p>{{ $service['body'] }}</p>
-                            <div class="card__foot">
-                                <a class="link" href="{{ $service['href'] }}">{{ $service['cta'] }}</a>
-                            </div>
-                        </div>
-                    </article>
-                @endforeach
-            </div>
+            <p class="body">A session has to help people act after the room empties. A system has to make a real task easier after launch. I look for changes people can point to: a clearer decision, a faster process or a customer who can finish what they came to do.</p>
+            <p class="body">That is why learning, software and consulting all end with a clear next step and someone on your team who can own it.</p>
         </div>
     </section>
 
     <section class="cta">
         <div class="wrap cta__inner">
             <h2>Get in touch</h2>
-            <p class="lede">Tell me what you are working on. A short call is usually enough to know if I can help. If I cannot, I will try to point you to someone who can.</p>
+            <p class="lede">{{ config('site.contact.invitation') }}</p>
             <div class="cta__actions">
                 <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}">Email me</a>
                 <a class="btn btn--ghost" href="{{ route('story') }}">About me</a>

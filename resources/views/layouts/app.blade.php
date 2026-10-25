@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ $title ?? 'Saiffil Fariz' }}</title>
-    <meta name="description" content="{{ $description ?? 'Saiffil Fariz is a speaker, trainer and consultant based in Shah Alam. He helps people and teams use AI for real work.' }}">
+    <meta name="description" content="{{ $description ?? config('site.positioning.description') }}">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ $title ?? 'Saiffil Fariz' }}">
-    <meta property="og:description" content="Talks, training programmes and practical help on using AI at work.">
+    <meta property="og:description" content="{{ $description ?? config('site.positioning.description') }}">
     <meta property="og:site_name" content="Saiffil Fariz">
     <meta name="theme-color" content="#141714">
 

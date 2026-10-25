@@ -1,3 +1,5 @@
+<x-slot:description>{{ $post->dek ?: $post->title }}</x-slot:description>
+
 <article class="reading-page">
     <header class="wrap--narrow article-head">
         <a class="crumb" href="{{ route('writing') }}">
@@ -55,13 +57,13 @@
 
     <section class="section closing">
         <div class="wrap closing__inner">
-            <h2>Want a session like this for your team?</h2>
+            <h2>Want to put this idea to work?</h2>
             <p class="lede">
-                I give talks and run classes on topics like this one. Tell me what your team needs and I will suggest a format.
+                We can explore an idea in a talk or programme, work through it with your team, or build the software that makes it useful day to day. Start with what you want to change.
             </p>
             <div class="closing__actions">
-                <a class="btn" href="{{ route('speaking') }}#book">Invite me to speak</a>
-                <a class="btn btn--ghost" href="{{ route('programmes') }}">See the programmes</a>
+                <a class="btn" href="{{ route('work') }}#ways-to-work">Ways to work together</a>
+                <a class="btn btn--ghost" href="{{ route('creations') }}">Explore my creations</a>
             </div>
         </div>
     </section>

@@ -1,3 +1,5 @@
+<x-slot:description>{{ $shelf['blurb'] }}</x-slot:description>
+
 <div>
     <section class="phero">
         <div class="wrap phero__inner">
@@ -30,6 +32,15 @@
             @endif
         </div>
     </section>
+
+    @if ($shelf['slug'] === 'code')
+        <section class="section section--tight section--muted">
+            <div class="wrap split">
+                <div class="stack"><h2>From writing to making.</h2><p class="body">Explore the websites and systems behind these ideas, or bring me a problem you would like to solve.</p></div>
+                <div class="stack"><a class="link" href="{{ route('creations') }}#websites">Explore website projects</a><br><a class="link" href="{{ route('build') }}">Have a website or system built</a></div>
+            </div>
+        </section>
+    @endif
 
     <section class="section section--muted">
         <div class="wrap">

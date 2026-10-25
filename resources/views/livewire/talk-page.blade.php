@@ -1,3 +1,5 @@
+<x-slot:description>{{ $engagement['summary'] }}</x-slot:description>
+
 @php
     $gallery = $engagement['gallery'];
     $letter = $engagement['letter'] ?? null;

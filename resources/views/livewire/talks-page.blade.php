@@ -1,3 +1,5 @@
+<x-slot:description>Talks and workshops by Saiffil Fariz across AI, business and practical technology. Explore sessions, photographs and the business teaching archive.</x-slot:description>
+
 <div>
     <section class="phero phero--plain phero--archive">
         <div class="wrap phero__inner">
