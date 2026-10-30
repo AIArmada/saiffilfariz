@@ -28,7 +28,7 @@
     @endif
 
     @if ($series && $seriesStrip->isNotEmpty())
-        <section class="section section--muted">
+        <section class="section section--pine">
             <div class="wrap split">
                 <div class="stack">
                     <h2>The weekly series, 2020 to 2021</h2>
@@ -49,7 +49,7 @@
     @endif
 
     @if ($listed->isNotEmpty())
-        <section class="section">
+        <section class="section section--journal">
             <div class="wrap">
                 <div class="head">
                     <h2>More sessions</h2>

@@ -86,7 +86,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--journal">
         <div class="wrap--narrow stack">
             <h2>From learning to building</h2>
             <p class="body">The internet came next, in 1996. Then came websites and systems, running a business, and teaching in classrooms, workshops and boardrooms.</p>

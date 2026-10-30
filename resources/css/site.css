@@ -14,11 +14,17 @@
   --paper: #090B0D; --paper-2: #121619; --surface: #15191C;
   color-scheme: dark;
 }
-.section--muted, .band, .strip, .reading-page {
+.section--muted, .band, .strip {
   --paper: #111518; --paper-2: #191E22; --paper-3: #252A2E; --surface: #181D21;
   color: var(--ink); background: var(--paper); color-scheme: dark;
 }
-.reading-page { --paper: #0D1013; --surface: #161B1F; }
+.reading-page {
+  --paper: #FAFAF8; --paper-2: #F1EFE9; --paper-3: #E4E0D4; --surface: #FFFFFF;
+  --ink: #211C15; --ink-2: #48423A; --muted: #6F675C;
+  --rule: #E3DDD1; --rule-2: #B9AE97;
+  --accent: #6E5218; --accent-hover: #503C0F; --accent-soft: #F1E6CC; --button-ink: #17120B;
+  background: var(--paper); color: var(--ink); color-scheme: light;
+}
 .brand__name > span { color: var(--accent); }
 .mobile-nav__link[aria-current="page"] { color: var(--accent); }
 .brand__descriptor { margin-top: 7px; color: var(--muted); font-size: 10px; letter-spacing: .06em; }
@@ -953,7 +959,7 @@ body[data-menu="open"] .header-home { visibility: hidden; }
   .concert-feature__visual:hover .concert-feature__seats { transform: rotate(4deg); }
 }
 
-/* Connected Worlds: light editorial rhythm (warm ivory) between cinematic dark sections. */
+/* Connected Worlds section themes. */
 .section--paper {
   --paper: #F6F1E8; --paper-2: #EFE6D2; --paper-3: #E3D6BA; --surface: #FFFDF8;
   --ink: #221D16; --ink-2: #4A443B; --muted: #6E6557;
@@ -964,10 +970,51 @@ body[data-menu="open"] .header-home { visibility: hidden; }
   color: var(--ink);
   color-scheme: light;
 }
-.section--paper .btn--ghost { border-color: var(--rule-2); color: var(--ink); }
-.section--paper .btn--ghost:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
-.section--paper .chip { border-color: var(--rule-2); color: var(--ink-2); }
-.section--paper a.chip:hover { border-color: var(--accent); color: var(--accent); }
+.section--journal {
+  --paper: #FAFAF8; --paper-2: #F1EFE9; --paper-3: #E4E0D4; --surface: #FFFFFF;
+  --ink: #211C15; --ink-2: #48423A; --muted: #6F675C;
+  --rule: #E3DDD1; --rule-2: #B9AE97;
+  --accent: #6E5218; --accent-hover: #503C0F; --accent-soft: #F1E6CC; --button-ink: #17120B;
+  border-block: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+  color-scheme: light;
+}
+.section--ink {
+  --paper: #17232F; --paper-2: #1D2C3D; --paper-3: #2A3C52; --surface: #1B2940;
+  --ink: #F2EDE2; --ink-2: #CFC8B9; --muted: #A49D8D;
+  --rule: #31485F; --rule-2: #57708A;
+  --accent: #E1BB7C; --accent-hover: #F6D9A6; --accent-soft: #2B2317; --button-ink: #17120B;
+  border-block: 1px solid var(--rule);
+  background:
+    radial-gradient(ellipse at 82% 18%, rgba(54, 94, 232, .14), transparent 55%),
+    var(--paper);
+  color: var(--ink);
+  color-scheme: dark;
+}
+.section--pine {
+  --paper: #0E2A26; --paper-2: #14342F; --paper-3: #1D443C; --surface: #122E29;
+  --ink: #F0EDE2; --ink-2: #CBC6B4; --muted: #A29B88;
+  --rule: #274E46; --rule-2: #3E6B60;
+  --accent: #E1BB7C; --accent-hover: #F6D9A6; --accent-soft: #2A2216; --button-ink: #17120B;
+  border-block: 1px solid var(--rule);
+  background:
+    radial-gradient(ellipse at 18% 12%, rgba(22, 134, 127, .16), transparent 55%),
+    var(--paper);
+  color: var(--ink);
+  color-scheme: dark;
+}
+.section--paper .btn--ghost, .section--journal .btn--ghost { border-color: var(--rule-2); color: var(--ink); }
+.section--paper .btn--ghost:hover, .section--journal .btn--ghost:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.section--paper .chip, .section--journal .chip { border-color: var(--rule-2); color: var(--ink-2); }
+.section--paper a.chip:hover, .section--journal a.chip:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Discipline accents: blue for software, teal for people, terracotta for human warmth. */
+.chip--blue { border-color: #3E5FC4; background: rgba(54, 94, 232, .16); color: #A9BEFF; }
+.chip--teal { border-color: #2E7D76; background: rgba(22, 134, 127, .16); color: #7FD1C9; }
+
+/* Human warmth for the life-story markers. */
+.timeline__item b { color: #DDA080; }
 
 .paper-card { padding: 26px 24px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); box-shadow: 0 14px 40px rgba(80, 60, 15, .08); }
 .paper-card h3 { font-family: var(--serif); font-size: 23px; font-weight: 400; letter-spacing: -.02em; }

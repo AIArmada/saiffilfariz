@@ -20,7 +20,7 @@
         </div>
     </section>
 
-    <section class="section" id="intents" aria-labelledby="work-intents-heading">
+    <section class="section section--ink" id="intents" aria-labelledby="work-intents-heading">
         <div class="wrap">
             <div class="head">
                 <h2 id="work-intents-heading">Start with your intent</h2>
@@ -62,7 +62,7 @@
         </div>
     </section>
 
-    <section class="section section--muted">
+    <section class="section section--pine">
         <div class="wrap">
             <div class="head">
                 <h2>How working with me goes</h2>

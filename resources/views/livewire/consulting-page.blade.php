@@ -19,7 +19,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--ink">
         <div class="wrap">
             <div class="head">
                 <h2>Where projects usually stall</h2>
@@ -76,7 +76,7 @@
         </div>
     </section>
 
-    <section class="section" id="shapes">
+    <section class="section section--journal" id="shapes">
         <div class="wrap">
             <div class="head">
                 <h2>Ways to work together</h2>

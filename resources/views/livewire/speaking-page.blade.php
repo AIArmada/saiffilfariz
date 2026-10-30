@@ -32,7 +32,7 @@
         </div>
     </section>
 
-    <section class="section" id="talks">
+    <section class="section section--journal" id="talks">
         <div class="wrap">
             <div class="head">
                 <h2>Talks I give</h2>
@@ -60,7 +60,7 @@
         </div>
     </section>
 
-    <section class="section section--muted">
+    <section class="section section--pine">
         <div class="wrap">
             <div class="head">
                 <h2>Ways to book me</h2>

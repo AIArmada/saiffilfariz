@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <section class="section" id="details">
+    <section class="section section--journal" id="details">
         <div class="wrap">
             <div class="head">
                 <h2>The three programmes</h2>
@@ -90,7 +90,7 @@
         </div>
     </section>
 
-    <section class="section section--muted">
+    <section class="section section--pine">
         <div class="wrap">
             <div class="head">
                 <h2>How every programme runs</h2>

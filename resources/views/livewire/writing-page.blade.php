@@ -109,7 +109,7 @@
         </div>
     </div>
 
-    <section class="section section--tight">
+    <section class="section section--tight section--journal">
         <div class="wrap">
             @if ($posts->isEmpty())
                 <div class="lib-empty">
@@ -126,7 +126,7 @@
         </div>
     </section>
 
-    <section class="section section--muted">
+    <section class="section section--paper">
         <div class="wrap">
             <div class="head head--wide">
                 <h2>Browse by topic</h2>

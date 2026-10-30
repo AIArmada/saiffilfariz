@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <section class="section build-capabilities">
+    <section class="section build-capabilities section--ink">
         <div class="wrap build-capabilities__layout">
             <div class="build-capabilities__intro">
                 <p class="build-kicker">Bring me the messy middle</p>

@@ -36,7 +36,7 @@
         </nav>
     </div>
 
-    <section class="section section--tight">
+    <section class="section section--tight section--ink">
         <div class="wrap">
             <div class="head">
                 <h2>Connected worlds</h2>
@@ -47,7 +47,7 @@
                     <article class="card card--flat">
                         <h3>{{ $world['name'] }}</h3>
                         <p>{{ $world['line'] }}</p>
-                        <a class="link" href="{{ route($world['route']).($world['anchor'] ? '#'.$world['anchor'] : '') }}">See it in practice</a>
+                        <a class="link" style="color:{{ $world['accent'] ?? 'inherit' }}" href="{{ route($world['route']).($world['anchor'] ? '#'.$world['anchor'] : '') }}">See it in practice</a>
                     </article>
                 @endforeach
             </div>
@@ -102,7 +102,7 @@
 
     <x-build-showcase />
 
-    <section class="section section--tight section--muted">
+    <section class="section section--tight section--pine">
         <div class="wrap">
             @php($featuredProgramme = collect(config('site.programmes'))->firstWhere('featured', true))
             <article class="card card--feature">
@@ -132,7 +132,7 @@
         </div>
     </section>
 
-    <section class="band">
+    <section class="band section--paper">
         <div class="band__media">
             <x-photo name="home-beach" alt="Two boys running through the sea at sunset"
                      sizes="(max-width: 900px) 100vw, 50vw" />
@@ -149,7 +149,7 @@
         </div>
     </section>
 
-    <section class="section section--muted">
+    <section class="section section--journal">
         <div class="wrap">
             <div class="head">
                 <h2>Recent ideas</h2>
