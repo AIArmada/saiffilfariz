@@ -14,8 +14,8 @@
                 </div>
             </div>
             <div class="phero__media">
-                <x-photo name="work-audience-closeup" alt="A participant listening closely during a session"
-                         sizes="(max-width: 900px) 100vw, 44vw" :eager="true" />
+                <x-photo name="profile-bluevest" alt="Saiffil Fariz in a blue vest, ready to talk"
+                         sizes="(max-width: 900px) 100vw, 44vw" :eager="true" class="cutout-top" />
             </div>
         </div>
     </section>

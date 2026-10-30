@@ -107,8 +107,8 @@
 
     <section class="band">
         <div class="band__media">
-            <x-photo name="method-navigation-map" alt="A hand-drawn map of ideas on paper"
-                     sizes="(max-width: 900px) 100vw, 50vw" />
+            <x-photo name="profile-brocadecladpresenter" alt="Saiffil presenting on stage with a headset microphone"
+                     sizes="(max-width: 900px) 100vw, 50vw" class="cutout-top" />
         </div>
         <div class="band__copy stack">
             <h2>How I prepare a talk</h2>

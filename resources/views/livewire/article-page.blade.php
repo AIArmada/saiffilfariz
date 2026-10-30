@@ -57,6 +57,8 @@
 
     <section class="section closing">
         <div class="wrap closing__inner">
+            <x-photo name="profile-onesign" alt="Saiffil holding up one finger" class="closing__avatar"
+                     sizes="120px" />
             <h2>Want to put this idea to work?</h2>
             <p class="lede">
                 We can explore an idea in a talk or programme, work through it with your team, or build the software that makes it useful day to day. Start with what you want to change.

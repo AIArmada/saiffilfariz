@@ -162,6 +162,116 @@
   ],
   "w": 1448
  },
+ "profile-baroqueshirt": {
+  "h": 1448,
+  "variants": [
+   480,
+   800,
+   1086
+  ],
+  "w": 1086
+ },
+ "profile-bluevest": {
+  "h": 1254,
+  "variants": [
+   480,
+   800,
+   1200,
+   1254
+  ],
+  "w": 1254
+ },
+ "profile-brocadecladpresenter": {
+  "h": 1448,
+  "variants": [
+   480,
+   800,
+   1086
+  ],
+  "w": 1086
+ },
+ "profile-charcoalgrey": {
+  "h": 1441,
+  "variants": [
+   480,
+   800,
+   1091
+  ],
+  "w": 1091
+ },
+ "profile-metallicgold": {
+  "h": 1448,
+  "variants": [
+   480,
+   800,
+   1086
+  ],
+  "w": 1086
+ },
+ "profile-mustardshirt": {
+  "h": 1536,
+  "variants": [
+   480,
+   800,
+   1024
+  ],
+  "w": 1024
+ },
+ "profile-navyblue": {
+  "h": 1254,
+  "variants": [
+   480,
+   800,
+   1200,
+   1254
+  ],
+  "w": 1254
+ },
+ "profile-onesign": {
+  "h": 772,
+  "variants": [
+   410
+  ],
+  "w": 410
+ },
+ "profile-ornatebatikshirt": {
+  "h": 1536,
+  "variants": [
+   480,
+   800,
+   1024
+  ],
+  "w": 1024
+ },
+ "profile-peacesign": {
+  "h": 1448,
+  "variants": [
+   480,
+   800,
+   1086
+  ],
+  "w": 1086
+ },
+ "profile-pointingforward": {
+  "h": 2048,
+  "variants": [
+   480,
+   800,
+   1200,
+   1365
+  ],
+  "w": 1365
+ },
+ "profile-pointinggesture": {
+  "h": 1254,
+  "variants": [
+   480,
+   800,
+   1200,
+   1254
+  ],
+  "w": 1254
+ },
  "program-awakening": {
   "h": 941,
   "variants": [
@@ -290,15 +400,15 @@
   "w": 512
  },
  "story-vtech-whizkid-device-reference-v1": {
+  "credit": "VTech Holdings Limited, Annual Report 2026, printed page 23 (PDF page 25).",
   "h": 251,
+  "note": "Manufacturer archival product photograph, extracted from the report without retouching. A reference example, not the owner\u2019s personal unit.",
+  "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0618/2026061800748.pdf#page=25",
   "variants": [
    240,
    337
   ],
-  "w": 337,
-  "credit": "VTech Holdings Limited, Annual Report 2026, printed page 23 (PDF page 25).",
-  "source": "https://www.hkexnews.hk/listedco/listconews/sehk/2026/0618/2026061800748.pdf#page=25",
-  "note": "Manufacturer archival product photograph, extracted from the report without retouching. A reference example, not the owner’s personal unit."
+  "w": 337
  },
  "talk-jdn-ai-evolution-posdigicert": {
   "h": 1200,

@@ -13,8 +13,8 @@
                 </div>
             </div>
             <div class="phero__media phero__media--wide">
-                <x-photo name="editorial-learning-practice-v1" alt="Two learners working together on a laptop and a practical exercise"
-                         sizes="(max-width: 900px) 100vw, 44vw" :eager="true" />
+                <x-photo name="profile-mustardshirt" alt="Saiffil in a mustard shirt, ready to teach"
+                         sizes="(max-width: 900px) 100vw, 44vw" :eager="true" class="cutout-top" />
             </div>
         </div>
     </section>

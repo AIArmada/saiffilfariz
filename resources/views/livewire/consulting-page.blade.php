@@ -66,8 +66,8 @@
 
     <section class="band">
         <div class="band__media">
-            <x-photo name="editorial-workflow-mapping-v1" alt="Hands mapping a business process with paper cards and connecting arrows"
-                     sizes="(max-width: 900px) 100vw, 50vw" />
+            <x-photo name="profile-charcoalgrey" alt="Saiffil in a charcoal suit"
+                     sizes="(max-width: 900px) 100vw, 50vw" class="cutout-top" />
         </div>
         <div class="band__copy stack">
             <h2>What good looks like</h2>

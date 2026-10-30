@@ -1,12 +1,16 @@
 <x-slot:description>Talks and workshops by Saiffil Fariz across AI, business and practical technology. Explore sessions, photographs and the business teaching archive.</x-slot:description>
 
 <div>
-    <section class="phero phero--plain phero--archive">
+    <section class="phero phero--archive">
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">Ideas, shared in the room</p>
                 <h1>Speaking</h1>
                 <p class="lede">A record of talks, workshops and panels for ministries, agencies, universities, companies and community groups. This archive lists {{ $total }} documented sessions, with photos and stories where available.</p>
+            </div>
+            <div class="phero__media">
+                <x-photo name="profile-metallicgold" alt="Saiffil in a gold blazer"
+                         sizes="(max-width: 900px) 100vw, 44vw" :eager="true" class="cutout-top" />
             </div>
         </div>
     </section>

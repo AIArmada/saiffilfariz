@@ -51,7 +51,8 @@
     <section class="creation-closing">
         <div class="wrap">
             <h2>What could we<br>make together?</h2>
-            <div><p class="lede">A story to tell, a song to shape, a digital experience to build. Tell me what you are imagining.</p><a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}">Start a creative conversation</a><a class="link" href="{{ route('work') }}">Other ways to work with me</a></div>
+            <div><x-photo name="profile-baroqueshirt" alt="Saiffil in an ornate baroque shirt" class="creation-closing__portrait"
+                     sizes="(max-width: 900px) 70vw, 400px" /><p class="lede">A story to tell, a song to shape, a digital experience to build. Tell me what you are imagining.</p><a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}">Start a creative conversation</a><a class="link" href="{{ route('work') }}">Other ways to work with me</a></div>
         </div>
     </section>
 </div>

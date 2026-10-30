@@ -139,6 +139,8 @@
 
     <section class="cta" id="connect">
         <div class="wrap cta__inner">
+            <x-photo name="profile-ornatebatikshirt" alt="Saiffil in a batik shirt" class="cta__avatar"
+                     sizes="120px" />
             <h2>Get in touch</h2>
             <p class="lede">{{ config('site.contact.invitation') }}</p>
             <div class="cta__actions">
