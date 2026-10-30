@@ -134,10 +134,9 @@
         <div class="wrap split split--top">
             <div class="stack">
                 <h2>Media kit</h2>
-                <p class="body">Everything an organiser or producer needs: a short bio, a longer one, and a portrait. Slides, topic outlines and a technical rider are available on request.</p>
-                <p class="small">Full press pack with downloadable portraits and one-pagers is coming. For now, email me and I will send whatever your deadline needs.</p>
+                <p class="body">Everything an organiser or producer needs: a short bio, a longer one, and press-ready portraits with transparent backgrounds. Slides, topic outlines and a technical rider are available on request.</p>
                 <div class="cta__actions">
-                    <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}?subject=Speaker%20media%20kit">Request the media kit</a>
+                    <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}?subject=Speaker%20media%20kit">Request slides and rider</a>
                     <a class="btn btn--ghost" href="{{ route('speaking') }}">Browse past sessions</a>
                 </div>
             </div>
@@ -152,6 +151,30 @@
                 </div>
             </div>
         </div>
+        @if (! empty(config('site.media_kit.press_portraits')))
+        <div class="wrap press-pack">
+            <div class="head head--top">
+                <h3>Press portraits</h3>
+                <p class="body">Transparent PNGs, free to use with credit. Square for avatars and listings, full body for posters and features.</p>
+            </div>
+            <div class="grid grid--4">
+                @foreach (config('site.media_kit.press_portraits', []) as $press)
+                    <article class="card card--flat press-card">
+                        <div class="press-card__thumb">
+                            <x-photo :name="'profile-'.$press['slug']" :alt="'Saiffil Fariz, '.$press['label']"
+                                     sizes="(max-width: 620px) 50vw, 25vw" />
+                        </div>
+                        <h4>{{ $press['label'] }}</h4>
+                        <p>{{ $press['use'] }}</p>
+                        <div class="press-card__actions">
+                            <a class="link" href="{{ asset('assets/img/press/press-'.$press['slug'].'-square.png') }}" download>Square PNG</a>
+                            <a class="link" href="{{ asset('assets/img/press/press-'.$press['slug'].'-full.png') }}" download>Full PNG</a>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+        @endif
     </section>
 
     <section class="band">

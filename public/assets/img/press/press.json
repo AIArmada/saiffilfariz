@@ -1,0 +1,42 @@
+{
+ "brocadecladpresenter": {
+  "full": [
+   1050,
+   1400
+  ],
+  "square": [
+   900,
+   900
+  ]
+ },
+ "charcoalgrey": {
+  "full": [
+   1060,
+   1400
+  ],
+  "square": [
+   900,
+   900
+  ]
+ },
+ "metallicgold": {
+  "full": [
+   1050,
+   1400
+  ],
+  "square": [
+   900,
+   900
+  ]
+ },
+ "mustardshirt": {
+  "full": [
+   933,
+   1400
+  ],
+  "square": [
+   900,
+   900
+  ]
+ }
+}

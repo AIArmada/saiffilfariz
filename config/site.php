@@ -372,6 +372,12 @@ return [
         'long_bio' => 'Saiffil Fariz had his first contact with technology in 1988, a VTech Talking WhizKid, and went online in 1996. Since then he has built websites and systems, run a small company, and taught in classrooms, workshops and boardrooms across Malaysia and the region. Today he connects AI, business and people through speaking, training, consulting, software and creative work — always starting with the people and the work, not the tool.',
         'portrait' => 'profile-metallicgold',
         'portrait_alt' => 'Saiffil Fariz in a gold blazer',
+        'press_portraits' => [
+            ['slug' => 'metallicgold', 'label' => 'Signature gold', 'use' => 'Keynotes, posters and feature slots.'],
+            ['slug' => 'charcoalgrey', 'label' => 'Formal grey', 'use' => 'Corporate programmes and panel listings.'],
+            ['slug' => 'mustardshirt', 'label' => 'Warm mustard', 'use' => 'Community sessions and teaching contexts.'],
+            ['slug' => 'brocadecladpresenter', 'label' => 'On stage', 'use' => 'Speaking pages and event promotions.'],
+        ],
     ],
 
     'proof' => 'Lately I have spoken for MATRADE, two ministries and nine universities.',
