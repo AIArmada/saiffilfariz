@@ -105,6 +105,7 @@
         </section>
     @endif
 
+    @if (! empty(config('site.signature_topics')))
     <section class="section section--paper">
         <div class="wrap">
             <div class="head">
@@ -112,7 +113,7 @@
                 <p class="body">Five talks I give most often. Each one runs as a 45-minute keynote or a longer workshop, and I adjust the examples for your audience.</p>
             </div>
             <div class="rows rows--paper">
-                @foreach (config('site.signature_topics') as $topic)
+                @foreach (config('site.signature_topics', []) as $topic)
                     <div class="rows__item">
                         <div>
                             <h3>{{ $topic['name'] }}</h3>
@@ -127,6 +128,7 @@
             </div>
         </div>
     </section>
+    @endif
 
     <section class="section" id="media-kit">
         <div class="wrap split split--top">
@@ -142,11 +144,11 @@
             <div class="stack">
                 <div class="card card--flat">
                     <p class="small">Short bio</p>
-                    <p>{{ config('site.media_kit.short_bio') }}</p>
+                    <p>{{ config('site.media_kit.short_bio', '') }}</p>
                 </div>
                 <div class="card card--flat">
                     <p class="small">Long bio</p>
-                    <p>{{ config('site.media_kit.long_bio') }}</p>
+                    <p>{{ config('site.media_kit.long_bio', '') }}</p>
                 </div>
             </div>
         </div>

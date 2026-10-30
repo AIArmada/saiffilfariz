@@ -26,10 +26,11 @@
         </div>
     </section>
 
+    @if (! empty(config('site.worlds')))
     <div class="wrap connection-rail">
         <p class="connection-rail__intro">Four worlds. One perspective.</p>
         <nav class="connection-rail__links" aria-label="Explore the four connected worlds">
-            @foreach (config('site.worlds') as $world)
+            @foreach (config('site.worlds', []) as $world)
                 <a href="{{ route($world['route']).($world['anchor'] ? '#'.$world['anchor'] : '') }}">{{ $world['name'] }}</a>
             @endforeach
         </nav>
@@ -42,7 +43,7 @@
                 <p class="body">Technology, business, people and creativity are not separate services. They are one story told in different rooms. Follow any thread to the proof.</p>
             </div>
             <div class="grid grid--4">
-                @foreach (config('site.worlds') as $world)
+                @foreach (config('site.worlds', []) as $world)
                     <article class="card card--flat">
                         <h3>{{ $world['name'] }}</h3>
                         <p>{{ $world['line'] }}</p>
@@ -52,6 +53,7 @@
             </div>
         </div>
     </section>
+    @endif
 
     <section class="strip">
         <div class="wrap strip__grid">

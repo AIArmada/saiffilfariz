@@ -36,13 +36,14 @@
     </section>
 
     <div class="wrap filters-wrap">
+        @if (! empty(config('site.learning_paths')))
         <section aria-label="Learning paths">
             <div class="head head--top" style="margin-bottom:24px">
                 <h2>Start here</h2>
                 <p class="body">Three ways in, depending on what you need next.</p>
             </div>
             <div class="grid grid--3" style="margin-bottom:40px">
-                @foreach (config('site.learning_paths') as $path)
+                @foreach (config('site.learning_paths', []) as $path)
                     <a class="card card--flat" href="{{ route($path['route'], $path['params']) }}">
                         <p class="small">{{ $path['step'] }}</p>
                         <h3>{{ $path['name'] }}</h3>
@@ -51,6 +52,7 @@
                 @endforeach
             </div>
         </section>
+        @endif
 
         <nav class="filters">
             <div class="filters__row">
