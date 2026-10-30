@@ -12,7 +12,6 @@
 <header class="site-header">
     <div class="wrap header-inner">
         <a class="header-home" href="{{ route('home') }}" aria-label="Saiffil Fariz home">saiffilfariz<span aria-hidden="true">.</span></a>
-        <a class="btn btn--primary header-cta" href="{{ route('work') }}">Let’s talk</a>
         <button type="button" class="burger" data-burger aria-expanded="false"
                 aria-controls="mobile-nav" aria-label="Open menu">
             <span class="burger__label">Menu</span>
