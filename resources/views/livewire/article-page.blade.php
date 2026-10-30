@@ -64,7 +64,7 @@
                 We can explore an idea in a talk or programme, work through it with your team, or build the software that makes it useful day to day. Start with what you want to change.
             </p>
             <div class="closing__actions">
-                <a class="btn" href="{{ route('work') }}#ways-to-work">Ways to work together</a>
+                <a class="btn" href="{{ route('work') }}#enquire">Ways to work together</a>
                 <a class="btn btn--ghost" href="{{ route('creations') }}">Explore my creations</a>
             </div>
         </div>

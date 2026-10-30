@@ -5,7 +5,7 @@
         ['route' => 'creations', 'label' => 'Creations', 'also' => ['creation']],
         ['route' => 'speaking', 'label' => 'Speaking', 'also' => ['talk', 'series']],
         ['route' => 'ideas', 'label' => 'Ideas', 'also' => ['article', 'pillar']],
-        ['route' => 'work', 'label' => 'Let’s talk', 'also' => ['build', 'speaking-service', 'programmes', 'consulting']],
+        ['route' => 'work', 'label' => 'Work together', 'also' => ['build', 'speaking-service', 'programmes', 'consulting']],
     ];
 @endphp
 

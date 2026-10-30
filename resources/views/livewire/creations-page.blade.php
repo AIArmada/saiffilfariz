@@ -3,9 +3,9 @@
 <div class="creations-page">
     <section class="creations-opening">
         <div class="wrap creations-opening__inner">
-            <div><p class="creation-context">Creations by Saiffil Fariz</p><h1>Ideas take<br>different forms.</h1></div>
+            <div><p class="creation-context">Creations by Saiffil Fariz</p><h1>Ideas made<br>tangible.</h1></div>
             <div class="creations-opening__note">
-                <p class="lede">A song. A film. A website. A little experiment that becomes something more.</p>
+                <p class="lede">Some become platforms. Some become programmes. Some become experiments. What matters is whether they solve something worth solving.</p>
                 <p>Client projects, personal experiments and hobbies, gathered in one place. Follow the connections, or enjoy each piece on its own.</p>
                 <a class="btn btn--primary" href="{{ route('creation', 'nusavue') }}#inside-experience">Explore Nusavue’s ticketing experience</a>
             </div>

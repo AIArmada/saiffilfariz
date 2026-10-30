@@ -952,3 +952,29 @@ body[data-menu="open"] .header-home { visibility: hidden; }
   .concert-feature__visual:hover .concert-feature__event { transform: rotate(-3deg); }
   .concert-feature__visual:hover .concert-feature__seats { transform: rotate(4deg); }
 }
+
+/* Connected Worlds: light editorial rhythm (warm ivory) between cinematic dark sections. */
+.section--paper {
+  --paper: #F6F1E8; --paper-2: #EFE6D2; --paper-3: #E3D6BA; --surface: #FFFDF8;
+  --ink: #221D16; --ink-2: #4A443B; --muted: #6E6557;
+  --rule: #D9CFBD; --rule-2: #B49B62;
+  --accent: #6E5218; --accent-hover: #503C0F; --accent-soft: #EFE2C6; --button-ink: #17120B;
+  border-block: 1px solid var(--rule);
+  background: var(--paper);
+  color: var(--ink);
+  color-scheme: light;
+}
+.section--paper .btn--ghost { border-color: var(--rule-2); color: var(--ink); }
+.section--paper .btn--ghost:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
+.section--paper .chip { border-color: var(--rule-2); color: var(--ink-2); }
+.section--paper a.chip:hover { border-color: var(--accent); color: var(--accent); }
+
+.paper-card { padding: 26px 24px; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface); box-shadow: 0 14px 40px rgba(80, 60, 15, .08); }
+.paper-card h3 { font-family: var(--serif); font-size: 23px; font-weight: 400; letter-spacing: -.02em; }
+.paper-card p { margin-top: 10px; color: var(--ink-2); font-size: 15px; line-height: 1.7; }
+
+.rows--paper .rows__item h3 { font-family: var(--serif); font-weight: 400; }
+
+.filters__advanced { border-top: 1px solid var(--rule); }
+.filters__advanced summary { cursor: pointer; padding: 12px 0; color: var(--accent); font-size: 13px; font-weight: 600; }
+.filters__advanced summary:hover { color: var(--accent-hover); }

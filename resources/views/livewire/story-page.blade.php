@@ -6,7 +6,7 @@
             <div class="phero__copy">
                 <p class="phero__eyebrow">A story that starts in 1988</p>
                 <h1>About me</h1>
-                <p class="lede">My first contact with technology was a VTech Talking WhizKid in 1988. I went online in 1996. Today, I connect AI, business and people through the software and creative work I make, the rooms I teach in and the teams I work with.</p>
+                <p class="lede">I am curious about how things work and stubborn about making them useful. My first contact with technology was a VTech Talking WhizKid in 1988. I went online in 1996. Today, I connect AI, business and people through the software and creative work I make, the rooms I teach in and the teams I work with.</p>
             </div>
             <div class="phero__media phero__media--portrait">
                 <x-photo name="saiffil-fariz-gold-portrait" alt="Saiffil Fariz in a metallic gold blazer"
@@ -96,6 +96,28 @@
         </div>
     </section>
 
+    <section class="section section--paper">
+        <div class="wrap">
+            <div class="head">
+                <h2>How I think</h2>
+                <p class="body">Four beliefs shape every talk, class and build. Each one comes from something that went wrong first.</p>
+            </div>
+            <div class="grid grid--4">
+                @foreach ([
+                    ['Start with people', 'Most failed projects did not fail because of the software. Nobody agreed on what done looks like, nobody owned the work after launch, or the people who had to use it were never asked.'],
+                    ['Useful beats impressive', 'A demo that delights and a tool nobody opens are the same failure. I would rather ship the boring fix that saves four hours a month.'],
+                    ['Teach so they can carry on', 'Every engagement ends with someone on your team able to own it: notes, source code and a handover, not a dependency on me.'],
+                    ['Say so when it will not work', 'If I am not the right person, or the idea will not pay for itself, I say so on the first call. A clear no is more useful than a hopeful yes.'],
+                ] as $belief)
+                    <article class="paper-card">
+                        <h3>{{ $belief[0] }}</h3>
+                        <p>{{ $belief[1] }}</p>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
     <section class="band">
         <div class="band__media">
             <x-photo name="story-reflective-closing" alt="Saiffil looking out over a city at dusk"
@@ -141,11 +163,11 @@
         <div class="wrap cta__inner">
             <x-photo name="profile-ornatebatikshirt" alt="Saiffil in a batik shirt" class="cta__avatar"
                      sizes="120px" />
-            <h2>Get in touch</h2>
-            <p class="lede">{{ config('site.contact.invitation') }}</p>
+            <h2>Start a conversation</h2>
+            <p class="lede">A talk, a collaboration or a project — tell me which one you have in mind and what you want to change.</p>
             <div class="cta__actions">
                 <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}">Email me</a>
-                <a class="btn btn--ghost" href="{{ route('work') }}#ways-to-work">Ways to work together</a>
+                <a class="btn btn--ghost" href="{{ route('work') }}#enquire">Ways to work together</a>
             </div>
         </div>
     </section>

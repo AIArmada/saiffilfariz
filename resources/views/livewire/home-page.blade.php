@@ -13,13 +13,13 @@
         <div class="wrap hero__inner">
             <div class="hero__copy">
                 <p class="hero__eyebrow">{{ config('site.positioning.name') }} <span>{{ config('site.positioning.themes') }}</span></p>
-                <h1>Outthink.<br>Outcreate.<br><em>Outlead.</em></h1>
+                <h1>Outthink.<br>Outcreate.<br><em>Outlast.</em></h1>
                 <p class="lede">
-                    I connect AI, business and people to make work more meaningful—from helping teams think and learn to building useful software and bringing ideas to life through music and film.
+                    I connect technology, business and people — turning complex ideas into things people can understand, use and grow with.
                 </p>
                 <div class="hero__actions">
-                    <a class="btn hero__primary" href="#work-with-me">Let’s talk <span aria-hidden="true">→</span></a>
-                    <a class="btn hero__secondary" href="{{ route('creations') }}">Explore my creations</a>
+                    <a class="btn hero__primary" href="{{ route('work') }}#enquire">Let’s work together <span aria-hidden="true">→</span></a>
+                    <a class="btn hero__secondary" href="{{ route('story') }}">Explore my world</a>
                 </div>
                 <p class="hero__proof">{{ config('site.proof') }}</p>
             </div>
@@ -27,13 +27,31 @@
     </section>
 
     <div class="wrap connection-rail">
-        <p class="connection-rail__intro">Five worlds. One perspective.</p>
-        <nav class="connection-rail__links" aria-label="Explore the five disciplines">
-            @foreach (config('site.pillars') as $pillar)
-                <a href="{{ route('pillar', $pillar['slug']) }}">{{ $pillar['name'] }}</a>
+        <p class="connection-rail__intro">Four worlds. One perspective.</p>
+        <nav class="connection-rail__links" aria-label="Explore the four connected worlds">
+            @foreach (config('site.worlds') as $world)
+                <a href="{{ route($world['route']).($world['anchor'] ? '#'.$world['anchor'] : '') }}">{{ $world['name'] }}</a>
             @endforeach
         </nav>
     </div>
+
+    <section class="section section--tight">
+        <div class="wrap">
+            <div class="head">
+                <h2>Connected worlds</h2>
+                <p class="body">Technology, business, people and creativity are not separate services. They are one story told in different rooms. Follow any thread to the proof.</p>
+            </div>
+            <div class="grid grid--4">
+                @foreach (config('site.worlds') as $world)
+                    <article class="card card--flat">
+                        <h3>{{ $world['name'] }}</h3>
+                        <p>{{ $world['line'] }}</p>
+                        <a class="link" href="{{ route($world['route']).($world['anchor'] ? '#'.$world['anchor'] : '') }}">See it in practice</a>
+                    </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
     <section class="strip">
         <div class="wrap strip__grid">
@@ -189,7 +207,7 @@
             <p class="lede">{{ config('site.contact.invitation') }}</p>
             <div class="cta__actions">
                 <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}">Email me</a>
-                <a class="btn btn--ghost" href="{{ route('work') }}#ways-to-work">Ways to work together</a>
+                <a class="btn btn--ghost" href="{{ route('work') }}#enquire">Ways to work together</a>
             </div>
         </div>
     </section>

@@ -7,8 +7,11 @@ use Livewire\Component;
 
 class EnquiryForm extends Component
 {
-    /** speak | programme | consult */
+    /** speak | programme | consult | build | partner */
     public string $intent = 'speak';
+
+    /** When true the visitor picks their own intent on the Work Together page. */
+    public bool $showIntentPicker = false;
 
     public string $name = '';
 
@@ -44,9 +47,17 @@ class EnquiryForm extends Component
         ];
     }
 
-    public function mount(string $intent = 'speak'): void
+    public function mount(string $intent = 'speak', bool $showIntentPicker = false): void
     {
-        $this->intent = in_array($intent, ['speak', 'programme', 'consult'], true) ? $intent : 'speak';
+        $this->intent = in_array($intent, ['speak', 'programme', 'consult', 'build', 'partner'], true) ? $intent : 'speak';
+        $this->showIntentPicker = $showIntentPicker;
+    }
+
+    public function updatedIntent(string $value): void
+    {
+        if (! in_array($value, ['speak', 'programme', 'consult', 'build', 'partner'], true)) {
+            $this->intent = 'speak';
+        }
     }
 
     public function submit(): void

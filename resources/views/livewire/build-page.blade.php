@@ -6,7 +6,7 @@
     <section class="build-opening">
         <div class="wrap build-opening__inner">
             <div class="build-opening__copy">
-                <a class="crumb" href="{{ route('work') }}">Let’s talk</a>
+                <a class="crumb" href="{{ route('work') }}">Work together</a>
                 <p class="build-kicker">Software &amp; systems</p>
                 <h1>When the right tool doesn't exist, I build it.</h1>
                 <p class="lede">

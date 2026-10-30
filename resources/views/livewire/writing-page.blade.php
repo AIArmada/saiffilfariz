@@ -36,6 +36,22 @@
     </section>
 
     <div class="wrap filters-wrap">
+        <section aria-label="Learning paths">
+            <div class="head head--top" style="margin-bottom:24px">
+                <h2>Start here</h2>
+                <p class="body">Three ways in, depending on what you need next.</p>
+            </div>
+            <div class="grid grid--3" style="margin-bottom:40px">
+                @foreach (config('site.learning_paths') as $path)
+                    <a class="card card--flat" href="{{ route($path['route'], $path['params']) }}">
+                        <p class="small">{{ $path['step'] }}</p>
+                        <h3>{{ $path['name'] }}</h3>
+                        <p>{{ $path['line'] }}</p>
+                    </a>
+                @endforeach
+            </div>
+        </section>
+
         <nav class="filters">
             <div class="filters__row">
                 <span class="label">Topic</span>
@@ -49,29 +65,32 @@
                 @endforeach
             </div>
 
-            <div class="filters__row">
-                <span class="label">Format</span>
-                <a class="chip {{ $format === '' ? 'chip--on' : '' }}"
-                   href="{{ $facetUrl('format', '') }}"
-                   @if ($format === '') aria-current="true" @endif>All</a>
-                @foreach (config('site.formats') as $item)
-                    <a class="chip {{ $format === $item ? 'chip--on' : '' }}"
-                       href="{{ $facetUrl('format', $item) }}"
-                       @if ($format === $item) aria-current="true" @endif>{{ $item }}</a>
-                @endforeach
-            </div>
+            <details class="filters__advanced">
+                <summary>Advanced filters: format and audience</summary>
+                <div class="filters__row">
+                    <span class="label">Format</span>
+                    <a class="chip {{ $format === '' ? 'chip--on' : '' }}"
+                       href="{{ $facetUrl('format', '') }}"
+                       @if ($format === '') aria-current="true" @endif>All</a>
+                    @foreach (config('site.formats') as $item)
+                        <a class="chip {{ $format === $item ? 'chip--on' : '' }}"
+                           href="{{ $facetUrl('format', $item) }}"
+                           @if ($format === $item) aria-current="true" @endif>{{ $item }}</a>
+                    @endforeach
+                </div>
 
-            <div class="filters__row">
-                <span class="label">For</span>
-                <a class="chip {{ $audience === '' ? 'chip--on' : '' }}"
-                   href="{{ $facetUrl('for', '') }}"
-                   @if ($audience === '') aria-current="true" @endif>Everyone</a>
-                @foreach (config('site.audiences') as $item)
-                    <a class="chip {{ $audience === $item ? 'chip--on' : '' }}"
-                       href="{{ $facetUrl('for', $item) }}"
-                       @if ($audience === $item) aria-current="true" @endif>{{ $item }}</a>
-                @endforeach
-            </div>
+                <div class="filters__row">
+                    <span class="label">For</span>
+                    <a class="chip {{ $audience === '' ? 'chip--on' : '' }}"
+                       href="{{ $facetUrl('for', '') }}"
+                       @if ($audience === '') aria-current="true" @endif>Everyone</a>
+                    @foreach (config('site.audiences') as $item)
+                        <a class="chip {{ $audience === $item ? 'chip--on' : '' }}"
+                           href="{{ $facetUrl('for', $item) }}"
+                           @if ($audience === $item) aria-current="true" @endif>{{ $item }}</a>
+                    @endforeach
+                </div>
+            </details>
         </nav>
 
         <div class="filter-count">
@@ -120,6 +139,17 @@
                         <p>{{ $item['line'] }}</p>
                     </a>
                 @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="wrap cta__inner">
+            <h2>Put an idea to work</h2>
+            <p class="lede">Reading is a start. A talk, a programme or a project is how an idea changes the way your team works.</p>
+            <div class="cta__actions">
+                <a class="btn btn--primary" href="{{ route('work') }}#enquire">Ways to work together</a>
+                <a class="btn btn--ghost" href="{{ route('programmes') }}">Explore the programmes</a>
             </div>
         </div>
     </section>

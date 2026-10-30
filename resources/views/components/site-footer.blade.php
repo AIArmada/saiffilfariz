@@ -17,7 +17,7 @@
             <div>
                 <h4>Pages</h4>
                 <a href="{{ route('story') }}">About me</a>
-                <a href="{{ route('work') }}">Let’s talk</a>
+                <a href="{{ route('work') }}">Work together</a>
                 <a href="{{ route('creations') }}">Creations</a>
                 <a href="{{ route('speaking') }}">Speaking</a>
                 <a href="{{ route('ideas') }}">Ideas</a>

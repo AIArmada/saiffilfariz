@@ -1,15 +1,15 @@
-<x-slot:title>Let’s talk | Saiffil Fariz</x-slot:title>
-<x-slot:description>Speaking, AI programmes, consulting, custom software and creative collaborations. Explore how Saiffil Fariz connects AI, business and people to make useful work happen.</x-slot:description>
+<x-slot:title>Work together | Saiffil Fariz</x-slot:title>
+<x-slot:description>Tell Saiffil Fariz what you are trying to make possible: invite him to speak, train your team, build software or explore a partnership.</x-slot:description>
 
 <div>
     <section class="phero">
         <div class="wrap phero__inner">
             <div class="phero__copy">
-                <p class="phero__eyebrow">Bring the challenge. We will find the right approach.</p>
+                <p class="phero__eyebrow">Tell me what you are trying to make possible.</p>
                 <h1>Let’s talk</h1>
-                <p class="lede">Help your people understand AI, improve the way your team works, build a useful product or bring a creative idea to life. We can start wherever you need me most.</p>
+                <p class="lede">You do not need a perfect brief. Start with the people, the problem and the outcome you want. Help your people understand AI, improve the way your team works, build a useful product or bring a creative idea to life.</p>
                 <div class="hero__actions">
-                    <a class="btn btn--primary" href="#ways-to-work">Ways to work together</a>
+                    <a class="btn btn--primary" href="#intents">Start with your intent</a>
                     <a class="btn btn--ghost" href="{{ route('creations') }}">Explore my creations</a>
                 </div>
             </div>
@@ -20,30 +20,28 @@
         </div>
     </section>
 
-    <section class="section" id="ways-to-work" aria-labelledby="work-options-heading">
+    <section class="section" id="intents" aria-labelledby="work-intents-heading">
         <div class="wrap">
             <div class="head">
-                <h2 id="work-options-heading">Ways to work together</h2>
-                <p class="body">Pick whichever is closest to what you need. We can always change direction after the first call.</p>
+                <h2 id="work-intents-heading">Start with your intent</h2>
+                <p class="body">Pick whichever is closest to what you need. Each path leads somewhere specific — or enquire below and choose as you write.</p>
             </div>
-            <div class="grid grid--2">
-                @foreach (config('site.services') as $serviceRoute => $service)
-                    <article class="card" wire:key="work-service-{{ $serviceRoute }}">
-                        <div class="card__media {{ isset($service['screenshot']) ? 'card__media--screen' : '' }}">
-                            @if (isset($service['screenshot']))
-                                <img src="{{ asset($service['screenshot']) }}" alt="{{ $service['alt'] }}" width="1200" height="850" loading="lazy">
+            <div class="grid grid--4">
+                @foreach ([
+                    ['Invite me to speak', 'Keynotes, workshops, panels and podcast conversations.', 'speaking-service', 'book', 'Speaking and workshops'],
+                    ['Train my team', 'Practical programmes built around your team’s real tasks.', 'programmes', 'reserve', 'Programmes and dates'],
+                    ['Build something', 'Websites, applications, custom systems and integrations.', 'build', null, 'Software services'],
+                    ['Explore a partnership', 'A creative collaboration, media project or something neither of us has named yet.', null, 'enquire', 'Enquire below'],
+                ] as $path)
+                    <article class="card card--flat">
+                        <h3>{{ $path[0] }}</h3>
+                        <p>{{ $path[1] }}</p>
+                        <div class="card__foot" style="border-top:0;padding-top:0">
+                            @if ($path[2])
+                                <a class="link" href="{{ route($path[2]).($path[3] ? '#'.$path[3] : '') }}">{{ $path[4] }}</a>
                             @else
-                                <x-photo :name="$service['image']" :alt="$service['alt']"
-                                         sizes="(max-width: 620px) 100vw, 50vw" />
+                                <a class="link" href="#enquire">{{ $path[4] }}</a>
                             @endif
-                        </div>
-                        <div class="card__body">
-                            <p class="small">{{ $service['meta'] }}</p>
-                            <h3>{{ $service['title'] }}</h3>
-                            <p>{{ $service['description'] }}</p>
-                            <div class="card__foot">
-                                <a class="link" href="{{ route($serviceRoute) }}">{{ $service['cta'] }}</a>
-                            </div>
                         </div>
                     </article>
                 @endforeach
@@ -51,10 +49,16 @@
         </div>
     </section>
 
-    <section class="section section--tight section--muted" aria-labelledby="creative-services-heading">
-        <div class="wrap split">
-            <div class="stack"><h2 id="creative-services-heading">Have a creative brief?</h2><p class="body">I also make music and corporate films. If your idea needs sound, a story or a digital experience, we can shape the right combination.</p></div>
-            <div class="stack"><a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}?subject=Creative%20collaboration">Discuss a creative collaboration</a><br><a class="link" href="{{ route('creations') }}">Experience the creations</a></div>
+    <section class="section section--tight section--muted" id="enquire" aria-labelledby="enquire-heading">
+        <div class="wrap split split--top">
+            <div class="stack">
+                <h2 id="enquire-heading">Send one enquiry</h2>
+                <p class="body">Choose what you would like to do and the form adjusts. I read every message myself and reply within two working days.</p>
+                <p class="small">Prefer email? Write to <a class="link" href="mailto:{{ config('site.contact.email') }}">{{ config('site.contact.email') }}</a>.</p>
+            </div>
+            <div class="card form-card">
+                <livewire:enquiry-form intent="speak" :showIntentPicker="true" />
+            </div>
         </div>
     </section>
 
@@ -95,8 +99,8 @@
 
     <section class="cta">
         <div class="wrap cta__inner">
-            <h2>Get in touch</h2>
-            <p class="lede">{{ config('site.contact.invitation') }}</p>
+            <h2>Not ready to enquire?</h2>
+            <p class="lede">Read how I think, see what I have made, or just say hello. Every page ends with a next step.</p>
             <div class="cta__actions">
                 <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}">Email me</a>
                 <a class="btn btn--ghost" href="{{ route('story') }}">About me</a>

@@ -1,16 +1,31 @@
 @php
     // The surrounding section owns the heading, so the form itself only
     // carries an accessible label. No duplicated copy, no second h2.
-    $label = match ($intent) {
+    $intents = [
+        'speak' => 'Invite me to speak',
         'programme' => 'Reserve a seat',
         'consult' => 'Start a conversation',
-        default => 'Invite me to speak',
-    };
+        'build' => 'Build something',
+        'partner' => 'Explore a partnership',
+    ];
+
+    $label = $intents[$intent] ?? $intents['speak'];
 
     $messageLabel = match ($intent) {
         'programme' => 'Which programme, and how many seats?',
         'consult' => 'What process do you want to fix?',
+        'build' => 'What do you want to build, and who is it for?',
+        'partner' => 'What is the partnership idea, and what would each side bring?',
         default => 'Tell me about your event',
+    };
+
+    $messageHint = match ($intent) {
+        'speak' => 'Who will be in the room, what they already know, and what should change afterwards.',
+        'programme' => 'Programme name, preferred dates and seats. I confirm availability before anything is charged.',
+        'consult' => 'The process in plain words, who does it now, and what better would look like.',
+        'build' => 'The problem, who uses it, and any timeline or existing system. A rough budget range helps.',
+        'partner' => 'The audience, what you bring, and the outcome you have in mind.',
+        default => '',
     };
 @endphp
 
@@ -27,6 +42,16 @@
     @else
         <form wire:submit="submit" aria-label="{{ $label }}" novalidate>
           <div class="form-rows">
+            @if ($showIntentPicker)
+                <label class="field">
+                    <span>What would you like to do?</span>
+                    <select class="select" wire:model.live="intent">
+                        @foreach ($intents as $value => $option)
+                            <option value="{{ $value }}">{{ $option }}</option>
+                        @endforeach
+                    </select>
+                </label>
+            @endif
             <div class="grid grid--2">
                 <label class="field">
                     <span>Your name</span>
@@ -61,6 +86,7 @@
             <label class="field">
                 <span>{{ $messageLabel }}</span>
                 <textarea class="textarea" wire:model="message" rows="5"
+                          @if ($messageHint !== '') placeholder="{{ $messageHint }}" @endif
                           @error('message') aria-invalid="true" @enderror></textarea>
                 @error('message') <span class="field-error">{{ $message }}</span> @enderror
             </label>

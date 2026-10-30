@@ -4,7 +4,7 @@
     <section class="phero">
         <div class="wrap phero__inner">
             <div class="phero__copy">
-                <a class="crumb" href="{{ route('work') }}"><span aria-hidden="true">←</span> Let’s talk</a>
+                <a class="crumb" href="{{ route('work') }}"><span aria-hidden="true">←</span> Work together</a>
                 <p class="phero__eyebrow">Ideas that open minds</p>
                 <h1>Speaking and workshops</h1>
                 <p class="lede">I give talks and workshops about using AI at work. I skip the hype. I explain what the tools can do today, what they still get wrong, and what your people can try first. Every talk includes time for questions.</p>
@@ -104,6 +104,53 @@
             </div>
         </section>
     @endif
+
+    <section class="section section--paper">
+        <div class="wrap">
+            <div class="head">
+                <h2>Signature topics</h2>
+                <p class="body">Five talks I give most often. Each one runs as a 45-minute keynote or a longer workshop, and I adjust the examples for your audience.</p>
+            </div>
+            <div class="rows rows--paper">
+                @foreach (config('site.signature_topics') as $topic)
+                    <div class="rows__item">
+                        <div>
+                            <h3>{{ $topic['name'] }}</h3>
+                            <p>{{ $topic['line'] }}</p>
+                        </div>
+                        <div class="rows__meta">
+                            <b>Best for</b>
+                            {{ $topic['for'] }}
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="media-kit">
+        <div class="wrap split split--top">
+            <div class="stack">
+                <h2>Media kit</h2>
+                <p class="body">Everything an organiser or producer needs: a short bio, a longer one, and a portrait. Slides, topic outlines and a technical rider are available on request.</p>
+                <p class="small">Full press pack with downloadable portraits and one-pagers is coming. For now, email me and I will send whatever your deadline needs.</p>
+                <div class="cta__actions">
+                    <a class="btn btn--primary" href="mailto:{{ config('site.contact.email') }}?subject=Speaker%20media%20kit">Request the media kit</a>
+                    <a class="btn btn--ghost" href="{{ route('speaking') }}">Browse past sessions</a>
+                </div>
+            </div>
+            <div class="stack">
+                <div class="card card--flat">
+                    <p class="small">Short bio</p>
+                    <p>{{ config('site.media_kit.short_bio') }}</p>
+                </div>
+                <div class="card card--flat">
+                    <p class="small">Long bio</p>
+                    <p>{{ config('site.media_kit.long_bio') }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="band">
         <div class="band__media">

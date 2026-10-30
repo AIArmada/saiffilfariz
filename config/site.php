@@ -18,8 +18,9 @@ return [
     'positioning' => [
         'name' => 'Connected intelligence',
         'themes' => 'AI · Business · People',
-        'description' => 'Saiffil Fariz connects AI, business and people through speaking, programmes, consulting, software and creative work. Explore websites, systems, music and the ideas behind them.',
-        'bio' => 'I connect AI, business and people through speaking, training, consulting, software and creative work. I make websites and systems, music and films, following ideas across different forms.',
+        'description' => 'Saiffil Fariz connects technology, business and people — turning complex ideas into things people can understand, use and grow with.',
+        'bio' => 'I connect technology, business and people through speaking, training, consulting, software and creative work — turning complex ideas into things people can understand, use and grow with.',
+        'promise' => 'Complexity made useful. Ideas turned into action. People kept at the centre.',
     ],
 
     'socials' => [
@@ -273,6 +274,100 @@ return [
         ['value' => '100+', 'label' => 'talks and workshops', 'note' => 'Malaysia and the region'],
         ['value' => '300+', 'label' => 'organisations', 'note' => 'public, private, academic'],
         ['value' => '9', 'label' => 'universities', 'note' => 'guest lectures and programmes'],
+    ],
+
+    /*
+    | The four connected worlds. Routes are resolved in templates so this
+    | file stays free of route() calls (config must load without routes).
+    */
+    'worlds' => [
+        [
+            'name' => 'Technology',
+            'line' => 'Systems, software, AI and automation that do real work.',
+            'route' => 'build',
+            'anchor' => null,
+        ],
+        [
+            'name' => 'Business',
+            'line' => 'Ventures, strategy and the unglamorous work of making things last.',
+            'route' => 'consulting',
+            'anchor' => null,
+        ],
+        [
+            'name' => 'People',
+            'line' => 'Talks, teaching and teams that leave with something they can use.',
+            'route' => 'speaking-service',
+            'anchor' => null,
+        ],
+        [
+            'name' => 'Creativity',
+            'line' => 'Music, film and experiments that carry ideas further.',
+            'route' => 'creations',
+            'anchor' => null,
+        ],
+    ],
+
+    'signature_topics' => [
+        [
+            'name' => 'AI literacy',
+            'line' => 'What AI can do today, what it still gets wrong, and how to tell the difference before you spend money.',
+            'for' => 'Leaders and mixed audiences',
+        ],
+        [
+            'name' => 'AI for business',
+            'line' => 'Where AI pays for itself: five everyday jobs most teams can improve this quarter, worked live on examples close to your own.',
+            'for' => 'Teams and decision makers',
+        ],
+        [
+            'name' => 'Smart workflow',
+            'line' => 'From scattered tools to a calmer way of working: pick one slow process and make it measurably better.',
+            'for' => 'Operations teams',
+        ],
+        [
+            'name' => 'Creative AI',
+            'line' => 'Making with machines: music, film and honest experiments in what the tools change and what they do not.',
+            'for' => 'Creatives and educators',
+        ],
+        [
+            'name' => 'Digital transformation',
+            'line' => 'Why projects stall even when the software works, and the four questions that tell you early whether yours will stick.',
+            'for' => 'Leaders',
+        ],
+    ],
+
+    /*
+    | Learning paths for Ideas: beginner, practical, deep. Destinations are
+    | route names resolved in templates.
+    */
+    'learning_paths' => [
+        [
+            'name' => 'Understand AI',
+            'step' => 'Start here',
+            'line' => 'Short reads on how I think about AI, in plain language.',
+            'route' => 'ideas',
+            'params' => ['pillar' => 'education'],
+        ],
+        [
+            'name' => 'Use it at work',
+            'step' => 'Go practical',
+            'line' => 'Small classes built around a real task from your job.',
+            'route' => 'programmes',
+            'params' => [],
+        ],
+        [
+            'name' => 'Build with it',
+            'step' => 'Go deeper',
+            'line' => 'Software and systems shaped around the way your team works.',
+            'route' => 'build',
+            'params' => [],
+        ],
+    ],
+
+    'media_kit' => [
+        'short_bio' => 'Saiffil Fariz connects technology, business and people. He gives talks and workshops on practical AI, runs small hands-on programmes, and builds websites, applications and custom systems. He also makes music and films.',
+        'long_bio' => 'Saiffil Fariz had his first contact with technology in 1988, a VTech Talking WhizKid, and went online in 1996. Since then he has built websites and systems, run a small company, and taught in classrooms, workshops and boardrooms across Malaysia and the region. Today he connects AI, business and people through speaking, training, consulting, software and creative work — always starting with the people and the work, not the tool.',
+        'portrait' => 'profile-metallicgold',
+        'portrait_alt' => 'Saiffil Fariz in a gold blazer',
     ],
 
     'proof' => 'Lately I have spoken for MATRADE, two ministries and nine universities.',
