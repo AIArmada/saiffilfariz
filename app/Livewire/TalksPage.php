@@ -5,9 +5,11 @@ namespace App\Livewire;
 use App\Support\Engagements;
 use App\Support\Series;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('layouts.app')]
+#[Title('Speaking | Saiffil Fariz')]
 class TalksPage extends Component
 {
     public function render()
@@ -15,7 +17,7 @@ class TalksPage extends Component
         $series = Series::first();
 
         return view('livewire.talks-page', [
-            'featured' => Engagements::featured(10),
+            'featured' => Engagements::all()->reject(fn (array $engagement) => $engagement['listed_only'])->values(),
             'listed' => Engagements::listedOnly(),
             'total' => Engagements::all()->count(),
             'series' => $series,

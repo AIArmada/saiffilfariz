@@ -11,8 +11,17 @@
                     <h1>{{ $creation['headline'] }}</h1>
                     <p class="lede">{{ $creation['intro'] }}</p>
                     <div class="creation-story__hero-actions">
-                        <a class="btn btn--primary" href="{{ $creation['url'] }}" target="_blank" rel="noopener noreferrer">{{ $creation['url_label'] }} <span aria-hidden="true">↗</span></a>
-                        <a class="link" href="{{ route('build') }}">Build a website or system with me</a>
+                        @if (isset($creation['screenshots']))
+                            <a class="btn btn--primary" href="#inside-experience">Explore the booking journey</a>
+                            <a class="link" href="{{ $creation['url'] }}" target="_blank" rel="noopener noreferrer">{{ $creation['url_label'] }} <span aria-hidden="true">↗</span></a>
+                        @else
+                            <a class="btn btn--primary" href="{{ $creation['url'] }}" target="_blank" rel="noopener noreferrer">{{ $creation['url_label'] }} <span aria-hidden="true">↗</span></a>
+                            @if (isset($creation['related']))
+                                <a class="link" href="{{ route('creation', $creation['related']['slug']) }}">{{ $creation['related']['label'] }}</a>
+                            @else
+                                <a class="link" href="{{ route('build') }}">Build a website or system with me</a>
+                            @endif
+                        @endif
                     </div>
                 </div>
                 <figure class="creation-story__visual">
@@ -30,6 +39,10 @@
         </div>
     </section>
 
+    @if (isset($creation['screenshots']))
+        <x-project-experience :screenshots="$creation['screenshots']" />
+    @endif
+
     <section class="creation-story__journey" aria-label="How the experience works">
         <div class="wrap">
             <div class="creation-story__section-head"><p class="creation-context">The journey</p><h2>One idea, carried all the way through.</h2></div>
@@ -40,27 +53,6 @@
             </ol>
         </div>
     </section>
-
-    @if (isset($creation['screenshots']))
-        <section class="creation-story__screens" aria-labelledby="creation-story-screens-heading">
-            <div class="wrap">
-                <div class="creation-story__section-head">
-                    <p class="creation-context">Inside the experience</p>
-                    <h2 id="creation-story-screens-heading">A ticket journey with nowhere to drop the thread.</h2>
-                </div>
-                <div class="creation-story__screens-grid">
-                    @foreach ($creation['screenshots'] as $screenshot)
-                        <figure class="creation-story__screen{{ ! empty($screenshot['tall']) ? ' creation-story__screen--tall' : '' }}">
-                            <div class="creation-story__screen-image">
-                                <img src="{{ asset($screenshot['image']) }}" alt="{{ $screenshot['alt'] }}" width="{{ $screenshot['width'] }}" height="{{ $screenshot['height'] }}" loading="lazy">
-                            </div>
-                            <figcaption><h3>{{ $screenshot['title'] }}</h3><p>{{ $screenshot['text'] }}</p></figcaption>
-                        </figure>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-    @endif
 
     <section class="creation-story__narrative">
         <div class="wrap">

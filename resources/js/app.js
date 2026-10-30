@@ -136,3 +136,52 @@ document.querySelectorAll('audio').forEach((player) => {
     });
   });
 });
+
+document.querySelectorAll('[data-project-experience]').forEach((experience) => {
+  const controls = experience.querySelector('[data-experience-controls]');
+  const buttons = [...experience.querySelectorAll('[data-experience-step]')];
+  const panels = [...experience.querySelectorAll('[data-experience-panel]')];
+  const status = experience.querySelector('[data-experience-status]');
+  const dialog = experience.querySelector('[data-experience-dialog]');
+  const dialogImage = experience.querySelector('[data-experience-zoom-image]');
+  const dialogTitle = experience.querySelector('[data-experience-zoom-title]');
+
+  const selectStep = (index, announce = true) => {
+    buttons.forEach((button, step) => button.setAttribute('aria-pressed', String(step === index)));
+    panels.forEach((panel, step) => { panel.hidden = step !== index; });
+
+    if (announce) {
+      status.textContent = buttons[index].getAttribute('aria-label');
+    }
+  };
+
+  if (buttons.length && panels.length) {
+    controls.hidden = false;
+    selectStep(Math.min(1, panels.length - 1), false);
+    buttons.forEach((button, index) => button.addEventListener('click', () => selectStep(index)));
+  }
+
+  if (dialog && typeof dialog.showModal === 'function') {
+    experience.querySelectorAll('[data-experience-zoom]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        dialogImage.src = link.href;
+        dialogImage.alt = link.querySelector('img').alt;
+        dialogTitle.textContent = link.dataset.title;
+        dialog.showModal();
+        dialog.scrollTop = 0;
+      });
+    });
+
+    dialog.querySelector('[data-experience-close]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) {
+        const bounds = dialog.getBoundingClientRect();
+        if (event.clientX < bounds.left || event.clientX > bounds.right
+            || event.clientY < bounds.top || event.clientY > bounds.bottom) {
+          dialog.close();
+        }
+      }
+    });
+  }
+});

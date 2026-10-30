@@ -18,7 +18,7 @@
                     I connect AI, business and people to make work more meaningful—from helping teams think and learn to building useful software and bringing ideas to life through music and film.
                 </p>
                 <div class="hero__actions">
-                    <a class="btn hero__primary" href="#work-with-me">Work with me <span aria-hidden="true">→</span></a>
+                    <a class="btn hero__primary" href="#work-with-me">Let’s talk <span aria-hidden="true">→</span></a>
                     <a class="btn hero__secondary" href="{{ route('creations') }}">Explore my creations</a>
                 </div>
                 <p class="hero__proof">{{ config('site.proof') }}</p>
@@ -46,6 +46,8 @@
             @endforeach
         </div>
     </section>
+
+    <x-creations-showcase />
 
     <section class="section" id="work-with-me">
         <div class="wrap">
@@ -79,8 +81,6 @@
     </section>
 
     <x-build-showcase />
-
-    <x-creations-showcase />
 
     <section class="section section--tight section--muted">
         <div class="wrap">
@@ -132,10 +132,10 @@
     <section class="section section--muted">
         <div class="wrap">
             <div class="head">
-                <h2>Recent writing</h2>
+                <h2>Recent ideas</h2>
                 <div>
-                    <p class="body">I write down what I learn from talks, classes and projects. Most pieces are short and practical. Start with the newest one, or browse by topic.</p>
-                    <a class="link" href="{{ route('writing') }}">All writing</a>
+                    <p class="body">I share what I learn from talks, classes and projects in different formats. Start with the newest one, or browse by topic.</p>
+                    <a class="link" href="{{ route('ideas') }}">Explore ideas</a>
                 </div>
             </div>
 

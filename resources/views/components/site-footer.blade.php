@@ -17,9 +17,10 @@
             <div>
                 <h4>Pages</h4>
                 <a href="{{ route('story') }}">About me</a>
-                <a href="{{ route('work') }}">Work with me</a>
+                <a href="{{ route('work') }}">Let’s talk</a>
                 <a href="{{ route('creations') }}">Creations</a>
-                <a href="{{ route('writing') }}">Writing</a>
+                <a href="{{ route('speaking') }}">Speaking</a>
+                <a href="{{ route('ideas') }}">Ideas</a>
             </div>
 
             <div>
@@ -30,7 +31,7 @@
             </div>
 
             <div>
-                <h4>Topics in my writing</h4>
+                <h4>Ideas by topic</h4>
                 @foreach (config('site.pillars') as $pillar)
                     <a href="{{ route('pillar', $pillar['slug']) }}">{{ $pillar['name'] }}</a>
                 @endforeach

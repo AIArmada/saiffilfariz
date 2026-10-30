@@ -8,7 +8,7 @@
 <article class="reading-page">
     {{-- ── Head ─────────────────────────────────────────────── --}}
     <header class="wrap--narrow article-head">
-        <a class="crumb" href="{{ route('talks') }}">
+        <a class="crumb" href="{{ route('speaking') }}">
             <span aria-hidden="true">←</span> Where I have spoken
         </a>
 
@@ -163,7 +163,7 @@
                     <span aria-hidden="true">←</span> {{ $previous['org'] }}
                 </a>
             @else
-                <a class="link link--ink" href="{{ route('talks') }}">
+                <a class="link link--ink" href="{{ route('speaking') }}">
                     <span aria-hidden="true">←</span> All sessions
                 </a>
             @endif
@@ -173,7 +173,7 @@
                     {{ $next['org'] }} <span aria-hidden="true">→</span>
                 </a>
             @else
-                <a class="link link--ink" href="{{ route('speaking') }}#book">
+                <a class="link link--ink" href="{{ route('speaking-service') }}#book">
                     Invite me to speak <span aria-hidden="true">→</span>
                 </a>
             @endif

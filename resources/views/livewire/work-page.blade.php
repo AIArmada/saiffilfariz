@@ -1,4 +1,4 @@
-<x-slot:title>Work with me | Saiffil Fariz</x-slot:title>
+<x-slot:title>Let’s talk | Saiffil Fariz</x-slot:title>
 <x-slot:description>Speaking, AI programmes, consulting, custom software and creative collaborations. Explore how Saiffil Fariz connects AI, business and people to make useful work happen.</x-slot:description>
 
 <div>
@@ -6,7 +6,7 @@
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">Bring the challenge. We will find the right approach.</p>
-                <h1>Work with me</h1>
+                <h1>Let’s talk</h1>
                 <p class="lede">Help your people understand AI, improve the way your team works, build a useful product or bring a creative idea to life. We can start wherever you need me most.</p>
                 <div class="hero__actions">
                     <a class="btn btn--primary" href="#ways-to-work">Ways to work together</a>

@@ -7,7 +7,7 @@
             <div class="creations-opening__note">
                 <p class="lede">A song. A film. A website. A little experiment that becomes something more.</p>
                 <p>Client projects, personal experiments and hobbies, gathered in one place. Follow the connections, or enjoy each piece on its own.</p>
-                <a class="link" href="#creation-gallery">Come and explore</a>
+                <a class="btn btn--primary" href="{{ route('creation', 'nusavue') }}#inside-experience">Explore Nusavue’s ticketing experience</a>
             </div>
         </div>
         <div class="wrap creations-opening__line"><span>For a brief.</span><span>For a cause.</span><span>For the joy of it.</span></div>

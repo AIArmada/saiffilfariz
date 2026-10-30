@@ -39,11 +39,10 @@ return [
             'audio' => 'audio/kita-bersama.mp3',
             'waveform' => 'images/creations/kita-bersama-waveform.svg',
             'artwork' => 'images/creations/konsert-kita.webp',
-            'screenshot' => 'images/projects/nusavue.jpg',
             'url' => 'https://nusavue.net',
         ],
         'websites' => [
-            ['slug' => 'ikon', 'name' => 'IKON Aspirasi Pahang', 'type' => 'Campaign & voting', 'description' => 'Give the next generation of talent a stage of its own. IKON Aspirasi Pahang brings the campaign journey, 20 finalist profiles and public voting into one place people can follow, explore and return to.', 'image' => 'images/projects/ikon.jpg', 'url' => 'https://ikonofficial.com/'],
+            ['slug' => 'ikon', 'name' => 'IKON Aspirasi Pahang', 'type' => 'Campaign, voting & original song', 'description' => 'Give the next generation of talent a stage of its own. IKON Aspirasi Pahang brings the campaign journey, 20 finalist profiles and public voting into one place people can follow, explore and return to. I also created “Ini Masa Kita” for ikonofficial.com, adding a musical piece to the campaign.', 'image' => 'images/projects/ikon.jpg', 'url' => 'https://ikonofficial.com/'],
             ['slug' => 'zunita', 'name' => 'DUN Pilah', 'type' => 'Community & public service', 'description' => 'Make it easier for people to find the help they need. A public service hub bringing the representative’s profile, local initiatives, community information and service centre together.', 'image' => 'images/projects/zunita.jpg', 'url' => 'https://zunita.my'],
             ['slug' => 'ilmu360', 'name' => 'ilmu360°', 'type' => 'Learning & discovery', 'description' => 'The next meaningful majlis can be hard to discover. ilmu360° brings events, speakers, institutions and topics into one searchable place, helping people find a gathering worth showing up for.', 'image' => 'images/projects/ilmu360.jpg', 'url' => 'https://ilmu360.com'],
             ['slug' => 'kod', 'name' => 'KOD', 'type' => 'Links & action', 'description' => 'Give a short word somewhere useful to take you. KOD turns a memorable word into an editable action hub for links, calls, QR access and engagement signals, ready to change as a campaign or business changes.', 'image' => 'images/projects/kod.jpg', 'url' => 'https://kod.to'],
@@ -77,8 +76,8 @@ return [
             'nusavue' => [
                 'name' => 'Nusavue · Konsert KITA',
                 'eyebrow' => 'Event platform · promotion · ticketing',
-                'headline' => 'From “I want to go” to a seat, a ticket and a verified arrival.',
-                'intro' => 'A concert site has to do more than look exciting. For Konsert KITA, I connected the campaign and event information to a working seat-selection and ticketing journey.',
+                'headline' => 'The concert starts before the first song.',
+                'intro' => 'From choosing where to sit to finding a ticket on event day, I built the digital journey around Konsert KITA. A vivid event site, an interactive seat map and a cart that makes every choice clear.',
                 'image' => 'images/projects/nusavue-event-desktop.jpg',
                 'image_width' => 1440,
                 'image_height' => 900,
@@ -86,7 +85,7 @@ return [
                 'url' => 'https://nusavue.net',
                 'url_label' => 'Visit Nusavue',
                 'related' => ['slug' => 'konsert-kita', 'label' => 'Hear the song made for this event'],
-                'partner' => 'The campaign ends at a vivid, interactive seat map—not a dead-end ticket button.',
+                'partner' => 'One connected experience: discover the concert, choose your place, keep your ticket and arrive.',
                 'journey' => [
                     ['number' => '01', 'title' => 'Discover', 'text' => 'Event details and the campaign give people a reason and a clear path to attend.'],
                     ['number' => '02', 'title' => 'Choose', 'text' => 'Guests explore the venue map, choose a seat and see the booking summary update. A timed hold keeps the selection for checkout.'],
@@ -98,25 +97,30 @@ return [
                         'width' => 1440,
                         'height' => 1322,
                         'alt' => 'Konsert KITA ticket booking page with its event seat sections',
-                        'title' => 'Start with the room',
-                        'text' => 'Choose a standing, seated or VIP experience from the venue layout.',
+                        'label' => 'Choose a section',
+                        'title' => 'Where do you want to be?',
+                        'text' => 'The venue becomes part of the invitation. Guests explore the room and choose the concert experience that feels right for them.',
+                        'details' => ['Standing, seated and VIP experiences', 'A visual venue layout', 'A clear path into seat selection'],
                     ],
                     [
                         'image' => 'images/projects/nusavue-seat-map-cart.jpg',
                         'width' => 1440,
                         'height' => 2141,
-                        'tall' => true,
                         'alt' => 'Interactive Sapphire seating map with seat H2 selected, a collector ticket and RM414 total',
-                        'title' => 'Pick a seat and see the full cost',
-                        'text' => 'The live summary follows the seat choice, with the optional collector ticket itemized before checkout.',
+                        'label' => 'Seats & cart',
+                        'title' => 'Your seat. Your keepsake. Your total.',
+                        'text' => 'Tap a seat and the booking comes together around it. The map, selected seats and cart stay connected, right down to the optional collector ticket.',
+                        'details' => ['A live map of available and selected seats', 'A 15-minute hold while guests check out', 'Optional collector tickets, itemized in the total'],
                     ],
                     [
                         'image' => 'images/projects/nusavue-ticket-lookup.jpg',
                         'width' => 1444,
                         'height' => 1692,
                         'alt' => 'Nusavue ticket lookup page with ticket number search and event artwork',
-                        'title' => 'Find the ticket later',
-                        'text' => 'A dedicated lookup brings ticket details back when event day arrives.',
+                        'label' => 'Find your ticket',
+                        'title' => 'Ready when the day arrives.',
+                        'text' => 'The experience continues after booking. A dedicated ticket lookup gives guests a clear way back to their ticket when it is time to go.',
+                        'details' => ['A dedicated ticket number search', 'A return point for ticket details', 'Connected to the same event experience'],
                     ],
                 ],
                 'sections' => [
@@ -169,14 +173,18 @@ return [
             ],
             'ikon' => [
                 'name' => 'IKON Aspirasi Pahang',
-                'eyebrow' => 'Campaign · profiles · public voting',
+                'eyebrow' => 'Campaign · profiles · public voting · original song',
                 'headline' => 'Give a new generation of talent a campaign people can take part in.',
                 'intro' => 'IKON Aspirasi Pahang brings a public campaign, its finalists and the voting experience into one vivid destination—giving supporters somewhere to discover the candidates and make their choice.',
                 'image' => 'images/projects/ikon.jpg',
                 'image_alt' => 'IKON Aspirasi Pahang campaign website with finalist profiles and public voting',
                 'url' => 'https://ikonofficial.com/',
                 'url_label' => 'Visit IKON Aspirasi Pahang',
-                'partner' => 'A campaign experience designed around participation.',
+                'partner' => 'A campaign experience people can take part in, with an original song created for ikonofficial.com.',
+                'audio' => 'audio/ini-masa-kita.mp3',
+                'track' => 'Ini Masa Kita',
+                'duration' => '1:52',
+                'waveform' => 'images/creations/ikon-waveform.png',
                 'journey' => [
                     ['number' => '01', 'title' => 'Meet the finalists', 'text' => 'A dedicated profile gives each selected talent room to be seen.'],
                     ['number' => '02', 'title' => 'Follow the campaign', 'text' => 'The programme and key information keep the event journey in one place.'],
@@ -185,6 +193,7 @@ return [
                 'sections' => [
                     ['label' => 'The opportunity', 'title' => 'A talent campaign should make its people easy to discover.', 'text' => 'When a programme is built around emerging talent, the audience needs a clear way to learn who is taking part and how to support them.'],
                     ['label' => 'The experience', 'title' => 'The website gives the campaign a place to gather.', 'text' => 'The visual campaign, finalist profiles and voting journey work together as one public experience. The audience can explore the people behind the programme before choosing.'],
+                    ['label' => 'The song', 'title' => 'Ini Masa Kita brings the campaign into music.', 'text' => 'Created for ikonofficial.com, the song gives the IKON project a musical expression alongside the website.'],
                     ['label' => 'The craft', 'title' => 'A strong campaign has to hold attention and make the next action obvious.', 'text' => 'The design gives the event its own atmosphere while keeping the practical steps visible: find the programme, discover a finalist and take part.'],
                 ],
             ],
@@ -213,7 +222,7 @@ return [
     ],
 
     'services' => [
-        'speaking' => [
+        'speaking-service' => [
             'title' => 'Speaking',
             'action' => 'Invite me to speak',
             'anchor' => 'book',
@@ -269,7 +278,7 @@ return [
     'proof' => 'Lately I have spoken for MATRADE, two ministries and nine universities.',
 
     'contact' => [
-        'email' => 'hello@saiffilfariz.com',
+        'email' => 'saiffilfariz@gmail.com',
         'city' => 'Shah Alam, Malaysia',
         'invitation' => 'Whether you need a talk, a stronger team, working software or a creative collaboration, tell me what you have in mind. I read every message myself.',
     ],

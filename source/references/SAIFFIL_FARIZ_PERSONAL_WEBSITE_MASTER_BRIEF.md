@@ -505,7 +505,7 @@ The history must be converted into strengths:
 - **Common public name:** Saiffil Fariz. **CONFIRMED**
 - **Preferred name:** Saiffil. **CONFIRMED**
 - **Public handle:** `@saiffil`. **CONFIRMED**
-- **Email:** `saiffil@maxx.my`. **CONFIRMED**
+- **Email:** `saiffilfariz@gmail.com`. **CONFIRMED**
 - **Country/context:** Malaysia. **CONFIRMED**
 - **Primary foundational identity:** Programmer and entrepreneur. **CONFIRMED**
 

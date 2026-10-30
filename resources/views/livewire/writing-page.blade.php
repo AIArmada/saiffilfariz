@@ -15,7 +15,7 @@
             $query[$key] = $value;
         }
 
-        return route('writing', $query);
+        return route('ideas', $query);
     };
 @endphp
 
@@ -24,8 +24,9 @@
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">Notes from a connected world</p>
-                <h1>Writing</h1>
-                <p class="lede">Notes from building software, running a business, teaching and advising teams. Five connected topics run through the work: code, commerce, influence, education and character. Browse everything, or filter by topic.</p>
+                <h1>Ideas</h1>
+                <p class="lede">How I think and teach across software, business, learning and creative work. Explore practical notes across five connected topics, alongside talks and workshops in the Speaking archive.</p>
+                <p class="small"><a class="link" href="{{ route('speaking') }}">Browse talks, workshops and panels</a></p>
             </div>
             <div class="phero__media phero__media--wide">
                 <x-photo name="editorial-fieldnotes-v1" alt="Gold-edged pages unfolding into a flowing metallic ribbon"
@@ -61,7 +62,7 @@
             </div>
 
             <div class="filters__row">
-                <span class="label">Written for</span>
+                <span class="label">For</span>
                 <a class="chip {{ $audience === '' ? 'chip--on' : '' }}"
                    href="{{ $facetUrl('for', '') }}"
                    @if ($audience === '') aria-current="true" @endif>Everyone</a>
@@ -82,7 +83,7 @@
                 @endif
             </p>
             @if ($filtered)
-                <a class="link" href="{{ route('writing') }}">Clear filters</a>
+                <a class="link" href="{{ route('ideas') }}">Clear filters</a>
             @endif
         </div>
     </div>
@@ -92,7 +93,7 @@
             @if ($posts->isEmpty())
                 <div class="lib-empty">
                     <h2>Nothing here yet.</h2>
-                    <p class="body">Try a different topic, or <a class="link" href="{{ route('writing') }}">see everything</a>.</p>
+                    <p class="body">Try a different topic, or <a class="link" href="{{ route('ideas') }}">see everything</a>.</p>
                 </div>
             @else
                 <div class="lib-grid">

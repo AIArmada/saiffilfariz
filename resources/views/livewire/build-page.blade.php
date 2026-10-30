@@ -6,7 +6,7 @@
     <section class="build-opening">
         <div class="wrap build-opening__inner">
             <div class="build-opening__copy">
-                <a class="crumb" href="{{ route('work') }}">Work with me</a>
+                <a class="crumb" href="{{ route('work') }}">Let’s talk</a>
                 <p class="build-kicker">Software &amp; systems</p>
                 <h1>When the right tool doesn't exist, I build it.</h1>
                 <p class="lede">
@@ -83,9 +83,8 @@
     </section>
 
     <section class="section build-creative-connection">
-            <div class="wrap split">
-            <div><p class="creation-context">When code meets a creative brief</p><h2>A project can have more than one voice.</h2></div>
-            <div class="stack"><p class="body">For Konsert KITA, I made music and built the promotional and ticketing website. The song and the software belong to the same story.</p><a class="link" href="{{ route('creation', 'konsert-kita') }}">Read and hear the whole project</a><a class="link" href="{{ route('creation', 'nusavue') }}">See how the ticketing works</a></div>
+        <div class="wrap">
+            <x-concert-creation />
         </div>
     </section>
 

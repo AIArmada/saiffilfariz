@@ -18,7 +18,7 @@
     <section class="phero phero--plain">
         <div class="wrap phero__inner">
             <div class="phero__copy">
-                <a class="crumb" href="{{ route('talks') }}">
+                <a class="crumb" href="{{ route('speaking') }}">
                     <span aria-hidden="true">←</span> Where I have spoken
                 </a>
                 <h1>{{ $series['name'] }}</h1>
@@ -177,8 +177,8 @@
             <h2>About the posters</h2>
             <p class="body">The posters are shown as they were posted, typos and all. Cleaning them up now would not be honest.</p>
             <div class="closing__actions">
-                <a class="btn btn--primary" href="{{ route('talks') }}">See where I speak now</a>
-                <a class="btn btn--ghost" href="{{ route('speaking') }}#book">Invite me to speak</a>
+                <a class="btn btn--primary" href="{{ route('speaking') }}">See where I speak now</a>
+                <a class="btn btn--ghost" href="{{ route('speaking-service') }}#book">Invite me to speak</a>
             </div>
         </div>
     </section>

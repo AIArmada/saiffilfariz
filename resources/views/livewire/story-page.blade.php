@@ -8,9 +8,9 @@
                 <h1>About me</h1>
                 <p class="lede">My first contact with technology was a VTech Talking WhizKid in 1988. I went online in 1996. Today, I connect AI, business and people through the software and creative work I make, the rooms I teach in and the teams I work with.</p>
             </div>
-            <div class="phero__media">
-                <x-photo name="story-present-portrait" alt="Portrait of Saiffil Fariz"
-                         sizes="(max-width: 900px) 100vw, 44vw" :eager="true" />
+            <div class="phero__media phero__media--portrait">
+                <x-photo name="saiffil-fariz-gold-portrait" alt="Saiffil Fariz in a metallic gold blazer"
+                         sizes="(max-width: 720px) min(90vw, 440px), 440px" :eager="true" />
             </div>
         </div>
     </section>

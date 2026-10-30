@@ -4,9 +4,11 @@ namespace App\Livewire;
 
 use App\Models\Post;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('layouts.app')]
+#[Title('Ideas | Saiffil Fariz')]
 class WritingPage extends Component
 {
     public string $pillar = '';

@@ -16,6 +16,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23141714'/><text y='.86em' x='50%' text-anchor='middle' font-size='78' font-family='Georgia,serif' fill='%23D8AE7B'>S</text></svg>">
     <link rel="preload" href="{{ asset('fonts/dm-sans-400-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ asset('fonts/playfair-display-400-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ asset('fonts/fonts.css') }}">
 
     @vite(['resources/css/site.css', 'resources/js/app.js'])
     @livewireStyles

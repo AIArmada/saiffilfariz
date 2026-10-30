@@ -19,7 +19,7 @@ Change every sentence that sounds written to impress.
 - 30 years working with technology, since 1996.
 - 100+ talks and workshops. 300+ organisations. 9 universities.
 - Recently in the room with MATRADE, two ministries and nine universities.
-- Married, two boys. Email: hello@saiffilfariz.com.
+- Married, two boys. Email: saiffilfariz@gmail.com.
 - What he sells: talks and workshops (45 to 90 minutes), small training
   programmes where people build something real (one or two days, 12 seats),
   and hands-on help for teams putting AI into a real process.

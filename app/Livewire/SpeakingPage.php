@@ -4,9 +4,11 @@ namespace App\Livewire;
 
 use App\Support\Engagements;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('layouts.app')]
+#[Title('Speaking and workshops | Saiffil Fariz')]
 class SpeakingPage extends Component
 {
     public function render()

@@ -4,12 +4,13 @@
     <section class="phero">
         <div class="wrap phero__inner">
             <div class="phero__copy">
+                <a class="crumb" href="{{ route('work') }}"><span aria-hidden="true">←</span> Let’s talk</a>
                 <p class="phero__eyebrow">Ideas that open minds</p>
-                <h1>Speaking</h1>
+                <h1>Speaking and workshops</h1>
                 <p class="lede">I give talks and workshops about using AI at work. I skip the hype. I explain what the tools can do today, what they still get wrong, and what your people can try first. Every talk includes time for questions.</p>
                 <div class="hero__actions">
                     <a class="btn btn--primary" href="#book">Check a date</a>
-                    <a class="btn btn--ghost" href="#talks">See the talks</a>
+                    <a class="btn btn--ghost" href="{{ route('speaking') }}">See past sessions</a>
                 </div>
             </div>
             <div class="phero__media">
@@ -89,7 +90,7 @@
                     <h2>Where I have spoken</h2>
                     <div class="stack">
                         <p class="body">Ministries, agencies, universities, companies, and once a village ICT centre in Tanjong Sepat. The message changes with the room. The honesty does not.</p>
-                        <a class="link" href="{{ route('talks') }}">See all {{ $talkCount }} sessions</a>
+                        <a class="link" href="{{ route('speaking') }}">See all {{ $talkCount }} documented sessions</a>
                         @if ($wall = \App\Support\Series::first())
                             <a class="link" href="{{ $wall['url'] }}">See the weekly series I ran in 2020 and 2021</a>
                         @endif

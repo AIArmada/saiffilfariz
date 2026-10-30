@@ -2,15 +2,17 @@
     $nav = [
         ['route' => 'home', 'label' => 'Home', 'also' => []],
         ['route' => 'story', 'label' => 'About me', 'also' => []],
-        ['route' => 'creations', 'label' => 'Creations', 'also' => []],
-        ['route' => 'work', 'label' => 'Work with me', 'also' => ['build', 'speaking', 'programmes', 'consulting', 'talks', 'talk', 'series']],
-        // Articles and topics belong to Writing, so the tab stays lit there.
-        ['route' => 'writing', 'label' => 'Writing', 'also' => ['article', 'pillar']],
+        ['route' => 'creations', 'label' => 'Creations', 'also' => ['creation']],
+        ['route' => 'speaking', 'label' => 'Speaking', 'also' => ['talk', 'series']],
+        ['route' => 'ideas', 'label' => 'Ideas', 'also' => ['article', 'pillar']],
+        ['route' => 'work', 'label' => 'Let’s talk', 'also' => ['build', 'speaking-service', 'programmes', 'consulting']],
     ];
 @endphp
 
 <header class="site-header">
     <div class="wrap header-inner">
+        <a class="header-home" href="{{ route('home') }}" aria-label="Saiffil Fariz home">saiffilfariz<span aria-hidden="true">.</span></a>
+        <a class="btn btn--primary header-cta" href="{{ route('work') }}">Let’s talk</a>
         <button type="button" class="burger" data-burger aria-expanded="false"
                 aria-controls="mobile-nav" aria-label="Open menu">
             <span class="burger__label">Menu</span>

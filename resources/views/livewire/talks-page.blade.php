@@ -5,8 +5,8 @@
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">Ideas, shared in the room</p>
-                <h1>Where I have spoken</h1>
-                <p class="lede">I have spoken for ministries, agencies, universities, companies and community groups. This page lists {{ $total }} sessions. The ones with photos have their own page.</p>
+                <h1>Speaking</h1>
+                <p class="lede">A record of talks, workshops and panels for ministries, agencies, universities, companies and community groups. This archive lists {{ $total }} documented sessions, with photos and stories where available.</p>
             </div>
         </div>
     </section>
@@ -70,13 +70,13 @@
         </section>
     @endif
 
-    <section class="cta">
+    <section class="cta" id="book">
         <div class="wrap cta__inner">
             <h2>Planning a session?</h2>
             <p class="lede">Tell me who will be in the room and what you want them to take away. I will reply with whether I am the right fit.</p>
             <div class="cta__actions">
-                <a class="btn btn--primary" href="{{ route('speaking') }}#book">Invite me to speak</a>
-                <a class="btn btn--ghost" href="{{ route('speaking') }}">See the talks I give</a>
+                <a class="btn btn--primary" href="{{ route('speaking-service') }}#book">Invite me to speak</a>
+                <a class="btn btn--ghost" href="{{ route('speaking-service') }}">Speaking and workshops</a>
             </div>
         </div>
     </section>

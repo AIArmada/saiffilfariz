@@ -2,8 +2,8 @@
 
 <article class="reading-page">
     <header class="wrap--narrow article-head">
-        <a class="crumb" href="{{ route('writing') }}">
-            <span aria-hidden="true">←</span> Writing
+        <a class="crumb" href="{{ route('ideas') }}">
+            <span aria-hidden="true">←</span> Ideas
         </a>
 
         <h1>{{ $post->title }}</h1>
@@ -35,8 +35,8 @@
         <div class="article-taxonomy">
             <span class="label">Topic</span>
             <a class="chip chip--accent" href="{{ route('pillar', $post->pillar) }}">{{ $post->pillarName() }}</a>
-            <a class="chip" href="{{ route('writing', ['format' => $post->format]) }}">{{ $post->format }}</a>
-            <a class="chip" href="{{ route('writing', ['for' => $post->audience]) }}">{{ $post->audience }}</a>
+            <a class="chip" href="{{ route('ideas', ['format' => $post->format]) }}">{{ $post->format }}</a>
+            <a class="chip" href="{{ route('ideas', ['for' => $post->audience]) }}">{{ $post->audience }}</a>
         </div>
     </div>
 
