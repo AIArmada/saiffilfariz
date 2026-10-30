@@ -41,7 +41,7 @@
                             <img src="{{ asset($creation['image']) }}" alt="{{ $creation['name'] }} website built by Saiffil Fariz" width="1200" height="850" loading="lazy">
                             <span aria-hidden="true">↗</span>
                         </a>
-                        <div class="creation-web__copy"><p class="creation-context">{{ $creation['type'] }}</p><h3><a href="{{ route('creation', $creation['slug']) }}">{{ $creation['name'] }}</a></h3><p>{{ $creation['description'] }}</p><div class="creation-web__actions"><a class="link" href="{{ route('creation', $creation['slug']) }}">Read the project story</a><a class="creation-web__visit" href="{{ $creation['url'] }}" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a></div></div>
+                        <div class="creation-web__copy"><p class="creation-context">{{ $creation['type'] }}</p><h3><a href="{{ route('creation', $creation['slug']) }}">{{ $creation['name'] }}</a></h3><div class="tag-row"><span class="chip">{{ $creation['relationship'] ?? 'Owned venture' }}</span><span class="chip chip--accent">{{ $creation['status'] ?? 'Live' }}</span></div><p>{{ $creation['description'] }}</p><div class="creation-web__actions"><a class="link" href="{{ route('creation', $creation['slug']) }}">Read the project story</a><a class="creation-web__visit" href="{{ $creation['url'] }}" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a></div></div>
                     </article>
                 @endforeach
             </div>

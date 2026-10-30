@@ -33,7 +33,7 @@
                 </div>
             </div>
         @endforeach
-        <div class="project-experience__footer"><p>Event discovery. Seat selection. A cart that follows every choice.</p><a href="https://nusavue.net" target="_blank" rel="noopener noreferrer">Visit Nusavue <span aria-hidden="true">↗</span></a></div>
+        <div class="project-experience__footer"><p>Event discovery. Seat selection. A cart that follows every choice.</p><span class="small">Nusavue has ended — kept here as a record.</span></div>
     </div>
     <dialog class="experience-zoom" data-experience-dialog aria-label="Enlarged project screenshot">
         <div class="experience-zoom__bar"><p data-experience-zoom-title></p><button type="button" data-experience-close aria-label="Close enlarged screenshot">Close <span aria-hidden="true">×</span></button></div>

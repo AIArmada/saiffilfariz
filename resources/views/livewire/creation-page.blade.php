@@ -10,16 +10,38 @@
                     <p class="creation-context">{{ $creation['eyebrow'] }}</p>
                     <h1>{{ $creation['headline'] }}</h1>
                     <p class="lede">{{ $creation['intro'] }}</p>
+                    @if (isset($creation['status']) || isset($creation['relationship']))
+                        <div class="tag-row" style="margin-top:18px">
+                            @if (isset($creation['relationship']))
+                                <span class="chip chip--accent">{{ $creation['relationship'] }}</span>
+                            @endif
+                            @if (isset($creation['status']))
+                                <span class="chip">{{ $creation['status'] }}</span>
+                            @endif
+                        </div>
+                    @endif
                     <div class="creation-story__hero-actions">
                         @if (isset($creation['screenshots']))
                             <a class="btn btn--primary" href="#inside-experience">Explore the booking journey</a>
-                            <a class="link" href="{{ $creation['url'] }}" target="_blank" rel="noopener noreferrer">{{ $creation['url_label'] }} <span aria-hidden="true">↗</span></a>
-                        @else
+                            @if (isset($creation['url']))
+                                <a class="link" href="{{ $creation['url'] }}" target="_blank" rel="noopener noreferrer">{{ $creation['url_label'] }} <span aria-hidden="true">↗</span></a>
+                            @elseif (isset($creation['ended_note']))
+                                <p class="small">{{ $creation['ended_note'] }}</p>
+                            @endif
+                        @elseif (isset($creation['url']))
                             <a class="btn btn--primary" href="{{ $creation['url'] }}" target="_blank" rel="noopener noreferrer">{{ $creation['url_label'] }} <span aria-hidden="true">↗</span></a>
                             @if (isset($creation['related']))
                                 <a class="link" href="{{ route('creation', $creation['related']['slug']) }}">{{ $creation['related']['label'] }}</a>
                             @else
                                 <a class="link" href="{{ route('build') }}">Build a website or system with me</a>
+                            @endif
+                        @else
+                            @if (isset($creation['related']))
+                                <a class="btn btn--primary" href="{{ route('creation', $creation['related']['slug']) }}">{{ $creation['related']['label'] }}</a>
+                            @endif
+                            <a class="link" href="{{ route('build') }}">Build a website or system with me</a>
+                            @if (isset($creation['ended_note']))
+                                <p class="small">{{ $creation['ended_note'] }}</p>
                             @endif
                         @endif
                     </div>
