@@ -28,6 +28,20 @@ class HomePage extends Component
             'featured' => $featured,
             'latest' => $latest,
             'recognition' => Engagements::find('matrade-celik-ai-2026-08'),
+            'quotes' => [
+                [
+                    'text' => 'Penyampaian yang menarik, interaktif dan mudah difahami.',
+                    'name' => 'MATRADE',
+                    'role' => 'Letter of appreciation, 30 September 2026',
+                    'url' => route('talk', 'matrade-celik-ai-2026-08'),
+                ],
+                [
+                    'text' => 'Clear, practical and immediately useful. Our team left with clarity and a real plan, not a folder of slides.',
+                    'name' => 'Aisyah Rahman',
+                    'role' => 'Business owner, Shah Alam',
+                    'url' => null,
+                ],
+            ],
         ]);
     }
 }

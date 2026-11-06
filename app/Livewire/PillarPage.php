@@ -38,6 +38,13 @@ class PillarPage extends Component
         return view('livewire.pillar-page', [
             'posts' => $posts,
             'others' => $others,
+            'nextSteps' => [
+                'code' => [['Explore website projects', 'creations', '#websites'], ['Have a website or system built', 'build', '']],
+                'commerce' => [['Work through a business problem', 'consulting', ''], ['Join a programme', 'programmes', '']],
+                'education' => [['Join a programme', 'programmes', ''], ['Invite me to speak', 'speaking-service', '#book']],
+                'influence' => [['Invite me to speak', 'speaking-service', '#book'], ['See past sessions', 'speaking', '']],
+                'character' => [['More about me', 'story', ''], ['Read the ideas', 'ideas', '']],
+            ][$this->shelf['slug']] ?? [['Read the ideas', 'ideas', '']],
         ]);
     }
 }

@@ -1089,6 +1089,11 @@ body[data-menu="open"] .header-home { visibility: hidden; }
 .trail .link { margin-right: 18px; }
 .link--inline { font-size: inherit; }
 
+/* Quote slider: real voices, one at a time. */
+.quote-slider__controls { display: flex; align-items: center; gap: 16px; margin-top: 22px; }
+.quote-slider__controls .small { margin: 0; }
+.proof-gallery img { cursor: zoom-in; }
+
 /* Reveal on scroll: subtle arrival, off when motion is reduced. */
 [data-reveal] { opacity: 1; }
 @media (prefers-reduced-motion: no-preference) {

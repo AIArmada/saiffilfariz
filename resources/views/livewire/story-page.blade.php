@@ -463,4 +463,10 @@
             </div>
         </div>
     </section>
+
+    <dialog class="lb" data-zoom-dialog aria-label="Photograph viewer">
+        <button class="lb__btn lb__close" type="button" data-zoom-close aria-label="Close">✕</button>
+        <img alt="">
+        <p class="lb__cap" data-zoom-cap></p>
+    </dialog>
 </div>

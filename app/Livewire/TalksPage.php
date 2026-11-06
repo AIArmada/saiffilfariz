@@ -20,6 +20,11 @@ class TalksPage extends Component
             'featured' => Engagements::all()->reject(fn (array $engagement) => $engagement['listed_only'])->values(),
             'listed' => Engagements::listedOnly(),
             'total' => Engagements::all()->count(),
+            'listedGroups' => [
+                ['key' => 'teaching', 'title' => 'Teaching and training', 'blurb' => 'Sessions for ministries, agencies, universities and companies. The same approach I describe on the story page —', 'link' => route('story').'#learning', 'linkLabel' => 'why I teach this way →', 'types' => ['training', 'webinar', 'keynote', 'workshop']],
+                ['key' => 'air', 'title' => 'On air', 'blurb' => 'Television and radio: the same ideas, compressed into minutes. Good preparation for a longer session —', 'link' => route('speaking-service').'#book', 'linkLabel' => 'invite me to speak →', 'types' => ['media']],
+                ['key' => 'community', 'title' => 'Community', 'blurb' => 'Small rooms, plain language, no jargon. Where the teaching gets its honesty —', 'link' => route('story').'#thinking', 'linkLabel' => 'how I think →', 'types' => ['community']],
+            ],
             'series' => $series,
             // Every eighth poster: a spread across the whole run, not six from
             // the same month.

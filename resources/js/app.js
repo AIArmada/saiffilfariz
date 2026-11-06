@@ -129,6 +129,50 @@ if (creationGallery) {
   });
 }
 
+/* Quote slider: manual, one voice at a time. */
+document.querySelectorAll('[data-quote-slider]').forEach((slider) => {
+  const slides = [...slider.querySelectorAll('[data-quote-slide]')];
+  const status = slider.querySelector('[data-quote-status]');
+  let current = 0;
+
+  const show = (index) => {
+    current = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => { slide.hidden = i !== current; });
+    if (status) status.textContent = `${current + 1} of ${slides.length}`;
+  };
+
+  slider.querySelector('[data-quote-prev]')?.addEventListener('click', () => show(current - 1));
+  slider.querySelector('[data-quote-next]')?.addEventListener('click', () => show(current + 1));
+});
+
+/* Zoom dialog: click any proof-gallery or story-proof photo to enlarge. */
+(function () {
+  const dialog = document.querySelector('[data-zoom-dialog]');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  const photo = dialog.querySelector('img');
+  const cap = dialog.querySelector('[data-zoom-cap]');
+
+  document.querySelectorAll('.proof-gallery figure, .story-proof').forEach((figure) => {
+    const img = figure.querySelector('img');
+    if (!img) return;
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    const open = () => {
+      photo.src = img.currentSrc || img.src;
+      photo.alt = img.alt;
+      if (cap) cap.textContent = figure.querySelector('figcaption')?.textContent.trim() || '';
+      dialog.showModal();
+    };
+    img.addEventListener('click', open);
+    img.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); open(); }
+    });
+  });
+
+  dialog.querySelector('[data-zoom-close]')?.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+})();
+
 document.querySelectorAll('audio').forEach((player) => {
   player.addEventListener('play', () => {
     document.querySelectorAll('audio').forEach((other) => {

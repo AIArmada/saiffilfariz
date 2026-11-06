@@ -218,13 +218,25 @@
 
     <section class="section">
         <div class="wrap">
-            <figure class="quote">
-                <blockquote>Clear, practical and immediately useful. Our team left with clarity and a real plan, not a folder of slides.</blockquote>
-                <figcaption>
-                    <b>Aisyah Rahman</b>
-                    Business owner, Shah Alam
-                </figcaption>
-            </figure>
+            <div class="quote-slider" data-quote-slider>
+                @foreach ($quotes as $i => $quote)
+                    <figure class="quote" data-quote-slide @hidden($i !== 0)>
+                        <blockquote>{{ $quote['text'] }}</blockquote>
+                        <figcaption>
+                            <b>{{ $quote['name'] }}</b>
+                            {{ $quote['role'] }}
+                            @if ($quote['url'])
+                                <a class="link link--inline" href="{{ $quote['url'] }}">See the session →</a>
+                            @endif
+                        </figcaption>
+                    </figure>
+                @endforeach
+                <div class="quote-slider__controls">
+                    <button type="button" class="btn btn--sm btn--ghost" data-quote-prev aria-label="Previous testimonial">←</button>
+                    <p class="small" data-quote-status aria-live="polite">1 of {{ count($quotes) }}</p>
+                    <button type="button" class="btn btn--sm btn--ghost" data-quote-next aria-label="Next testimonial">→</button>
+                </div>
+            </div>
         </div>
     </section>
 
