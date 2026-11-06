@@ -286,41 +286,6 @@ return [
         ['value' => '9', 'label' => 'universities', 'note' => 'guest lectures and programmes'],
     ],
 
-    /*
-    | The four connected worlds. Routes are resolved in templates so this
-    | file stays free of route() calls (config must load without routes).
-    */
-    'worlds' => [
-        [
-            'name' => 'Technology',
-            'line' => 'Systems, software, AI and automation that do real work.',
-            'route' => 'build',
-            'anchor' => null,
-            'accent' => '#8FA8FF',
-        ],
-        [
-            'name' => 'Business',
-            'line' => 'Ventures, strategy and the unglamorous work of making things last.',
-            'route' => 'consulting',
-            'anchor' => null,
-            'accent' => '#E1BB7C',
-        ],
-        [
-            'name' => 'People',
-            'line' => 'Talks, teaching and teams that leave with something they can use.',
-            'route' => 'speaking-service',
-            'anchor' => null,
-            'accent' => '#7FD1C9',
-        ],
-        [
-            'name' => 'Creativity',
-            'line' => 'Music, film and experiments that carry ideas further.',
-            'route' => 'creations',
-            'anchor' => null,
-            'accent' => '#E8A37E',
-        ],
-    ],
-
     'signature_topics' => [
         [
             'name' => 'AI literacy',
@@ -398,6 +363,8 @@ return [
 
     /*
     | These five topics organize writing, talks and programmes.
+    | (The old 'worlds' grouping was removed: nothing rendered it, and the
+    | home rail already points at these five disciplines.)
     */
     'pillars' => [
         [

@@ -63,6 +63,26 @@ class SiteRebuildQualityGatesTest extends TestCase
             ->assertSee('Kursus Celik AI', false);
     }
 
+    public function test_sitemap_lists_pages_talks_and_series(): void
+    {
+        $this->get('/sitemap.xml')
+            ->assertOk()
+            ->assertHeader('Content-Type', 'application/xml')
+            ->assertSee('<urlset', false)
+            ->assertSee('/talks/matrade-celik-ai-2026-08', false)
+            ->assertSee('/talks/series/talk-with-ceo', false)
+            ->assertSee('/build', false);
+    }
+
+    public function test_ideas_feed_is_valid_rss(): void
+    {
+        $this->get('/ideas/feed.xml')
+            ->assertOk()
+            ->assertHeader('Content-Type', 'application/rss+xml')
+            ->assertSee('<rss version="2.0">', false)
+            ->assertSee('<channel>', false);
+    }
+
     public function test_image_manifest_covers_every_referenced_asset(): void
     {
         $opt = json_decode(file_get_contents(base_path('public/assets/img/opt/manifest.json')), true);

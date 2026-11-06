@@ -26,7 +26,7 @@
     </section>
 
     <div class="wrap connection-rail">
-        <p class="connection-rail__intro">Five worlds. One perspective.</p>
+        <p class="connection-rail__intro">Five disciplines. One perspective.</p>
         <nav class="connection-rail__links" aria-label="Explore the five disciplines">
             @foreach (config('site.pillars', []) as $pillar)
                 <a href="{{ route('pillar', $pillar['slug']) }}">{{ $pillar['name'] }}</a>

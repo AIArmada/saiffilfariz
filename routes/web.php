@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SitemapController;
 use App\Livewire\ArticlePage;
 use App\Livewire\BuildPage;
 use App\Livewire\ConsultingPage;
@@ -38,6 +39,7 @@ Route::redirect('/talks', '/speaking', 301)->name('talks');
 Route::livewire('/talks/series/{series}', SeriesPage::class)->name('series');
 Route::livewire('/talks/{talk}', TalkPage::class)->name('talk');
 Route::livewire('/ideas', WritingPage::class)->name('ideas');
+Route::get('/ideas/feed.xml', [SitemapController::class, 'feed'])->name('feed');
 Route::livewire('/ideas/{post:slug}', ArticlePage::class)->name('article');
 
 Route::get('/writing', fn (Request $request): RedirectResponse => redirect()->route('ideas', $request->query()))->name('writing');
@@ -48,6 +50,8 @@ Route::livewire('/consulting', ConsultingPage::class)->name('consulting');
 
 /* Writing topics. */
 Route::livewire('/pillars/{pillar}', PillarPage::class)->name('pillar');
+
+Route::get('/sitemap.xml', [SitemapController::class, 'sitemap'])->name('sitemap');
 
 /* Old addresses, kept so nothing that was ever shared breaks. */
 Route::redirect('/about', '/story', 301);
