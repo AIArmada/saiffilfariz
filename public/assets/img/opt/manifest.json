@@ -162,6 +162,97 @@
   ],
   "w": 1448
  },
+ "poster-bernama-malaysia-petang-ini-2026-05-26": {
+  "h": 800,
+  "variants": [
+   320,
+   480,
+   640
+  ],
+  "w": 640
+ },
+ "poster-bernama-malaysia-petang-ini-2026-10-28": {
+  "h": 800,
+  "variants": [
+   320,
+   480,
+   640
+  ],
+  "w": 640
+ },
+ "poster-bernama-ruang-bicara-2026-06-30": {
+  "h": 800,
+  "variants": [
+   320,
+   480,
+   640
+  ],
+  "w": 640
+ },
+ "poster-jpa-pbs-2025-05-21": {
+  "h": 905,
+  "variants": [
+   320,
+   480,
+   640
+  ],
+  "w": 640
+ },
+ "poster-mmu-facing-a-real-business-2019-01-29": {
+  "h": 1660,
+  "variants": [
+   320,
+   480,
+   640,
+   1241
+  ],
+  "w": 1241
+ },
+ "poster-psukns-2026-10-26": {
+  "h": 800,
+  "variants": [
+   320,
+   480,
+   640
+  ],
+  "w": 640
+ },
+ "poster-radio-klasik-2026-08-21": {
+  "h": 906,
+  "variants": [
+   320,
+   480,
+   640
+  ],
+  "w": 640
+ },
+ "poster-rtm-spm-2026-08-11": {
+  "h": 640,
+  "variants": [
+   320,
+   480,
+   640
+  ],
+  "w": 640
+ },
+ "poster-traxx-morning-show-2026-08-06": {
+  "h": 800,
+  "variants": [
+   320,
+   480,
+   640
+  ],
+  "w": 640
+ },
+ "poster-wbs-ppas-2025-02-08": {
+  "h": 905,
+  "variants": [
+   320,
+   480,
+   640
+  ],
+  "w": 640
+ },
  "profile-baroqueshirt": {
   "h": 1448,
   "variants": [
@@ -302,6 +393,223 @@
   ],
   "w": 1672
  },
+ "proof-airasia-cellmaxx-tarmac": {
+  "h": 637,
+  "variants": [
+   480,
+   800,
+   960
+  ],
+  "w": 960
+ },
+ "proof-airasia-livery-9m-ahg": {
+  "h": 720,
+  "variants": [
+   480,
+   800,
+   1280
+  ],
+  "w": 1280
+ },
+ "proof-cellmaxx-airport": {
+  "h": 720,
+  "variants": [
+   480,
+   720
+  ],
+  "w": 720
+ },
+ "proof-cellmaxx-boxing": {
+  "h": 960,
+  "variants": [
+   480,
+   800,
+   960
+  ],
+  "w": 960
+ },
+ "proof-cellmaxx-bus": {
+  "h": 720,
+  "variants": [
+   480,
+   800,
+   960
+  ],
+  "w": 960
+ },
+ "proof-cellmaxx-jersey-saiffil": {
+  "h": 960,
+  "variants": [
+   480,
+   720
+  ],
+  "w": 720
+ },
+ "proof-cellmaxx-model": {
+  "h": 661,
+  "variants": [
+   480,
+   800,
+   960
+  ],
+  "w": 960
+ },
+ "proof-dolf-de-roos-real-estate-riches": {
+  "h": 2000,
+  "variants": [
+   480,
+   800,
+   1200,
+   1500
+  ],
+  "w": 1500
+ },
+ "proof-eric-edmeades": {
+  "h": 2000,
+  "variants": [
+   480,
+   800,
+   1200,
+   1500
+  ],
+  "w": 1500
+ },
+ "proof-jeffrey-allen": {
+  "h": 2000,
+  "variants": [
+   480,
+   800,
+   1200,
+   1500
+  ],
+  "w": 1500
+ },
+ "proof-jeffrey-perlman": {
+  "h": 2000,
+  "variants": [
+   480,
+   800,
+   1200,
+   1500
+  ],
+  "w": 1500
+ },
+ "proof-jim-kwik": {
+  "h": 2000,
+  "variants": [
+   480,
+   800,
+   1200,
+   1500
+  ],
+  "w": 1500
+ },
+ "proof-letter-kbs-2018-01-24": {
+  "h": 1676,
+  "variants": [
+   320,
+   480,
+   640,
+   1227
+  ],
+  "w": 1227
+ },
+ "proof-letter-mfa-2018-02-14": {
+  "h": 850,
+  "variants": [
+   320,
+   480,
+   529
+  ],
+  "w": 529
+ },
+ "proof-maxxcare-50-senyuman": {
+  "h": 1000,
+  "variants": [
+   480,
+   800,
+   1000
+  ],
+  "w": 1000
+ },
+ "proof-maxxima-hq": {
+  "h": 2000,
+  "variants": [
+   480,
+   800,
+   1200,
+   1500
+  ],
+  "w": 1500
+ },
+ "proof-mindvalley-evolution": {
+  "h": 2000,
+  "variants": [
+   480,
+   800,
+   1200,
+   1500
+  ],
+  "w": 1500
+ },
+ "proof-mindvalley-lisa-nichols": {
+  "h": 1500,
+  "variants": [
+   480,
+   800,
+   1200,
+   2000
+  ],
+  "w": 2000
+ },
+ "proof-mindvalley-vishen-stage": {
+  "h": 1500,
+  "variants": [
+   480,
+   800,
+   1200,
+   2000
+  ],
+  "w": 2000
+ },
+ "proof-tony-robbins-business-mastery-2018": {
+  "h": 1070,
+  "variants": [
+   480,
+   800,
+   924
+  ],
+  "w": 924
+ },
+ "proof-tony-robbins-wealth-mastery-2018": {
+  "h": 1080,
+  "variants": [
+   480,
+   800,
+   810
+  ],
+  "w": 810
+ },
+ "proof-vishen-lakhiani-2018": {
+  "h": 2000,
+  "variants": [
+   480,
+   800,
+   1200,
+   1500
+  ],
+  "w": 1500
+ },
+ "proof-with-vishen-lakhiani": {
+  "h": 2000,
+  "variants": [
+   480,
+   800,
+   1200,
+   1500
+  ],
+  "w": 1500
+ },
  "purpose-mountain": {
   "h": 941,
   "variants": [
@@ -387,6 +695,17 @@
   ],
   "w": 1672
  },
+ "story-saiffil-whizkid-1989-v1": {
+  "credit": "Personal photograph, 1989.",
+  "h": 736,
+  "note": "Saiffil Fariz with the actual VTech Talking WhizKid, 1989.",
+  "variants": [
+   480,
+   800,
+   1042
+  ],
+  "w": 1042
+ },
  "story-vtech-whizkid-box-reference-v1": {
   "credit": "The Strong National Museum of Play; gift of Sara Zielinski; object 116.4187",
   "h": 390,
@@ -437,6 +756,15 @@
    800
   ],
   "w": 914
+ },
+ "talk-ntw-2025-ai": {
+  "h": 960,
+  "variants": [
+   480,
+   800,
+   1200
+  ],
+  "w": 1280
  },
  "work-audience-closeup": {
   "h": 1024,

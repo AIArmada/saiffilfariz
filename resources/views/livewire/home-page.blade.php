@@ -21,7 +21,6 @@
                     <a class="btn hero__primary" href="{{ route('work') }}#enquire">Let’s work together <span aria-hidden="true">→</span></a>
                     <a class="btn hero__secondary" href="{{ route('story') }}">Explore my world</a>
                 </div>
-                <p class="hero__proof">{{ config('site.proof') }}</p>
             </div>
         </div>
     </section>
@@ -128,6 +127,54 @@
             <a class="link" href="{{ route('story') }}">More about me</a>
         </div>
     </section>
+
+    @php($letter = $recognition['letter'] ?? null)
+    @if ($recognition && $letter)
+        <section class="section section--tight rule-top" id="recognition">
+            <div class="wrap recognition">
+                <a class="recognition__doc"
+                   href="{{ asset($letter['file']) }}"
+                   target="_blank" rel="noopener"
+                   aria-label="Read the {{ $letter['label'] }} (PDF)">
+                    <x-photo :name="'talk-'.$recognition['slug'].'-letter'"
+                             :alt="'First page of the '.$letter['label'].' from '.$recognition['org']"
+                             sizes="(max-width: 720px) 180px, 260px" />
+                </a>
+                <div class="stack">
+                    <p class="label accent">Recognition</p>
+                    <h2>A letter from {{ $recognition['org'] }}.</h2>
+                    <blockquote class="recognition__quote">
+                        “Penyampaian yang menarik, interaktif dan mudah difahami.”
+                    </blockquote>
+                    <p class="body">
+                        After two hybrid sessions on AI literacy for its officers, {{ $recognition['org'] }} wrote to
+                        record its appreciation — citing the practical examples, the interactive
+                        delivery and the shift in how participants saw AI in their own work.
+                    </p>
+                    <p class="small">
+                        {{ $letter['label'] }} · {{ \Illuminate\Support\Carbon::parse($letter['date'])->format('j F Y') }}
+                        @if (! empty($letter['ref'])) · Ref. {{ $letter['ref'] }} @endif
+                    </p>
+                    <div class="cta__actions">
+                        <a class="btn btn--sm btn--ghost"
+                           href="{{ asset($letter['file']) }}"
+                           target="_blank" rel="noopener">
+                            Read the letter (PDF)
+                        </a>
+                        <a class="link" href="{{ route('talk', $recognition['slug']) }}">
+                            See the session <span aria-hidden="true">→</span>
+                        </a>
+                        <a class="link" href="{{ route('speaking') }}">
+                            All sessions <span aria-hidden="true">→</span>
+                        </a>
+                        <a class="link" href="{{ route('story') }}#learning">
+                            Why I teach this way <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    @endif
 
     <section class="section section--journal">
         <div class="wrap">

@@ -1,3 +1,4 @@
+<x-slot:title>{{ $engagement['title'] }} · {{ $engagement['org'] }} | Saiffil Fariz</x-slot:title>
 <x-slot:description>{{ $engagement['summary'] }}</x-slot:description>
 
 @php
@@ -156,6 +157,13 @@
     @endif
 
     {{-- ── Next / previous ──────────────────────────────────── --}}
+    {{-- ── Continue ─────────────────────────────────────────── --}}
+    <section class="section section--tight" style="border-top:1px solid var(--rule)">
+        <div class="wrap">
+            <p class="trail" style="margin-top:0;border-top:0;padding-top:0">This session is part of a longer thread: <a class="link link--inline" href="{{ route('story') }}#learning">why I teach this way →</a> <a class="link link--inline" href="{{ route('speaking-service') }}#book">book a version for your team →</a> <a class="link link--inline" href="{{ route('ideas') }}">read how I think →</a></p>
+        </div>
+    </section>
+
     <section class="section section--tight" style="border-top:1px solid var(--rule)">
         <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px">
             @if ($previous)

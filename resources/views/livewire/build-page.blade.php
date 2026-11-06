@@ -88,6 +88,19 @@
         </div>
     </section>
 
+    <section class="section section--tight section--muted" id="start">
+        <div class="wrap split split--top">
+            <div class="stack">
+                <h2>Start a project conversation</h2>
+                <p class="body">Tell me what you would like to change for your customers or your team. I read every message myself and reply within two working days.</p>
+                <p class="small">Prefer email? Write to <a class="link" href="mailto:{{ config('site.contact.email') }}">{{ config('site.contact.email') }}</a>.</p>
+            </div>
+            <div class="card form-card">
+                <livewire:enquiry-form intent="build" />
+            </div>
+        </div>
+    </section>
+
     <section class="cta build-cta">
         <div class="wrap cta__inner">
             <p class="build-kicker">Have something worth making?</p>

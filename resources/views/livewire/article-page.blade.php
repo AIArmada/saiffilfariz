@@ -1,3 +1,4 @@
+<x-slot:title>{{ $post->title }} | Saiffil Fariz</x-slot:title>
 <x-slot:description>{{ $post->dek ?: $post->title }}</x-slot:description>
 
 <article class="reading-page">

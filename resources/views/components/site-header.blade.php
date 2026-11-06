@@ -3,7 +3,7 @@
         ['route' => 'home', 'label' => 'Home', 'also' => []],
         ['route' => 'story', 'label' => 'About me', 'also' => []],
         ['route' => 'creations', 'label' => 'Creations', 'also' => ['creation']],
-        ['route' => 'speaking', 'label' => 'Speaking', 'also' => ['talk', 'series']],
+        ['route' => 'speaking', 'label' => 'Past sessions', 'also' => ['talk', 'series']],
         ['route' => 'ideas', 'label' => 'Ideas', 'also' => ['article', 'pillar']],
         ['route' => 'work', 'label' => 'Work together', 'also' => ['build', 'speaking-service', 'programmes', 'consulting']],
     ];
@@ -11,7 +11,7 @@
 
 <header class="site-header">
     <div class="wrap header-inner">
-        <a class="header-home" href="{{ route('home') }}" aria-label="Saiffil Fariz home">saiffilfariz<span aria-hidden="true">.</span></a>
+        <a class="header-home" href="{{ route('home') }}" aria-label="Saiffil Fariz home">saiffilfariz</a>
         <button type="button" class="burger" data-burger aria-expanded="false"
                 aria-controls="mobile-nav" aria-label="Open menu">
             <span class="burger__label">Menu</span>

@@ -1,3 +1,4 @@
+<x-slot:title>{{ $series['name'] }}, {{ $series['date_label'] }} — {{ $series['count'] }} session posters | Saiffil Fariz</x-slot:title>
 <x-slot:description>{{ $series['lede'] }}</x-slot:description>
 
 @php

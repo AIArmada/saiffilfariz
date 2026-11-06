@@ -5,6 +5,7 @@ export default defineConfig({
     plugins: [
         laravel({
             input: ['resources/css/site.css', 'resources/js/app.js'],
+            buildDirectory: 'app',
             refresh: true,
         }),
     ],

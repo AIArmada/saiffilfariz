@@ -3,10 +3,13 @@
 namespace App\Livewire;
 
 use App\Models\Post;
+use App\Support\Engagements;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('layouts.app')]
+#[Title('Saiffil Fariz — Connected intelligence across AI, business and people')]
 class HomePage extends Component
 {
     public function render()
@@ -24,6 +27,7 @@ class HomePage extends Component
         return view('livewire.home-page', [
             'featured' => $featured,
             'latest' => $latest,
+            'recognition' => Engagements::find('matrade-celik-ai-2026-08'),
         ]);
     }
 }

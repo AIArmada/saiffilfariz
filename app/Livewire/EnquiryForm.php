@@ -32,6 +32,7 @@ class EnquiryForm extends Component
     protected function rules(): array
     {
         return [
+            'intent' => ['required', 'string', 'in:speak,programme,consult,build,partner'],
             'name' => ['required', 'string', 'max:80'],
             'email' => ['required', 'email', 'max:120'],
             'organisation' => ['nullable', 'string', 'max:120'],

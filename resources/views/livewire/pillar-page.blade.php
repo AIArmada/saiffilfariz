@@ -1,3 +1,4 @@
+<x-slot:title>{{ $shelf['name'] }} · Ideas | Saiffil Fariz</x-slot:title>
 <x-slot:description>{{ $shelf['blurb'] }}</x-slot:description>
 
 <div>
@@ -33,14 +34,25 @@
         </div>
     </section>
 
-    @if ($shelf['slug'] === 'code')
-        <section class="section section--tight section--muted">
-            <div class="wrap split">
-                <div class="stack"><h2>From ideas to making.</h2><p class="body">Explore the websites and systems behind these ideas, or bring me a problem you would like to solve.</p></div>
-                <div class="stack"><a class="link" href="{{ route('creations') }}#websites">Explore website projects</a><br><a class="link" href="{{ route('build') }}">Have a website or system built</a></div>
+    @php
+        $pillarNext = [
+            'code' => [['Explore website projects', 'creations', '#websites'], ['Have a website or system built', 'build', '']],
+            'commerce' => [['Work through a business problem', 'consulting', ''], ['Join a programme', 'programmes', '']],
+            'education' => [['Join a programme', 'programmes', ''], ['Invite me to speak', 'speaking-service', '#book']],
+            'influence' => [['Invite me to speak', 'speaking-service', '#book'], ['See past sessions', 'speaking', '']],
+            'character' => [['More about me', 'story', ''], ['Read the ideas', 'ideas', '']],
+        ][$shelf['slug']] ?? [['Read the ideas', 'ideas', '']];
+    @endphp
+    <section class="section section--tight section--muted">
+        <div class="wrap split">
+            <div class="stack"><h2>From ideas to making.</h2><p class="body">Ideas are only half the work. Here is where this topic goes next.</p></div>
+            <div class="stack">
+                @foreach ($pillarNext as $step)
+                    <a class="link" href="{{ route($step[1]).$step[2] }}">{{ $step[0] }}</a><br>
+                @endforeach
             </div>
-        </section>
-    @endif
+        </div>
+    </section>
 
     <section class="section section--paper">
         <div class="wrap">

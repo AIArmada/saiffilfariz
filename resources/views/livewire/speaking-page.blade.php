@@ -40,15 +40,18 @@
             </div>
             <div class="rows">
                 @foreach ([
-                    ['AI without the hype.', 'What AI tools can do today, what they still cannot do, and how to tell the difference before you spend money. Your team leaves with a short list of things worth trying.', '45 to 75 minutes', 'Mixed audiences'],
-                    ['Using AI in everyday work.', 'Five everyday jobs most teams can improve this quarter. Writing, research, meetings, reporting, and the handover notes nobody writes. I work live, on examples close to your own.', '60 to 90 minutes', 'Teams'],
-                    ['People first, tools second.', 'Why many AI projects stall even when the software works. I cover the four questions that tell you early whether a project will stick.', '45 minutes', 'Leaders'],
-                    ['Explaining hard things clearly.', 'How to explain a complicated topic to busy people so they can act on it. Drawn from thirty years of teaching and plenty of mistakes.', '45 to 60 minutes', 'Communicators and trainers'],
+                    ['AI without the hype.', 'What AI tools can do today, what they still cannot do, and how to tell the difference before you spend money. Your team leaves with a short list of things worth trying.', '45 to 75 minutes', 'Mixed audiences', 'matrade-celik-ai-2026-08'],
+                    ['Using AI in everyday work.', 'Five everyday jobs most teams can improve this quarter. Writing, research, meetings, reporting, and the handover notes nobody writes. I work live, on examples close to your own.', '60 to 90 minutes', 'Teams', 'ntw-2025-ai'],
+                    ['People first, tools second.', 'Why many AI projects stall even when the software works. I cover the four questions that tell you early whether a project will stick.', '45 minutes', 'Leaders', 'jdn-ai-evolution-posdigicert'],
+                    ['Explaining hard things clearly.', 'How to explain a complicated topic to busy people so they can act on it. Drawn from thirty years of teaching and plenty of mistakes.', '45 to 60 minutes', 'Communicators and trainers', null],
                 ] as $talk)
                     <div class="rows__item">
                         <div>
                             <h3>{{ $talk[0] }}</h3>
                             <p>{{ $talk[1] }}</p>
+                            @if (! empty($talk[4]))
+                                <p style="margin-top:10px"><a class="link link--inline" href="{{ route('talk', $talk[4]) }}">See it in a room →</a></p>
+                            @endif
                         </div>
                         <div class="rows__meta">
                             <b>{{ $talk[2] }}</b>
@@ -92,7 +95,7 @@
                         <p class="body">Ministries, agencies, universities, companies, and once a village ICT centre in Tanjong Sepat. The message changes with the room. The honesty does not.</p>
                         <a class="link" href="{{ route('speaking') }}">See all {{ $talkCount }} documented sessions</a>
                         @if ($wall = \App\Support\Series::first())
-                            <a class="link" href="{{ $wall['url'] }}">See the weekly series I ran in 2020 and 2021</a>
+                            <a class="link" href="{{ $wall['url'] }}">See the Talk With CEO series, 2020 to 2024</a>
                         @endif
                     </div>
                 </div>
@@ -186,6 +189,7 @@
             <h2>How I prepare a talk</h2>
             <p class="body">Before I write a single slide, I ask who will be in the room, what they already think, and what decision they face next. Then I decide what they should still remember a month later, and I build the talk around that.</p>
             <p class="body">My perspective comes from programming, business and teaching. I also build websites, applications and custom systems, so the questions I bring to the room come from making technology work for people in practice.</p>
+            <p class="body">The business side of that perspective lives on the story page — <a class="link link--inline" href="{{ route('story') }}#business">the CellMaxx years →</a> and <a class="link link--inline" href="{{ route('story') }}#thinking">what they taught me →</a></p>
             <a class="link" href="{{ route('creations') }}#websites">Explore the websites and systems I have made</a>
         </div>
     </section>

@@ -6,7 +6,7 @@ use Illuminate\Support\Carbon;
 
 /**
  * Reads assets/data/series.json — the long-running, multi-session series that
- * don't belong in the one-off engagement list (Talk With CEO, 2020–2021).
+ * don't belong in the one-off engagement list (Talk With CEO, 2020–2024).
  *
  * Each episode is one announcement poster. Adding one means dropping the image
  * in assets/img/engagements/<poster_dir>/, adding a row to episodes, and

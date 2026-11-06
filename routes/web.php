@@ -33,7 +33,7 @@ Route::livewire('/creations', CreationsPage::class)->name('creations');
 Route::livewire('/creations/{slug}', CreationPage::class)->name('creation');
 Route::livewire('/speaking', TalksPage::class)->name('speaking');
 Route::livewire('/work/speaking', SpeakingPage::class)->name('speaking-service');
-Route::redirect('/talks', '/speaking')->name('talks');
+Route::redirect('/talks', '/speaking', 301)->name('talks');
 /* Registered before {talk} so a series slug is never mistaken for an engagement. */
 Route::livewire('/talks/series/{series}', SeriesPage::class)->name('series');
 Route::livewire('/talks/{talk}', TalkPage::class)->name('talk');
@@ -50,7 +50,7 @@ Route::livewire('/consulting', ConsultingPage::class)->name('consulting');
 Route::livewire('/pillars/{pillar}', PillarPage::class)->name('pillar');
 
 /* Old addresses, kept so nothing that was ever shared breaks. */
-Route::redirect('/about', '/story');
-Route::redirect('/blog', '/ideas');
-Route::redirect('/library', '/ideas');
-Route::redirect('/contact', '/#connect');
+Route::redirect('/about', '/story', 301);
+Route::redirect('/blog', '/ideas', 301);
+Route::redirect('/library', '/ideas', 301);
+Route::redirect('/contact', '/#connect', 301);

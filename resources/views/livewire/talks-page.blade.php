@@ -31,8 +31,8 @@
         <section class="section section--pine">
             <div class="wrap split">
                 <div class="stack">
-                    <h2>The weekly series, 2020 to 2021</h2>
-                    <p class="body">Before the AI talks, I ran a weekly live series called {{ $series['name'] }} from July 2020 to August 2021. The topics were sales, follow-up and running a small business. We kept the announcement posters, and they are all here.</p>
+                    <h2>The {{ $series['name'] }} series, 2020 to 2024</h2>
+                    <p class="body">Before the AI talks, I ran a weekly live series called {{ $series['name'] }} from July 2020 to August 2021, then continued it as occasional sessions at Maxxima Lifestyle Hub until January 2024. The topics were sales, follow-up, mindset and running a small business. We kept the announcement posters, and they are all here.</p>
                     <a class="btn btn--primary" href="{{ $series['url'] }}">See all {{ $series['count'] }} posters</a>
                 </div>
                 <div class="mini-wall" aria-hidden="true">
@@ -49,15 +49,37 @@
     @endif
 
     @if ($listed->isNotEmpty())
+        @php
+            $listedGroups = [
+                ['key' => 'teaching', 'title' => 'Teaching and training', 'blurb' => 'Sessions for ministries, agencies, universities and companies. The same approach I describe on the story page —', 'link' => route('story').'#learning', 'linkLabel' => 'why I teach this way →', 'types' => ['training', 'webinar', 'keynote', 'workshop']],
+                ['key' => 'air', 'title' => 'On air', 'blurb' => 'Television and radio: the same ideas, compressed into minutes. Good preparation for a longer session —', 'link' => route('speaking-service').'#book', 'linkLabel' => 'invite me to speak →', 'types' => ['media']],
+                ['key' => 'community', 'title' => 'Community', 'blurb' => 'Small rooms, plain language, no jargon. Where the teaching gets its honesty —', 'link' => route('story').'#thinking', 'linkLabel' => 'how I think →', 'types' => ['community']],
+            ];
+        @endphp
         <section class="section section--journal">
             <div class="wrap">
                 <div class="head">
                     <h2>More sessions</h2>
                     <p class="body">These sessions have no photo page. Sometimes the organiser asked for no photography. Sometimes the session was online or on air.</p>
                 </div>
-                <div class="rows">
-                    @foreach ($listed as $talk)
-                        <div class="rows__item">
+                @foreach ($listedGroups as $group)
+                    @php($rows = $listed->whereIn('type', $group['types'])->values())
+                    @continue($rows->isEmpty())
+                    <h3 class="h3" style="margin:34px 0 4px">{{ $group['title'] }}</h3>
+                    <p class="small" style="margin-bottom:6px">{{ $group['blurb'] }} <a class="link link--inline" href="{{ $group['link'] }}">{{ $group['linkLabel'] }}</a></p>
+                    <div class="rows">
+                    @foreach ($rows as $talk)
+                        <div class="rows__item {{ ! empty($talk['poster']) ? 'rows__item--poster' : '' }}">
+                            @if (! empty($talk['poster']))
+                                <a class="rows__poster"
+                                   href="{{ asset('assets/img/opt/'.$talk['poster'].'-640.webp') }}"
+                                   target="_blank" rel="noopener"
+                                   aria-label="Open the poster for {{ $talk['title'] }}">
+                                    <x-photo :name="$talk['poster']"
+                                             :alt="'Poster for '.$talk['title']"
+                                             sizes="128px" />
+                                </a>
+                            @endif
                             <div>
                                 <h3>{{ $talk['title'] }}</h3>
                                 <p>{{ $talk['summary'] }}</p>
@@ -69,7 +91,8 @@
                             </div>
                         </div>
                     @endforeach
-                </div>
+                    </div>
+                @endforeach
             </div>
         </section>
     @endif

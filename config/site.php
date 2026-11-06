@@ -280,7 +280,7 @@ return [
     ],
 
     'facts' => [
-        ['value' => '1988', 'label' => 'first contact with technology', 'note' => 'VTech Talking WhizKid'],
+        ['value' => '1989', 'label' => 'first contact with technology', 'note' => 'VTech Talking WhizKid'],
         ['value' => '100+', 'label' => 'talks and workshops', 'note' => 'Malaysia and the region'],
         ['value' => '300+', 'label' => 'organisations', 'note' => 'public, private, academic'],
         ['value' => '9', 'label' => 'universities', 'note' => 'guest lectures and programmes'],
@@ -379,7 +379,7 @@ return [
 
     'media_kit' => [
         'short_bio' => 'Saiffil Fariz connects technology, business and people. He gives talks and workshops on practical AI, runs small hands-on programmes, and builds websites, applications and custom systems. He also makes music and films.',
-        'long_bio' => 'Saiffil Fariz had his first contact with technology in 1988, a VTech Talking WhizKid, and went online in 1996. Since then he has built websites and systems, run a small company, and taught in classrooms, workshops and boardrooms across Malaysia and the region. Today he connects AI, business and people through speaking, training, consulting, software and creative work — always starting with the people and the work, not the tool.',
+        'long_bio' => 'Saiffil Fariz had his first contact with technology in 1989, a VTech Talking WhizKid, and went online in 1996. Since then he has built websites and systems, run a small company, and taught in classrooms, workshops and boardrooms across Malaysia and the region. Today he connects AI, business and people through speaking, training, consulting, software and creative work — always starting with the people and the work, not the tool.',
         'portrait' => 'profile-metallicgold',
         'portrait_alt' => 'Saiffil Fariz in a gold blazer',
         'press_portraits' => [
@@ -389,8 +389,6 @@ return [
             ['slug' => 'brocadecladpresenter', 'label' => 'On stage', 'use' => 'Speaking pages and event promotions.'],
         ],
     ],
-
-    'proof' => 'Lately I have spoken for MATRADE, two ministries and nine universities.',
 
     'contact' => [
         'email' => 'saiffilfariz@gmail.com',

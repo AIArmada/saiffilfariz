@@ -11,6 +11,8 @@
     <meta property="og:title" content="{{ $title ?? 'Saiffil Fariz' }}">
     <meta property="og:description" content="{{ $description ?? config('site.positioning.description') }}">
     <meta property="og:site_name" content="Saiffil Fariz">
+    <link rel="canonical" href="{{ url()->current() }}">
+    <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ rtrim(config('app.url'), '/').'/images/og-default.jpg' }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -25,7 +27,7 @@
     <link rel="preload" href="{{ asset('fonts/playfair-display-400-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ asset('fonts/fonts.css') }}">
 
-    @vite(['resources/css/site.css', 'resources/js/app.js'])
+    @vite(['resources/css/site.css', 'resources/js/app.js'], 'app')
     @livewireStyles
 </head>
 <body data-menu="closed" data-hero-header="{{ request()->routeIs('home') ? 'overlay' : 'standard' }}">
