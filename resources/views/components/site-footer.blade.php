@@ -16,10 +16,10 @@
 
             <div>
                 <h4>Pages</h4>
-                <a href="{{ route('story') }}">About me</a>
-                <a href="{{ route('work') }}">Work together</a>
-                <a href="{{ route('creations') }}">Creations</a>
-                <a href="{{ route('speaking') }}">Past sessions</a>
+                <a href="{{ route('story') }}">My Story</a>
+                <a href="{{ route('work') }}">Work With Me</a>
+                <a href="{{ route('creations') }}">My Work</a>
+                <a href="{{ route('speaking') }}">Speaking & Learning</a>
                 <a href="{{ route('ideas') }}">Ideas</a>
             </div>
 
