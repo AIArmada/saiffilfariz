@@ -1,4 +1,4 @@
-<div>
+<div class="v3-page v3-page--home">
     <section class="hero hero--connected">
         <picture class="hero__visual" aria-hidden="true">
             <source media="(max-width: 720px)"
@@ -12,27 +12,59 @@
         </picture>
         <div class="wrap hero__inner">
             <div class="hero__copy">
-                <p class="hero__eyebrow">{{ config('site.positioning.name') }} <span>{{ config('site.positioning.themes') }}</span></p>
-                <h1>Outthink.<br>Outcreate.<br><em>Outlead.</em></h1>
+                <p class="hero__eyebrow">Technology · Business <span>Creativity · People</span></p>
+                <h1>Different worlds.<br><em>One purpose.</em></h1>
                 <p class="lede">
-                    I connect technology, business and people — turning complex ideas into things people can understand, use and grow with.
+                    I build businesses, develop technology, create experiences and share what I’ve learned — with one intention: to create something useful for people.
                 </p>
                 <div class="hero__actions">
-                    <a class="btn hero__primary" href="{{ route('work') }}#enquire">Let’s work together <span aria-hidden="true">→</span></a>
-                    <a class="btn hero__secondary" href="{{ route('story') }}">Explore my world</a>
+                    <a class="btn hero__primary" href="{{ route('story') }}">Explore my story <span aria-hidden="true">→</span></a>
+                    <a class="btn hero__secondary" href="{{ route('creations') }}">See my work</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="wrap connection-rail">
-        <p class="connection-rail__intro">Five disciplines. One perspective.</p>
-        <nav class="connection-rail__links" aria-label="Explore the five disciplines">
-            @foreach (config('site.pillars', []) as $pillar)
-                <a href="{{ route('pillar', $pillar['slug']) }}">{{ $pillar['name'] }}</a>
-            @endforeach
-        </nav>
-    </div>
+
+    <section class="v3-journey" aria-labelledby="journey-heading">
+        <div class="wrap">
+            <div class="v3-journey__heading">
+                <h2 id="journey-heading">A lifelong journey of building, learning and sharing.</h2>
+                <p>It began with curiosity about technology. Each chapter taught me more about people, possibility and what makes an idea useful.</p>
+            </div>
+            <div class="v3-journey__steps">
+                @foreach ([
+                    ['Curiosity', 'A young mind fascinated by technology'],
+                    ['Building', 'Turning ideas into working systems'],
+                    ['Business', 'Learning about people and real execution'],
+                    ['Sharing', 'Helping others understand and apply ideas'],
+                    ['Impact', 'Creating meaningful, lasting value'],
+                ] as $chapter)
+                    <div class="v3-journey__step">
+                        <strong>{{ $chapter[0] }}</strong>
+                        <span>{{ $chapter[1] }}</span>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="v3-pillars" aria-labelledby="pillars-heading">
+        <div class="wrap">
+            <div class="v3-pillars__intro">
+                <h2 id="pillars-heading">Five pillars. One direction.</h2>
+                <p>Different disciplines, brought together by a common intention.</p>
+            </div>
+            <div class="v3-pillars__grid">
+                @foreach (config('site.pillars', []) as $index => $pillar)
+                    <a class="v3-pillar" href="{{ route('pillar', $pillar['slug']) }}">
+                        <span class="v3-pillar__art" aria-hidden="true">{{ ['⌘','↗','◉','✦','♡'][$index] ?? '✦' }}</span>
+                        <span class="v3-pillar__label">{{ $pillar['name'] }}</span>
+                    </a>
+                @endforeach
+            </div>
+        </div>
+    </section>
 
     <section class="strip">
         <div class="wrap strip__grid">
@@ -81,33 +113,17 @@
 
     <x-build-showcase />
 
-    <section class="section section--tight section--pine">
-        <div class="wrap">
-            @php($featuredProgramme = collect(config('site.programmes'))->firstWhere('featured', true))
-            <article class="card card--feature">
-                <div class="card__media">
-                    <x-photo :name="$featuredProgramme['image']" :alt="$featuredProgramme['name']"
-                             sizes="(max-width: 900px) 100vw, 50vw" />
-                </div>
-                <div class="card__body">
-                    <p class="small">Next programme</p>
-                    <h3>{{ $featuredProgramme['name'] }}</h3>
-                    <p>{{ $featuredProgramme['summary'] }}</p>
-                    <div class="tag-row">
-                        <span class="chip chip--accent">{{ $featuredProgramme['format'] }}</span>
-                        <span class="chip">{{ $featuredProgramme['location'] }}</span>
-                        <span class="chip">{{ $featuredProgramme['seats'] }}</span>
-                    </div>
-                    <p class="prog__price">
-                        {{ $featuredProgramme['price'] }}
-                        <span>{{ $featuredProgramme['price_note'] }}</span>
-                    </p>
-                    <p class="caption">{{ $featuredProgramme['dates'] }}</p>
-                    <div class="card__foot">
-                        <a class="btn btn--primary" href="{{ route('programmes') }}">Reserve a seat</a>
-                    </div>
-                </div>
-            </article>
+
+    <section class="section section--tight section--pine" aria-labelledby="home-programmes-heading">
+        <div class="wrap head">
+            <div>
+                <p class="label accent">Speaking & learning</p>
+                <h2 id="home-programmes-heading">Make difficult ideas practical.</h2>
+            </div>
+            <div>
+                <p class="body">Explore talks, workshops and programmes designed around real work, genuine understanding and useful next steps.</p>
+                <a class="btn btn--primary" href="{{ route('programmes') }}">Explore programmes <span aria-hidden="true">→</span></a>
+            </div>
         </div>
     </section>
 
@@ -219,7 +235,8 @@
     <section class="section">
         <div class="wrap">
             <div class="quote-slider" data-quote-slider>
-                @foreach ($quotes as $i => $quote)
+                @php($verifiedQuotes = collect($quotes)->filter(fn ($quote) => ! empty($quote['url']))->values())
+                @foreach ($verifiedQuotes as $i => $quote)
                     <figure class="quote" data-quote-slide @hidden($i !== 0)>
                         <blockquote>{{ $quote['text'] }}</blockquote>
                         <figcaption>
@@ -233,7 +250,7 @@
                 @endforeach
                 <div class="quote-slider__controls">
                     <button type="button" class="btn btn--sm btn--ghost" data-quote-prev aria-label="Previous testimonial">←</button>
-                    <p class="small" data-quote-status aria-live="polite">1 of {{ count($quotes) }}</p>
+                    <p class="small" data-quote-status aria-live="polite">1 of {{ count($verifiedQuotes) }}</p>
                     <button type="button" class="btn btn--sm btn--ghost" data-quote-next aria-label="Next testimonial">→</button>
                 </div>
             </div>
