@@ -19,13 +19,14 @@
     };
 @endphp
 
-<div>
+<div class="v3-page v3-page--ideas">
     <section class="phero phero--wide">
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">Notes from a connected world</p>
                 <h1>Ideas</h1>
-                <p class="lede">How I think and teach across software, business, learning and creative work. Explore practical notes across five connected topics, alongside talks and workshops in the Speaking archive.</p>
+                <h2 class="v3-hero-subtitle">Thoughts, lessons and <em>observations.</em></h2>
+                <p class="lede">A collection of ideas, lessons and real experiences from building technology, running businesses, teaching, creating and living. Not just theory — things I have tried and learned.</p>
                 <p class="small"><a class="link" href="{{ route('speaking') }}">Browse talks, workshops and panels</a></p>
             </div>
             <div class="phero__media phero__media--wide">
