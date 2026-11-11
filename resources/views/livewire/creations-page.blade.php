@@ -1,12 +1,12 @@
 <x-slot:description>Music, websites, films and experiments by Saiffil Fariz. Listen to Kita Bersama and explore the connected creative and software work behind Konsert KITA.</x-slot:description>
 
-<div class="creations-page">
+<div class="creations-page v3-page v3-page--work">
     <section class="creations-opening">
         <div class="wrap creations-opening__inner">
-            <div><p class="creation-context">Creations by Saiffil Fariz</p><h1>Ideas made<br>tangible.</h1></div>
+            <div><p class="creation-context">Technology · Business · Creativity · People</p><h1>Ideas into<br>real impact.</h1></div>
             <div class="creations-opening__note">
-                <p class="lede">Some become platforms. Some become programmes. Some become experiments. What matters is whether they solve something worth solving.</p>
-                <p>Client projects, personal experiments and hobbies, gathered in one place. Follow the connections, or enjoy each piece on its own.</p>
+                <p class="lede">A collection of platforms, businesses, creative work and experiments — each an attempt to make something useful for real people.</p>
+                <p>Different worlds, one common thread: understanding a problem, creating a thoughtful solution and learning from what happens next.</p>
                 <a class="btn btn--primary" href="{{ route('creation', 'nusavue') }}#inside-experience">Explore Nusavue’s ticketing experience</a>
             </div>
         </div>
@@ -16,7 +16,7 @@
     <section class="section creations-gallery" id="creation-gallery" aria-label="Explore creations" data-creation-gallery>
         <div class="wrap">
             <div class="creation-browser">
-                <h2>Take a closer look.</h2>
+                <h2>Explore the work.</h2>
                 <div class="creation-filters" role="group" aria-label="Filter creations by medium" data-creation-filters hidden>
                     <button type="button" data-creation-filter="all" aria-pressed="true">All creations</button>
                     <button type="button" data-creation-filter="music" aria-pressed="false">Music</button>
