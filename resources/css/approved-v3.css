@@ -198,3 +198,57 @@ body[data-menu="open"] .site-header--v3 .header-home { position: relative; z-ind
 @media (prefers-reduced-motion: reduce) {
   .v3-page *, .v3-page *::before, .v3-page *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
+
+
+/* Page accents and content-density rules that are unique to the approved
+   six-screen mobile reference. Avoid turning these into a generic card kit. */
+.v3-hero-subtitle { max-width: 13ch; margin: 6px 0 22px; color: #FFF8EA; font-family: var(--serif); font-size: clamp(37px,4.9vw,72px); font-weight: 400; line-height: 1.05; letter-spacing: -.05em; }
+.v3-hero-subtitle em { color: #F9C661; font-style: italic; }
+.v3-page--speaking .phero__copy h1, .v3-page--ideas .phero__copy h1 { color: #F3C875; font-family: var(--sans); font-size: 14px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+.v3-page--speaking .phero__copy .lede, .v3-page--ideas .phero__copy .lede { max-width: 44ch; font-size: 17px; }
+.v3-speaking-paths { background: #F9F0E7; color: #231F20; --ink: #231F20; --ink-2: #5A5151; --muted: #6C6060; --rule: #E0D1C8; --accent: #8D5720; color-scheme: light; }
+.v3-speaking-paths__grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 15px; margin-top: 32px; }
+.v3-speaking-paths__grid a { display: flex; min-width: 0; flex-direction: column; align-items: flex-start; min-height: 238px; padding: 26px 23px; border: 1px solid #E9D6C3; border-radius: 20px; background: #FFFCF7; box-shadow: 0 8px 23px #3C23440C; transition: transform .18s ease; }
+.v3-speaking-paths__grid a:hover { transform: translateY(-4px); }
+.v3-speaking-paths__grid span { display: grid; width: 52px; height: 52px; place-items: center; border-radius: 14px; background: #FFE1A6; color: #4B2D60; font-size: 27px; }
+.v3-speaking-paths__grid h3 { margin-top: 18px; color: #231B26; font-family: var(--serif); font-size: 26px; }
+.v3-speaking-paths__grid p { margin-top: 10px; color: #5C5251; font-size: 15px; line-height: 1.65; }
+.v3-speaking-paths__grid b { margin-top: auto; padding-top: 15px; color: #895917; font-size: 13px; }
+.v3-page--speaking .talk-grid .card { border-color: #553E74; border-radius: 18px; }
+.v3-page--speaking .section--journal { --ink: #201D24; --ink-2: #554A50; --muted: #70646C; --rule: #DFD2D7; --accent: #73539A; color: var(--ink); color-scheme: light; }
+.v3-page--ideas .lib-grid, .v3-page--ideas .grid--3 { row-gap: 20px; }
+.v3-page--ideas .lib-grid .card { border: 1px solid #E8D7C3; background: #FFFAF4; box-shadow: 0 10px 22px #5D3C1B10; }
+.v3-page--ideas .lib-grid .card h3 { font-size: 23px; }
+.v3-page--ideas .filters__advanced summary { color: #895F20; }
+.v3-page--contact #enquire .input, .v3-page--contact #enquire .textarea, .v3-page--contact #enquire select { color: #241F1D; background: #FCF7F0; border: 1px solid #CDBEAE; }
+.v3-page--contact #enquire .input::placeholder, .v3-page--contact #enquire .textarea::placeholder { color: #776E64; }
+.v3-page--home .section--journal .grid--3 { margin-top: 24px; }
+.v3-page--home .service-row__media { overflow: hidden; border-radius: 22px; }
+.v3-page--home .service-row__media picture { overflow: hidden; border-radius: inherit; }
+.v3-page--home .service-row__media img { transition: transform .3s ease; }
+.v3-page--home .service-row:hover .service-row__media img { transform: scale(1.02); }
+@media (max-width:720px) {
+  .v3-hero-subtitle { margin: 7px 0 13px; font-size: clamp(38px,10vw,53px); }
+  .v3-page--speaking .phero__copy h1, .v3-page--ideas .phero__copy h1 { font-size: 12px; }
+  .v3-page--speaking .phero__copy .lede, .v3-page--ideas .phero__copy .lede { font-size: 15px; line-height: 1.6; }
+  .v3-speaking-paths { padding-block: 39px; }
+  .v3-speaking-paths__grid { grid-template-columns: 1fr; gap: 12px; }
+  .v3-speaking-paths__grid a { display: grid; grid-template-columns: 54px 1fr; align-items: center; gap: 0 14px; min-height: 0; padding: 16px 18px; }
+  .v3-speaking-paths__grid span { grid-row: span 3; width: 46px; height: 46px; font-size: 22px; }
+  .v3-speaking-paths__grid h3 { margin-top: 0; font-size: 21px; }
+  .v3-speaking-paths__grid p { margin-top: 5px; font-size: 13px; }
+  .v3-speaking-paths__grid b { padding-top: 7px; font-size: 12px; }
+  .v3-page--work .creation-web-grid { grid-template-columns: 1fr; }
+  .v3-page--work .creations-opening__inner { gap: 20px; }
+  .v3-page--work .creations-opening__line { gap: 17px; flex-wrap: wrap; }
+  .v3-page--ideas .filters { padding: 13px; }
+  .v3-page--ideas .filters__row { gap: 6px; }
+  .v3-page--ideas .filters .chip { min-height: 37px; }
+  .v3-page--ideas .lib-grid .card h3 { font-size: 20px; }
+}
+@media (max-width:380px) {
+  .v3-pillar__art { height: 50px; font-size: 23px; }
+  .v3-pillar__label { font-size: 8px; }
+  .v3-page--home .hero--connected h1 { font-size: 46px; }
+  .site-header--v3 .header-home { font-size: 14px; }
+}
