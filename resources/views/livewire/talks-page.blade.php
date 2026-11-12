@@ -1,16 +1,32 @@
 <x-slot:description>Talks and workshops by Saiffil Fariz across AI, business and practical technology. Explore sessions, photographs and the business teaching archive.</x-slot:description>
 
-<div>
+<div class="v3-page v3-page--speaking">
     <section class="phero phero--archive">
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">Ideas, shared in the room</p>
                 <h1>Speaking</h1>
-                <p class="lede">A record of talks, workshops and panels for ministries, agencies, universities, companies and community groups. This archive lists {{ $total }} documented sessions, with photos and stories where available.</p>
+                <h2 class="v3-hero-subtitle">Share. Teach. <em>Empower.</em></h2>
+                <p class="lede">Keynotes, workshops and programmes that turn ideas about AI, technology, business and creativity into practical understanding. Browse {{ $total }} documented sessions and the stories behind them.</p>
             </div>
             <div class="phero__media">
-                <x-photo name="profile-metallicgold" alt="Saiffil in a gold blazer"
+                <x-photo name="profile-charcoalgrey" alt="Saiffil Fariz speaking"
                          sizes="(max-width: 900px) 100vw, 44vw" :eager="true" class="cutout-top" />
+            </div>
+        </div>
+    </section>
+
+
+    <section class="v3-speaking-paths section" aria-labelledby="speaking-paths-heading">
+        <div class="wrap">
+            <div class="head">
+                <h2 id="speaking-paths-heading">Ways to learn together.</h2>
+                <p class="body">Choose the format that fits your audience. Every session aims to leave people with something they can actually apply.</p>
+            </div>
+            <div class="v3-speaking-paths__grid">
+                <a href="{{ route('speaking-service') }}#book"><span aria-hidden="true">♩</span><h3>Keynotes & talks</h3><p>Ideas made clear, relevant and memorable.</p><b>Invite me to speak →</b></a>
+                <a href="{{ route('speaking-service') }}"><span aria-hidden="true">✦</span><h3>Workshops</h3><p>Hands-on practice built around real situations.</p><b>Explore workshops →</b></a>
+                <a href="{{ route('programmes') }}"><span aria-hidden="true">◈</span><h3>Learning programmes</h3><p>Structured development for teams and individuals.</p><b>Explore programmes →</b></a>
             </div>
         </div>
     </section>

@@ -1,16 +1,16 @@
 <x-slot:description>Meet Saiffil Fariz: programmer, speaker, educator and creator connecting AI, business and people through software, learning, music and film.</x-slot:description>
 
-<div>
+<div class="v3-page v3-page--story">
     <section class="phero">
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">A story that starts in 1989</p>
-                <h1>About me</h1>
-                <p class="lede">I am curious about how things work and stubborn about making them useful. My first contact with technology was a VTech Talking WhizKid in 1989. I went online in 1996. Today, I connect AI, business and people through the software and creative work I make, the rooms I teach in and the teams I work with.</p>
+                <h1>A curious mind, through different chapters of life.</h1>
+                <p class="lede">From a childhood curiosity about technology to building businesses, leading teams, learning and creating impact — this is the journey that shaped how I think and what I build today.</p>
             </div>
             <div class="phero__media phero__media--portrait">
-                <x-photo name="saiffil-fariz-gold-portrait" alt="Saiffil Fariz in a metallic gold blazer"
-                         sizes="(max-width: 720px) min(90vw, 440px), 440px" :eager="true" />
+                <x-photo name="story-saiffil-whizkid-1989-v1" alt="Saiffil with the VTech Talking WhizKid"
+                         sizes="(max-width: 720px) 90vw, 45vw" :eager="true" />
             </div>
         </div>
     </section>

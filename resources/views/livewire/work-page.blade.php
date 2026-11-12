@@ -1,13 +1,13 @@
 <x-slot:title>Work together | Saiffil Fariz</x-slot:title>
 <x-slot:description>Tell Saiffil Fariz what you are trying to make possible: invite him to speak, train your team, build software or explore a partnership.</x-slot:description>
 
-<div>
+<div class="v3-page v3-page--contact">
     <section class="phero">
         <div class="wrap phero__inner">
             <div class="phero__copy">
                 <p class="phero__eyebrow">Tell me what you are trying to make possible.</p>
-                <h1>Let’s talk</h1>
-                <p class="lede">You do not need a perfect brief. Start with the people, the problem and the outcome you want. Help your people understand AI, improve the way your team works, build a useful product or bring a creative idea to life.</p>
+                <h1>Let’s build something useful together.</h1>
+                <p class="lede">Whether it’s a talk, a learning programme, a technology initiative or a creative collaboration, I’d be glad to explore it with you. Start with the people and the problem — the rest we can work out together.</p>
                 <div class="hero__actions">
                     <a class="btn btn--primary" href="#intents">Start with your intent</a>
                     <a class="btn btn--ghost" href="{{ route('creations') }}">Explore my creations</a>
@@ -23,7 +23,7 @@
     <section class="section section--ink" id="intents" aria-labelledby="work-intents-heading">
         <div class="wrap">
             <div class="head">
-                <h2 id="work-intents-heading">Start with your intent</h2>
+                <h2 id="work-intents-heading">Ways we can collaborate</h2>
                 <p class="body">Pick whichever is closest to what you need. Each path leads somewhere specific — or enquire below and choose as you write.</p>
             </div>
             <div class="grid grid--4">
@@ -52,7 +52,7 @@
     <section class="section section--tight section--muted" id="enquire" aria-labelledby="enquire-heading">
         <div class="wrap split split--top">
             <div class="stack">
-                <h2 id="enquire-heading">Send one enquiry</h2>
+                <h2 id="enquire-heading">Tell me about your idea.</h2>
                 <p class="body">Choose what you would like to do and the form adjusts. I read every message myself and reply within two working days.</p>
                 <p class="small">Prefer email? Write to <a class="link" href="mailto:{{ config('site.contact.email') }}">{{ config('site.contact.email') }}</a>.</p>
             </div>
