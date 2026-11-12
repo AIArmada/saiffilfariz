@@ -1,15 +1,11 @@
 <div class="v3-page v3-page--home">
     <section class="hero hero--connected">
-        <picture class="hero__visual" aria-hidden="true">
-            <source media="(max-width: 720px)"
-                    srcset="{{ asset('assets/img/generated/home-hero-connected-intelligence-phone.jpg') }}"
-                    width="1122" height="1402">
-            <source media="(max-width: 1100px)"
-                    srcset="{{ asset('assets/img/generated/home-hero-connected-intelligence-tablet.jpg') }}"
-                    width="1448" height="1086">
-            <img class="hero__art" src="{{ asset('assets/img/generated/home-hero-connected-intelligence.webp') }}"
-                 alt="" width="1672" height="941" fetchpriority="high">
-        </picture>
+        <div class="hero__visual v3-home-art" aria-hidden="true">
+            <x-photo name="purpose-mountain" alt="" sizes="100vw" :eager="true" />
+        </div>
+        <div class="v3-home-portrait" aria-hidden="true">
+            <x-photo name="home-editorial-portrait" alt="" sizes="(max-width: 720px) 75vw, 44vw" :eager="true" />
+        </div>
         <div class="wrap hero__inner">
             <div class="hero__copy">
                 <p class="hero__eyebrow">Technology · Business <span>Creativity · People</span></p>
