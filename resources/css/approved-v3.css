@@ -258,7 +258,7 @@ body[data-menu="open"] .site-header--v3 .header-home { position: relative; z-ind
 .v3-page--home .v3-home-art { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; mask-image: none; pointer-events: none; }
 .v3-page--home .v3-home-art picture, .v3-page--home .v3-home-art img { width: 100%; height: 100%; }
 .v3-page--home .v3-home-art img { object-fit: cover; object-position: center 58%; filter: saturate(.87); }
-.v3-page--home .v3-home-portrait { position: absolute; right: 4%; bottom: 0; z-index: 0; width: min(47%,670px); height: 83%; overflow: hidden; pointer-events: none; mask-image: linear-gradient(to right,transparent,#000 16%,#000 88%,transparent),linear-gradient(to bottom,#000 76%,transparent); mask-composite: intersect; }
+.v3-page--home .v3-home-portrait { position: absolute; right: 4%; bottom: 0; z-index: -1; width: min(47%,670px); height: 83%; overflow: hidden; pointer-events: none; mask-image: linear-gradient(to right,transparent,#000 16%,#000 88%,transparent),linear-gradient(to bottom,#000 76%,transparent); mask-composite: intersect; }
 .v3-page--home .v3-home-portrait picture, .v3-page--home .v3-home-portrait img { display: block; width: 100%; height: 100%; }
 .v3-page--home .v3-home-portrait img { object-fit: cover; object-position: center 16%; }
 .v3-page--home .hero--connected::before { z-index: 0; background: linear-gradient(90deg,#061426 0%,rgba(5,14,27,.96) 25%,rgba(5,14,27,.78) 46%,rgba(5,14,27,.14) 84%),linear-gradient(0deg,#061325 0%,transparent 35%); }
