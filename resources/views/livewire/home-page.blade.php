@@ -244,11 +244,13 @@
                         </figcaption>
                     </figure>
                 @endforeach
-                <div class="quote-slider__controls">
-                    <button type="button" class="btn btn--sm btn--ghost" data-quote-prev aria-label="Previous testimonial">←</button>
-                    <p class="small" data-quote-status aria-live="polite">1 of {{ count($verifiedQuotes) }}</p>
-                    <button type="button" class="btn btn--sm btn--ghost" data-quote-next aria-label="Next testimonial">→</button>
-                </div>
+                @if ($verifiedQuotes->count() > 1)
+                    <div class="quote-slider__controls">
+                        <button type="button" class="btn btn--sm btn--ghost" data-quote-prev aria-label="Previous testimonial">←</button>
+                        <p class="small" data-quote-status aria-live="polite">1 of {{ $verifiedQuotes->count() }}</p>
+                        <button type="button" class="btn btn--sm btn--ghost" data-quote-next aria-label="Next testimonial">→</button>
+                    </div>
+                @endif
             </div>
         </div>
     </section>
