@@ -2,6 +2,9 @@
 
 <div class="creations-page v3-page v3-page--work">
     <section class="creations-opening">
+        <div class="v3-work-hero-art" aria-hidden="true">
+            <x-photo name="pillar-code" alt="" sizes="(max-width: 720px) 90vw, 48vw" :eager="true" />
+        </div>
         <div class="wrap creations-opening__inner">
             <div><p class="creation-context">Technology · Business · Creativity · People</p><h1>Ideas into<br>real impact.</h1></div>
             <div class="creations-opening__note">
