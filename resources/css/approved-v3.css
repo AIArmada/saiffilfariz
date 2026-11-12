@@ -252,3 +252,42 @@ body[data-menu="open"] .site-header--v3 .header-home { position: relative; z-ind
   .v3-page--home .hero--connected h1 { font-size: 46px; }
   .site-header--v3 .header-home { font-size: 14px; }
 }
+
+
+/* Visual artwork is separate from real text and remains decorative. */
+.v3-page--home .v3-home-art { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; mask-image: none; pointer-events: none; }
+.v3-page--home .v3-home-art picture, .v3-page--home .v3-home-art img { width: 100%; height: 100%; }
+.v3-page--home .v3-home-art img { object-fit: cover; object-position: center 58%; filter: saturate(.87); }
+.v3-page--home .v3-home-portrait { position: absolute; right: 4%; bottom: 0; z-index: 0; width: min(47%,670px); height: 83%; overflow: hidden; pointer-events: none; mask-image: linear-gradient(to right,transparent,#000 16%,#000 88%,transparent),linear-gradient(to bottom,#000 76%,transparent); mask-composite: intersect; }
+.v3-page--home .v3-home-portrait picture, .v3-page--home .v3-home-portrait img { display: block; width: 100%; height: 100%; }
+.v3-page--home .v3-home-portrait img { object-fit: cover; object-position: center 16%; }
+.v3-page--home .hero--connected::before { z-index: 0; background: linear-gradient(90deg,#061426 0%,rgba(5,14,27,.96) 25%,rgba(5,14,27,.78) 46%,rgba(5,14,27,.14) 84%),linear-gradient(0deg,#061325 0%,transparent 35%); }
+.v3-page--home .hero--connected .hero__copy { position: relative; z-index: 3; }
+.v3-page--work .v3-work-hero-art { position: absolute; z-index: 0; top: 0; right: -3%; bottom: 0; width: 55%; pointer-events: none; opacity: .72; mask-image: linear-gradient(90deg,transparent 0%,#000 48%,#000 90%,transparent 100%); }
+.v3-page--work .v3-work-hero-art picture, .v3-page--work .v3-work-hero-art img { width: 100%; height: 100%; }
+.v3-page--work .v3-work-hero-art img { object-fit: cover; object-position: center; }
+.v3-page--work .creations-opening__inner, .v3-page--work .creations-opening__line { position: relative; z-index: 1; }
+.v3-page--story .phero__media--portrait { max-width: 550px; height: auto; aspect-ratio: 1.13; align-items: center; overflow: hidden; border: 9px solid #F8E7CB; border-radius: 5px; background: #C69C77; box-shadow: 0 25px 40px #1D130F44; transform: rotate(2deg); }
+.v3-page--story .phero__media--portrait picture { height: 100%; }
+.v3-page--story .phero__media--portrait img { width: 100%; height: 100%; max-height: none; object-fit: cover; object-position: 50% 44%; }
+.v3-page--contact .phero { background: linear-gradient(90deg,#081629 3%,rgba(11,24,46,.88) 35%,rgba(26,25,46,.30) 100%),url('/assets/img/opt/purpose-mountain-1200.webp') center center / cover, #081629; }
+.v3-page--contact .phero__copy .lede { text-shadow: 0 1px 12px #06122188; }
+@media (max-width: 900px) {
+  .v3-page--home .v3-home-portrait { right: -4%; width: 56%; height: 70%; }
+  .v3-page--work .v3-work-hero-art { width: 65%; }
+}
+@media (max-width: 720px) {
+  .v3-page--home .hero--connected .v3-home-art { position: absolute; inset: 0; width: 100%; height: 100%; opacity: .7; }
+  .v3-page--home .hero--connected .v3-home-art picture, .v3-page--home .hero--connected .v3-home-art img { height: 100%; }
+  .v3-page--home .v3-home-portrait { right: -16%; bottom: 0; width: 87%; height: 84%; opacity: .84; mask-image: linear-gradient(90deg,transparent,#000 36%),linear-gradient(0deg,transparent,#000 20%,#000 87%,transparent); }
+  .v3-page--home .hero--connected::before { z-index: 0; background: linear-gradient(90deg,#061426 0%,rgba(5,14,27,.94) 34%,rgba(5,14,27,.67) 65%,rgba(5,14,27,.1) 100%),linear-gradient(0deg,#061325 0%,transparent 48%); }
+  .v3-page--home .hero--connected .hero__copy { max-width: 82%; }
+  .v3-page--home .hero--connected .lede { max-width: 26ch; }
+  .v3-page--story .phero__media--portrait { width: min(82vw,380px); max-width: 82vw; margin: 0 auto 15px; }
+  .v3-page--work .v3-work-hero-art { top: 0; right: -25%; bottom: auto; width: 105%; height: 440px; opacity: .42; mask-image: linear-gradient(90deg,transparent,#000 50%),linear-gradient(0deg,transparent,#000 65%); }
+  .v3-page--work .creations-opening__inner { padding-top: 30px; }
+}
+@media (max-width: 380px) {
+  .v3-page--home .hero--connected .hero__copy { max-width: 95%; }
+  .v3-page--home .v3-home-portrait { right: -25%; opacity: .7; }
+}
