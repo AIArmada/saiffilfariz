@@ -291,3 +291,10 @@ body[data-menu="open"] .site-header--v3 .header-home { position: relative; z-ind
   .v3-page--home .hero--connected .hero__copy { max-width: 95%; }
   .v3-page--home .v3-home-portrait { right: -25%; opacity: .7; }
 }
+
+
+/* The legacy mobile stylesheet hides the hero overlay completely.
+   Re-enable it so headlines stay legible over the new portrait artwork. */
+@media (max-width: 720px) {
+  .v3-page--home .hero--connected::before { display: block; }
+}
