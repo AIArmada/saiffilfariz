@@ -9,8 +9,8 @@
                 <p class="lede">From a childhood curiosity about technology to building businesses, leading teams, learning and creating impact — this is the journey that shaped how I think and what I build today.</p>
             </div>
             <div class="phero__media phero__media--portrait">
-                <x-photo name="saiffil-fariz-gold-portrait" alt="Saiffil Fariz in a metallic gold blazer"
-                         sizes="(max-width: 720px) min(90vw, 440px), 440px" :eager="true" />
+                <x-photo name="story-saiffil-whizkid-1989-v1" alt="Saiffil with the VTech Talking WhizKid"
+                         sizes="(max-width: 720px) 90vw, 45vw" :eager="true" />
             </div>
         </div>
     </section>
