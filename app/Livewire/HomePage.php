@@ -9,7 +9,7 @@ use Livewire\Attributes\Title;
 use Livewire\Component;
 
 #[Layout('layouts.app')]
-#[Title('Saiffil Fariz — Connected intelligence across AI, business and people')]
+#[Title('Saiffil Fariz — Different worlds. One purpose.')]
 class HomePage extends Component
 {
     public function render()
@@ -34,12 +34,6 @@ class HomePage extends Component
                     'name' => 'MATRADE',
                     'role' => 'Letter of appreciation, 30 September 2026',
                     'url' => route('talk', 'matrade-celik-ai-2026-08'),
-                ],
-                [
-                    'text' => 'Clear, practical and immediately useful. Our team left with clarity and a real plan, not a folder of slides.',
-                    'name' => 'Aisyah Rahman',
-                    'role' => 'Business owner, Shah Alam',
-                    'url' => null,
                 ],
             ],
         ]);
