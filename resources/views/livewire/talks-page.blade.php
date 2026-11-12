@@ -10,7 +10,7 @@
                 <p class="lede">Keynotes, workshops and programmes that turn ideas about AI, technology, business and creativity into practical understanding. Browse {{ $total }} documented sessions and the stories behind them.</p>
             </div>
             <div class="phero__media">
-                <x-photo name="profile-metallicgold" alt="Saiffil in a gold blazer"
+                <x-photo name="profile-charcoalgrey" alt="Saiffil Fariz speaking"
                          sizes="(max-width: 900px) 100vw, 44vw" :eager="true" class="cutout-top" />
             </div>
         </div>
